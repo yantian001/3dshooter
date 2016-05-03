@@ -6,7 +6,7 @@ SubstanceImporter:
   - serializedVersion: 16
     name: B2S
     prototypeName: B2S
-    shader: {instanceID: 0}
+    shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
     shaderKeywords: 
     renderQueue: -1
     lightmapFlags: 5
@@ -158,16 +158,14 @@ SubstanceImporter:
           first:
             name: _MainTex
           second:
-            texture: {fileID: -1940505237, guid: 00000000000000000000000000000000,
-              type: 0}
+            texture: {instanceID: 0}
             scale: {x: 1, y: 1}
             offset: {x: 0, y: 0}
         data:
           first:
             name: _BumpMap
           second:
-            texture: {fileID: -426080421, guid: 00000000000000000000000000000000,
-              type: 0}
+            texture: {instanceID: 0}
             scale: {x: 1, y: 1}
             offset: {x: 0, y: 0}
       floats:
@@ -200,7 +198,15 @@ SubstanceImporter:
       filterMode: 1
       aniso: 1
       wrapMode: 0
-    textureAssignments: []
+    textureAssignments:
+    - shaderProp:
+        name: _MainTex
+      material: {instanceID: 0}
+      baseUID: 3836540242
+    - shaderProp:
+        name: _BumpMap
+      material: {instanceID: 0}
+      baseUID: 3836538650
     buildTargetSettings:
     - serializedVersion: 2
       buildTarget: 
