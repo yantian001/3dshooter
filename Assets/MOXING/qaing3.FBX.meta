@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 5e3a3aefac263b8499719e5e55a50cdf
-timeCreated: 1461923840
+guid: dd97810685cf80149b2d8574a885f8fa
+timeCreated: 1462276669
 licenseType: Pro
 ModelImporter:
   serializedVersion: 18
@@ -9,9 +9,7 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: polySurface168
-    6400000: //RootNode
-    9500000: //RootNode
+    4300000: Box001
   materials:
     importMaterials: 1
     materialName: 0
@@ -35,12 +33,12 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 100
+    globalScale: 10
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
