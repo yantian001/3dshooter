@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public enum LevelType
@@ -34,6 +34,7 @@ public class GameValue
     /// </summary>
     public static int level = -1;
 
+	public static string diffdegree = null;
 
     public static string GetMapSceneName()
     {
