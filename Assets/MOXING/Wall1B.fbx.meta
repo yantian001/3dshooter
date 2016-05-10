@@ -6,11 +6,28 @@ ModelImporter:
   serializedVersion: 18
   fileIDToRecycleName:
     100000: //RootNode
+    100002: polySurface168
+    100004: youbance
+    100006: zuobance
     400000: //RootNode
+    400002: polySurface168
+    400004: youbance
+    400006: zuobance
     2300000: //RootNode
+    2300002: polySurface168
+    2300004: youbance
+    2300006: zuobance
     3300000: //RootNode
+    3300002: polySurface168
+    3300004: youbance
+    3300006: zuobance
     4300000: polySurface168
+    4300002: youbance
+    4300004: zuobance
     6400000: //RootNode
+    6400002: polySurface168
+    6400004: youbance
+    6400006: zuobance
     9500000: //RootNode
   materials:
     importMaterials: 1
