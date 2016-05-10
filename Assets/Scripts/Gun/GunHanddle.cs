@@ -20,16 +20,6 @@ public class GunHanddle : MonoBehaviour
         {
             Guns = this.gameObject.GetComponentsInChildren<Gun>();
         }
-        for (int i = 0; i < Guns.Length; i++)
-        {
-            if (FPScamera)
-                Guns[i].NormalCamera = FPScamera;
-            Guns[i].fovTemp = FPScamera.fieldOfView;
-            if (Guns[i].positionTemp == Vector3.zero)
-            {
-                Guns[i].positionTemp = Guns[i].transform.localPosition;
-            }
-        }
         if(crossHair == null )
         {
             crossHair = GameObject.FindGameObjectWithTag("CrossHair").GetComponent<Crosshair>();
@@ -87,36 +77,15 @@ public class GunHanddle : MonoBehaviour
         	r.enabled = show;
     	}*/
     }
-
-    public void Zoom()
-    {
-        if (CurrentGun)
-        {
-            CurrentGun.Zoom();
-        }
-    }
-    public void ZoomToggle()
-    {
-        if (CurrentGun)
-            CurrentGun.ZoomToggle();
-    }
-
+    
     public void Reload()
     {
         if (CurrentGun)
             CurrentGun.Reload();
     }
 
-    public void ZoomAdjust(int delta)
-    {
-        if (CurrentGun)
-            CurrentGun.ZoomDelta(delta);
-    }
-    public void OffsetAdjust(Vector2 delta)
-    {
-        if (CurrentGun)
-            CurrentGun.OffsetAdjust(delta);
-    }
+  
+  
     public void SwitchGun(int index)
     {
         //if (FPScamera.enabled)

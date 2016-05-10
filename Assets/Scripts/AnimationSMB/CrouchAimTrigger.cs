@@ -10,8 +10,7 @@ public class CrouchAimTrigger : CustomSMB
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
-
-        tpsInput.IsMoveing = false;
+       
 
         if (playerMove == null)
         {
@@ -26,6 +25,12 @@ public class CrouchAimTrigger : CustomSMB
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        if (animator.GetAnimatorTransitionInfo(layerIndex).normalizedTime > 0)
+        {
+            return;
+        }
+        tpsInput.IsMoveing = false;
+
         if (tpsInput.IsMoveLeftPressed)
         {
             playerMove.MoveDirection(-1);

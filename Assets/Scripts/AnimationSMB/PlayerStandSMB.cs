@@ -11,12 +11,14 @@ public class PlayerStandSMB : CustomSMB
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
+
         if (tpsInput == null)
         {
+
             tpsInput = GameObject.FindGameObjectWithTag("Player").GetComponent<TPSInput>();
             Debug.Log("Get tpsinput in player Stand SMB");
         }
-        if(gunHanddle == null)
+        if (gunHanddle == null)
         {
             gunHanddle = tpsInput.GetComponent<GunHanddle>();
         }
@@ -25,6 +27,12 @@ public class PlayerStandSMB : CustomSMB
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        var ti = animator.GetAnimatorTransitionInfo(layerIndex);
+        if (ti.normalizedTime > 0)
+        {
+            return;
+        }
+
         if (!tpsInput)
         {
             return;
@@ -36,8 +44,7 @@ public class PlayerStandSMB : CustomSMB
         }
         if (tpsInput.IsFirePressed)
         {
-         //   animator.SetTrigger("fired");
-            gunHanddle.Shoot();
+            animator.SetBool("fired", true);
         }
     }
 
