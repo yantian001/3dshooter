@@ -20,7 +20,7 @@ public class GunHanddle : MonoBehaviour
         {
             Guns = this.gameObject.GetComponentsInChildren<Gun>();
         }
-        if(crossHair == null )
+        if (crossHair == null)
         {
             crossHair = GameObject.FindGameObjectWithTag("CrossHair").GetComponent<Crosshair>();
         }
@@ -77,15 +77,15 @@ public class GunHanddle : MonoBehaviour
         	r.enabled = show;
     	}*/
     }
-    
+
     public void Reload()
     {
         if (CurrentGun)
             CurrentGun.Reload();
     }
 
-  
-  
+
+
     public void SwitchGun(int index)
     {
         //if (FPScamera.enabled)
@@ -154,8 +154,8 @@ public class GunHanddle : MonoBehaviour
         //    CurrentGun.FPSmotor.Holdbreath(noiseMult);
     }
 
-    public void Update()
+    public bool CanFire()
     {
-
+        return false;
     }
 }

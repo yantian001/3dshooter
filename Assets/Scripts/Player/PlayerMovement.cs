@@ -16,8 +16,7 @@ public class PlayerMovement : MonoBehaviour
 
     public Animator animator;
 
-    public float currentColdDown = 0;
-    int index = 0;//当前位置
+    int index = 1;//当前位置
     public bool isMoving = false; //是否在移动中
     // Use this for initialization
     void Start()
@@ -37,12 +36,22 @@ public class PlayerMovement : MonoBehaviour
             animator = GetComponent<Animator>();
         }
     }
-
-    void SetTarget()
+    /// <summary>
+    /// 是否可以向左边移动
+    /// </summary>
+    /// <returns></returns>
+    public bool CanMoveLeft()
     {
-
+        return index > 0;
     }
-
+    /// <summary>
+    /// 是否可以向右边移动
+    /// </summary>
+    /// <returns></returns>
+    public bool CanMoveRight()
+    {
+        return index < targets.Length - 1;
+    }
 
     void Update()
     {
@@ -138,6 +147,7 @@ public class PlayerMovement : MonoBehaviour
         //index = i % targets.Length;
         agent.enabled = true;
         //isMoving = true;
+        transform.LookAt(targets[index].position);
         agent.SetDestination(targets[index].position);
     }
 }

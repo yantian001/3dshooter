@@ -9,9 +9,9 @@ public class CrouchAimTrigger : CustomSMB
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        
         base.OnStateEnter(animator, stateInfo, layerIndex);
-       
-
+        tpsInput.InputEable = true;
         if (playerMove == null)
         {
             if (tpsInput)
@@ -34,10 +34,12 @@ public class CrouchAimTrigger : CustomSMB
         if (tpsInput.IsMoveLeftPressed)
         {
             playerMove.MoveDirection(-1);
+            tpsInput.IsMoveLeftPressed = false;
         }
         else if (tpsInput.IsMoveRightPressed)
         {
             playerMove.MoveDirection(1);
+            tpsInput.IsMoveRightPressed = false;
         }
         else
         {

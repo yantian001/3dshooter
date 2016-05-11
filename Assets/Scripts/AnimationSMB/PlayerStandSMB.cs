@@ -14,7 +14,6 @@ public class PlayerStandSMB : CustomSMB
 
         if (tpsInput == null)
         {
-
             tpsInput = GameObject.FindGameObjectWithTag("Player").GetComponent<TPSInput>();
             Debug.Log("Get tpsinput in player Stand SMB");
         }
@@ -37,6 +36,15 @@ public class PlayerStandSMB : CustomSMB
         {
             return;
         }
+
+        if (gunHanddle.CurrentGun.gunState == GunState.Empty)
+        {
+            animator.SetBool("isAim", false);
+            tpsInput.IsAim = false;
+            tpsInput.CanFire = false;
+            return;
+        }
+
         if (!tpsInput.IsAim)
         {
             animator.SetBool("isAim", false);

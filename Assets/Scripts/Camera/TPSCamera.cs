@@ -66,7 +66,8 @@ public class TPSCamera : MonoBehaviour
             anim = playerF.GetComponent<Animator>();
         }
         defQ = playerF.rotation;
-        cameraQ = transform.rotation;
+        cameraQ = defQ;
+        //cameraQ = transform.rotation;
         targetFov = Camera.main.fieldOfView;
         defFov = targetFov;
 

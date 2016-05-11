@@ -17,13 +17,14 @@ public class PlayerStandShootSMB : CustomSMB {
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateUpdate(animator, stateInfo, layerIndex);
-        if(tpsInput.IsFirePressed)
+        if(tpsInput.IsFirePressed && gunHandle.CurrentGun.gunState == GunState.Ready)
         {
             gunHandle.Shoot();
         }
         else
         {
             animator.SetBool("fired", false);
+            tpsInput.IsFirePressed = false;
         }
     }
 }

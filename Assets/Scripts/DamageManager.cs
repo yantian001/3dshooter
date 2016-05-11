@@ -24,7 +24,7 @@ public class DamageManager : MonoBehaviour
 
     bool showHitTips = false;
     public BehaviorTree behavior;
-    int maxHp = 0;
+    public int maxHp = 0;
     HitPosition hpos;
     public int depth = 0;
 
@@ -154,7 +154,7 @@ public class DamageManager : MonoBehaviour
         edi.transform = this.transform;
         edi.headShot = suffix == 2;
         edi.hitPos = hpos;
-      //  edi.animal = this.GetComponent<Animal>();
+        //  edi.animal = this.GetComponent<Animal>();
         LeanTween.dispatchEvent((int)Events.ENEMYDIE, edi);
     }
     /// <summary>

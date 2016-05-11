@@ -8,6 +8,28 @@ public class TPSInput : MonoBehaviour
 
     public bool IsFirePressed;
 
+    private bool _canFire;
+
+    public bool InputEable = false;
+    /// <summary>
+    /// 是否可以开枪
+    /// </summary>
+    public bool CanFire
+    {
+        get
+        {
+            return _canFire;
+        }
+        set
+        {
+            _canFire = value;
+            if (!_canFire)
+            {
+                IsFirePressed = false;
+            }
+        }
+    }
+
     private bool _isMoveLeftPressed = false;
     /// <summary>
     /// 向左移动
@@ -18,7 +40,7 @@ public class TPSInput : MonoBehaviour
         {
             return _isMoveLeftPressed;
         }
-        private set
+        set
         {
             _isMoveLeftPressed = value;
             SetMoveState(_isMoveLeftPressed);
@@ -36,12 +58,34 @@ public class TPSInput : MonoBehaviour
         {
             return _isMoveRightPressed;
         }
-        private set
+        set
         {
             _isMoveRightPressed = value;
             SetMoveState(_isMoveRightPressed);
         }
     }
+
+    private bool _reload = false;
+    /// <summary>
+    /// 换子弹
+    /// </summary>
+    public bool Reload
+    {
+        get
+        {
+            return _reload;
+        }
+        set
+        {
+            _reload = value;
+            if (_reload)
+            {
+                IsAim = false;
+                CanFire = false;
+            }
+        }
+    }
+
     /// <summary>
     /// 设置移动时的相关状态
     /// 1.不能瞄准
@@ -52,6 +96,7 @@ public class TPSInput : MonoBehaviour
     {
         if (b)
         {
+            CanFire = false;
             IsFirePressed = false;
             IsAim = false;
         }
@@ -61,30 +106,44 @@ public class TPSInput : MonoBehaviour
 
     public float horizontal = 0;
     public float vertical = 0;
-    // Use this for initialization
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
     void Update()
     {
-        horizontal = CnInputManager.GetAxis("Horizontal");
-        vertical = CnInputManager.GetAxis("Vertical");
-        if (CnInputManager.GetButtonDown("Cover"))
+        if (InputEable)
         {
-            IsAim = !IsAim;
+            horizontal = CnInputManager.GetAxis("Horizontal");
+            vertical = CnInputManager.GetAxis("Vertical");
+            if (CnInputManager.GetButtonDown("Cover"))
+            {
+                IsAim = !IsAim;
+            }
+            if (CnInputManager.GetButtonDown("Reload"))
+            {
+                Reload = true;
+            }
+            if (CanFire)
+            {
+                IsFirePressed = CnInputManager.GetButton("F");
+                if (IsFirePressed)
+                {
+                    IsAim = true;
+                }
+            }
+            //判读移动
+            if (CnInputManager.GetButtonDown("Left"))
+            {
+                IsMoveLeftPressed = true;
+            }
+            else if (CnInputManager.GetButtonDown("Right"))
+            {
+                IsMoveRightPressed = true;
+            }
         }
-        IsFirePressed = CnInputManager.GetButton("F");
-        if (IsFirePressed)
+        else
         {
-            IsAim = true;
+
         }
-        IsMoveLeftPressed = CnInputManager.GetButtonDown("Left");
-        IsMoveRightPressed = CnInputManager.GetButtonDown("Right");
-        //Debug.Log("Left: " + IsMoveLeftPressed + " R :" + IsMoveRightPressed);
     }
-
-
+   
 }
