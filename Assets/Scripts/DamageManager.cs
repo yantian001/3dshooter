@@ -31,6 +31,11 @@ public class DamageManager : MonoBehaviour
 
     float hpSliderDisplayBeginTime = 0;
 
+    public void Awake()
+    {
+        maxHp = hp;
+    }
+
     void Start()
     {
         if (behavior == null)
@@ -42,7 +47,7 @@ public class DamageManager : MonoBehaviour
         //{
         //    animal = GetComponent<Animal>();
         //}
-        maxHp = hp;
+
     }
 
     void Update()
@@ -142,7 +147,7 @@ public class DamageManager : MonoBehaviour
         }
         else
         {
-            LeanTween.rotateZ(transform.root.gameObject, 90, 0.5f);
+            //  LeanTween.rotateZ(transform.root.gameObject, 90, 0.5f);
         }
     }
 
@@ -243,7 +248,7 @@ public class DamageManager : MonoBehaviour
         }
         else
         {
-            LeanTween.rotateZ(transform.root.gameObject, 90, 0.5f);
+           // LeanTween.rotateZ(transform.root.gameObject, 90, 0.5f);
         }
     }
 

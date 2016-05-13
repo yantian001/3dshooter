@@ -14,7 +14,8 @@ namespace BehaviorDesigner.Runtime.Tasks.Basic.SharedVariables
 
         public override TaskStatus OnUpdate()
         {
-            targetVariable.Value = (targetValue.Value != null ? targetValue.Value : transform);
+            // targetVariable.Value = (targetValue.Value != null ? targetValue.Value : transform);
+            targetVariable.Value = targetValue.Value;
 
             return TaskStatus.Success;
         }

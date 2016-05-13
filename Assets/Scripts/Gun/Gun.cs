@@ -22,7 +22,6 @@ public class Gun : MonoBehaviour
     public float FireRate = 0.2f;
     public float CooldownTime = 0.8f;
     public float BoltTime = 0.35f;
-    public Texture2D CrosshairImg, CrosshairZoom;
     public bool HideGunWhileZooming = true;
     public AudioClip SoundGunFire;
     public AudioClip SoundBoltEnd;
@@ -31,7 +30,7 @@ public class Gun : MonoBehaviour
     public AudioClip SoundReloadEnd;
     public AudioClip SoundEmpty;
 
-    float Power = 0;
+    public float Power = 0;
     public bool SemiAuto;
     public bool InfinityAmmo = true;
     public int BulletNum = 1;
@@ -105,8 +104,7 @@ public class Gun : MonoBehaviour
                     if (Bullets)
                     {
                         Vector3 point = NormalCamera.GetComponent<Camera>().ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2, 0));
-
-                        //GameObject bullet = (GameObject)Instantiate(Bullets, muzzleTransform.position, Quaternion.LookRotation(NormalCamera.transform.forward));
+                        
                         GameObject bullet = (GameObject)Instantiate(Bullets, point, Quaternion.LookRotation(NormalCamera.transform.forward));
                         var asBuulet = bullet.GetComponent<AS_Bullet>();
                         if (asBuulet)
@@ -115,7 +113,7 @@ public class Gun : MonoBehaviour
                         }
                         bullet.transform.forward = NormalCamera.transform.forward + new Vector3(Random.Range(-Spread / 1000, Spread / 1000), Random.Range(-Spread / 1000, Spread / 1000), Random.Range(-Spread / 1000, Spread / 1000));
 
-                        //bullet.transform.forward = NormalCamera.transform.forward;
+                        
                         Destroy(bullet, LifeTimeBullet);
                     }
                 }
@@ -150,6 +148,23 @@ public class Gun : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// 显示弹壳
+    /// </summary>
+    public void ShowShell()
+    {
+        if(Shell && ShellSpawn)
+        {
+            GameObject shell = (GameObject)Instantiate(Shell, ShellSpawn.position, ShellSpawn.rotation);
+            shell.GetComponent<Rigidbody>().AddForce(ShellSpawn.transform.right * 2);
+            shell.GetComponent<Rigidbody>().AddTorque(Random.rotation.eulerAngles * 10);
+            GameObject.Destroy(shell, 5);
+        }
+    }
+
+    /// <summary>
+    /// 显示枪口特效
+    /// </summary>
     public void ShowFlash()
     {
         if (muzzleFlash && muzzleTransform)

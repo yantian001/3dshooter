@@ -12,24 +12,33 @@ namespace BehaviorDesigner.Runtime.Tasks.Movement
         // A cache of the NavMeshAgent
         protected NavMeshAgent navMeshAgent;
 
+        protected NavMeshObstacle navMeshObstacle;
+
         public override void OnAwake()
         {
             // cache for quick lookup
             navMeshAgent = gameObject.GetComponent<NavMeshAgent>();
+            navMeshObstacle = gameObject.GetComponent<NavMeshObstacle>();
         }
 
         public override void OnStart()
         {
+            //disable navMeshObstacle
+            if (navMeshObstacle != null)
+                navMeshObstacle.enabled = false;
             // set the speed and angular speed, enable the NavMeshAgent
             navMeshAgent.speed = speed.Value;
             navMeshAgent.angularSpeed = angularSpeed.Value;
             navMeshAgent.enabled = true;
+
         }
 
         public override void OnEnd()
         {
             // Disable the nav mesh
             navMeshAgent.enabled = false;
+            if (navMeshObstacle != null)
+                navMeshObstacle.enabled = true;
         }
 
         // Reset the public variables

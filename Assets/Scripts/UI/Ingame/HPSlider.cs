@@ -24,7 +24,7 @@ public class HPSlider : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        dm.ApplyDamage(1, Vector3.zero, 0);
+        
         slider.value = dm.hp;
     }
 }

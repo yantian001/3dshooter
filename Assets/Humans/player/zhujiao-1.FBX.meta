@@ -1,5 +1,7 @@
 fileFormatVersion: 2
 guid: 02a69bf2171dbb84197bd9e759e2d844
+labels:
+- Road
 timeCreated: 1462414668
 licenseType: Pro
 ModelImporter:
@@ -132,6 +134,21 @@ ModelImporter:
     100248: ren
     100250: SAS_body_bmp001
     100252: //RootNode
+    100254: Section001
+    100256: DrawCall_0054
+    100258: DrawCall_0055
+    100260: DrawCall_0060
+    100262: DrawCall_0080
+    100264: DrawCall_0081
+    100266: DrawCall_0084
+    100268: DrawCall_0122
+    100270: DrawCall_0123
+    100272: DrawCall_42
+    100274: DrawCall_43
+    100276: Q-1
+    100278: Q-2
+    100280: Q-4
+    100282: Q-5
     400000: 4cca0b90_obj
     400002: 4cca2598_obj
     400004: 4ccaae58_obj
@@ -259,6 +276,21 @@ ModelImporter:
     400248: ren
     400250: SAS_body_bmp001
     400252: //RootNode
+    400254: Section001
+    400256: DrawCall_0054
+    400258: DrawCall_0055
+    400260: DrawCall_0060
+    400262: DrawCall_0080
+    400264: DrawCall_0081
+    400266: DrawCall_0084
+    400268: DrawCall_0122
+    400270: DrawCall_0123
+    400272: DrawCall_42
+    400274: DrawCall_43
+    400276: Q-1
+    400278: Q-2
+    400280: Q-4
+    400282: Q-5
     2300000: Box001
     3300000: Box001
     4300000: DrawCall_0304
@@ -307,6 +339,16 @@ ModelImporter:
     4300086: 4cca0b90_obj
     4300088: 4cceb630_obj
     4300090: 4f796f10_obj
+    4300092: DrawCall_0122
+    4300094: DrawCall_0123
+    4300096: DrawCall_0084
+    4300098: DrawCall_0080
+    4300100: DrawCall_0081
+    4300102: DrawCall_42
+    4300104: DrawCall_43
+    4300106: DrawCall_0054
+    4300108: DrawCall_0060
+    4300110: DrawCall_0055
     6400000: Box001
     7400000: Stand-Idle
     7400002: Stand-Shoot
@@ -390,6 +432,16 @@ ModelImporter:
     13700084: Mesh_059
     13700086: Mesh_060
     13700088: SAS_body_bmp001
+    13700090: DrawCall_0054
+    13700092: DrawCall_0055
+    13700094: DrawCall_0060
+    13700096: DrawCall_0080
+    13700098: DrawCall_0081
+    13700100: DrawCall_0084
+    13700102: DrawCall_0122
+    13700104: DrawCall_0123
+    13700106: DrawCall_42
+    13700108: DrawCall_43
   materials:
     importMaterials: 1
     materialName: 0
@@ -413,10 +465,10 @@ ModelImporter:
       that will be discarded.\n"
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    animationCompression: 3
-    animationRotationError: .5
-    animationPositionError: .5
-    animationScaleError: .5
+    animationCompression: 1
+    animationRotationError: 0
+    animationPositionError: 0
+    animationScaleError: 0
     animationWrapMode: 0
     extraExposedTransformPaths: []
     clipAnimations:
@@ -436,9 +488,9 @@ ModelImporter:
       loopBlendPositionY: 0
       loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
-      keepOriginalPositionY: 1
+      keepOriginalPositionY: 0
       keepOriginalPositionXZ: 0
-      heightFromFeet: 0
+      heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
@@ -814,13 +866,13 @@ ModelImporter:
       loop: 0
       loopTime: 1
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
@@ -1196,41 +1248,19 @@ ModelImporter:
       loop: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events: []
       transformMask:
       - path: 
-        weight: 1
-      - path: ren
-        weight: 1
-      - path: ren/DrawCall_0304
-        weight: 1
-      - path: ren/Mesh_052
-        weight: 1
-      - path: ren/DrawCall_0303
-        weight: 1
-      - path: ren/Mesh_053
-        weight: 1
-      - path: ren/Mesh_060
-        weight: 1
-      - path: ren/Mesh_054
-        weight: 1
-      - path: ren/Mesh_051
-        weight: 1
-      - path: ren/DrawCall_0301
-        weight: 1
-      - path: ren/SAS_body_bmp001
-        weight: 1
-      - path: ren/Mesh_059
         weight: 1
       - path: Circle001
         weight: 1
@@ -1241,6 +1271,34 @@ ModelImporter:
       - path: Circle001/Bip001/Bip001 Pelvis
         weight: 1
       - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
+          Calf
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
+          Calf/Bip001 L Foot
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
+          Calf/Bip001 L Foot/Bip001 L Toe0
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
+          Calf/Bip001 L Foot/Bip001 L Toe0/Bip001 L Toe0Nub
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
+          Calf
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
+          Calf/Bip001 R Foot
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
+          Calf/Bip001 R Foot/Bip001 R Toe0
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
+          Calf/Bip001 R Foot/Bip001 R Toe0/Bip001 R Toe0Nub
         weight: 1
       - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1
         weight: 1
@@ -1448,47 +1506,7 @@ ModelImporter:
           Spine3/Bip001 Neck/Bip001 R Clavicle/Bip001 R UpperArm/Bip001 R Forearm/Bip001
           R Hand/qiang
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh
-        weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
-          Calf
-        weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
-          Calf/Bip001 L Foot
-        weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
-          Calf/Bip001 L Foot/Bip001 L Toe0
-        weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
-          Calf/Bip001 L Foot/Bip001 L Toe0/Bip001 L Toe0Nub
-        weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh
-        weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
-          Calf
-        weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
-          Calf/Bip001 R Foot
-        weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
-          Calf/Bip001 R Foot/Bip001 R Toe0
-        weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
-          Calf/Bip001 R Foot/Bip001 R Toe0/Bip001 R Toe0Nub
-        weight: 1
       - path: qiang-0
-        weight: 1
-      - path: qiang-0/qiang-3
-        weight: 1
-      - path: qiang-0/qiang-3/4d289fb0_obj
-        weight: 1
-      - path: qiang-0/qiang-3/4d2c8688_obj
-        weight: 1
-      - path: qiang-0/qiang-3/4d366f90_obj
-        weight: 1
-      - path: qiang-0/qiang-3/4d2cf070_obj
-        weight: 1
-      - path: qiang-0/qiang-3/4d2d1220_obj
         weight: 1
       - path: qiang-0/qiang-1
         weight: 1
@@ -1498,39 +1516,51 @@ ModelImporter:
         weight: 1
       - path: qiang-0/qiang-2
         weight: 1
-      - path: qiang-0/qiang-2/4ccf1048_obj
-        weight: 1
-      - path: qiang-0/qiang-2/4ccef640_obj
-        weight: 1
-      - path: qiang-0/qiang-2/4cd2ea10_obj
-        weight: 1
-      - path: qiang-0/qiang-2/bvsdbsdgs
-        weight: 1
       - path: qiang-0/qiang-2/4cca2598_obj
-        weight: 1
-      - path: qiang-0/qiang-2/4f7f8088_obj
         weight: 1
       - path: qiang-0/qiang-2/4cce6188_obj
         weight: 1
       - path: qiang-0/qiang-2/4ccee418_obj
         weight: 1
+      - path: qiang-0/qiang-2/4ccef640_obj
+        weight: 1
+      - path: qiang-0/qiang-2/4ccf1048_obj
+        weight: 1
+      - path: qiang-0/qiang-2/4cd2ea10_obj
+        weight: 1
+      - path: qiang-0/qiang-2/4f7f8088_obj
+        weight: 1
+      - path: qiang-0/qiang-2/bvsdbsdgs
+        weight: 1
+      - path: qiang-0/qiang-3
+        weight: 1
+      - path: qiang-0/qiang-3/4d2c8688_obj
+        weight: 1
+      - path: qiang-0/qiang-3/4d2cf070_obj
+        weight: 1
+      - path: qiang-0/qiang-3/4d2d1220_obj
+        weight: 1
+      - path: qiang-0/qiang-3/4d289fb0_obj
+        weight: 1
+      - path: qiang-0/qiang-3/4d366f90_obj
+        weight: 1
       - path: qiang-0/qiang-4
-        weight: 1
-      - path: qiang-0/qiang-4/4d3433c8_obj
-        weight: 1
-      - path: qiang-0/qiang-4/4f6e90c8_obj
         weight: 1
       - path: qiang-0/qiang-4/4d2dd7a8_obj
         weight: 1
       - path: qiang-0/qiang-4/4d2e2238_obj
         weight: 1
+      - path: qiang-0/qiang-4/4d3433c8_obj
+        weight: 1
+      - path: qiang-0/qiang-4/4f6e90c8_obj
+        weight: 1
       - path: qiang-0/qiang-5
         weight: 1
       - path: qiang-0/qiang-5/4d2c3d80_obj
         weight: 1
-      - path: qiang-0/qiang-5/4f6f96a8_obj
-        weight: 1
       - path: qiang-0/qiang-5/4f6c5e60_obj
+        weight: 1
+      - path: qiang-0/qiang-5/4f6f96a8_obj
         weight: 1
       - path: qiang-0/qiang-5/4f741e08_obj
         weight: 1
@@ -1538,31 +1568,53 @@ ModelImporter:
         weight: 1
       - path: qiang-0/qiang-6/4cd0ad80_obj
         weight: 1
-      - path: qiang-0/qiang-6/4cd03fb0_obj
-        weight: 1
       - path: qiang-0/qiang-6/4cd2d008_obj
+        weight: 1
+      - path: qiang-0/qiang-6/4cd03fb0_obj
         weight: 1
       - path: qiang-0/qiang-7
         weight: 1
-      - path: qiang-0/qiang-7/4f66c2c0_obj
+      - path: qiang-0/qiang-7/4ccaae58_obj
         weight: 1
       - path: qiang-0/qiang-7/4ccd71b0_obj
         weight: 1
       - path: qiang-0/qiang-7/4ccfd7b0_obj
         weight: 1
-      - path: qiang-0/qiang-7/4ccaae58_obj
+      - path: qiang-0/qiang-7/4f66c2c0_obj
         weight: 1
       - path: qiang-0/qiang-8
-        weight: 1
-      - path: qiang-0/qiang-8/4cd2df10_obj
-        weight: 1
-      - path: qiang-0/qiang-8/4cd063b8_obj
         weight: 1
       - path: qiang-0/qiang-8/4cca0b90_obj
         weight: 1
       - path: qiang-0/qiang-8/4cceb630_obj
         weight: 1
+      - path: qiang-0/qiang-8/4cd2df10_obj
+        weight: 1
+      - path: qiang-0/qiang-8/4cd063b8_obj
+        weight: 1
       - path: qiang-0/qiang-8/4f796f10_obj
+        weight: 1
+      - path: ren
+        weight: 1
+      - path: ren/DrawCall_0301
+        weight: 1
+      - path: ren/DrawCall_0303
+        weight: 1
+      - path: ren/DrawCall_0304
+        weight: 1
+      - path: ren/Mesh_051
+        weight: 1
+      - path: ren/Mesh_052
+        weight: 1
+      - path: ren/Mesh_053
+        weight: 1
+      - path: ren/Mesh_054
+        weight: 1
+      - path: ren/Mesh_059
+        weight: 1
+      - path: ren/Mesh_060
+        weight: 1
+      - path: ren/SAS_body_bmp001
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
@@ -1578,41 +1630,19 @@ ModelImporter:
       loop: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events: []
       transformMask:
       - path: 
-        weight: 1
-      - path: ren
-        weight: 1
-      - path: ren/DrawCall_0304
-        weight: 1
-      - path: ren/Mesh_052
-        weight: 1
-      - path: ren/DrawCall_0303
-        weight: 1
-      - path: ren/Mesh_053
-        weight: 1
-      - path: ren/Mesh_060
-        weight: 1
-      - path: ren/Mesh_054
-        weight: 1
-      - path: ren/Mesh_051
-        weight: 1
-      - path: ren/DrawCall_0301
-        weight: 1
-      - path: ren/SAS_body_bmp001
-        weight: 1
-      - path: ren/Mesh_059
         weight: 1
       - path: Circle001
         weight: 1
@@ -1623,6 +1653,34 @@ ModelImporter:
       - path: Circle001/Bip001/Bip001 Pelvis
         weight: 1
       - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
+          Calf
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
+          Calf/Bip001 L Foot
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
+          Calf/Bip001 L Foot/Bip001 L Toe0
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
+          Calf/Bip001 L Foot/Bip001 L Toe0/Bip001 L Toe0Nub
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
+          Calf
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
+          Calf/Bip001 R Foot
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
+          Calf/Bip001 R Foot/Bip001 R Toe0
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
+          Calf/Bip001 R Foot/Bip001 R Toe0/Bip001 R Toe0Nub
         weight: 1
       - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1
         weight: 1
@@ -1830,121 +1888,55 @@ ModelImporter:
           Spine3/Bip001 Neck/Bip001 R Clavicle/Bip001 R UpperArm/Bip001 R Forearm/Bip001
           R Hand/qiang
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh
+      - path: Q-1
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
-          Calf
+      - path: Q-1/DrawCall_0054
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
-          Calf/Bip001 L Foot
+      - path: Q-1/DrawCall_0055
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
-          Calf/Bip001 L Foot/Bip001 L Toe0
+      - path: Q-1/DrawCall_0060
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
-          Calf/Bip001 L Foot/Bip001 L Toe0/Bip001 L Toe0Nub
+      - path: Q-2
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh
+      - path: Q-2/DrawCall_42
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
-          Calf
+      - path: Q-2/DrawCall_43
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
-          Calf/Bip001 R Foot
+      - path: Q-4
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
-          Calf/Bip001 R Foot/Bip001 R Toe0
+      - path: Q-4/DrawCall_0122
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
-          Calf/Bip001 R Foot/Bip001 R Toe0/Bip001 R Toe0Nub
+      - path: Q-4/DrawCall_0123
         weight: 1
-      - path: qiang-0
+      - path: Q-5
         weight: 1
-      - path: qiang-0/qiang-3
+      - path: Q-5/DrawCall_0080
         weight: 1
-      - path: qiang-0/qiang-3/4d289fb0_obj
+      - path: Q-5/DrawCall_0081
         weight: 1
-      - path: qiang-0/qiang-3/4d2c8688_obj
+      - path: Q-5/DrawCall_0084
         weight: 1
-      - path: qiang-0/qiang-3/4d366f90_obj
+      - path: ren
         weight: 1
-      - path: qiang-0/qiang-3/4d2cf070_obj
+      - path: ren/DrawCall_0301
         weight: 1
-      - path: qiang-0/qiang-3/4d2d1220_obj
+      - path: ren/DrawCall_0303
         weight: 1
-      - path: qiang-0/qiang-1
+      - path: ren/DrawCall_0304
         weight: 1
-      - path: qiang-0/qiang-1/4d2b6ef0_obj
+      - path: ren/Mesh_051
         weight: 1
-      - path: qiang-0/qiang-1/4d2c60e0_obj
+      - path: ren/Mesh_052
         weight: 1
-      - path: qiang-0/qiang-2
+      - path: ren/Mesh_053
         weight: 1
-      - path: qiang-0/qiang-2/4ccf1048_obj
+      - path: ren/Mesh_054
         weight: 1
-      - path: qiang-0/qiang-2/4ccef640_obj
+      - path: ren/Mesh_059
         weight: 1
-      - path: qiang-0/qiang-2/4cd2ea10_obj
+      - path: ren/Mesh_060
         weight: 1
-      - path: qiang-0/qiang-2/bvsdbsdgs
-        weight: 1
-      - path: qiang-0/qiang-2/4cca2598_obj
-        weight: 1
-      - path: qiang-0/qiang-2/4f7f8088_obj
-        weight: 1
-      - path: qiang-0/qiang-2/4cce6188_obj
-        weight: 1
-      - path: qiang-0/qiang-2/4ccee418_obj
-        weight: 1
-      - path: qiang-0/qiang-4
-        weight: 1
-      - path: qiang-0/qiang-4/4d3433c8_obj
-        weight: 1
-      - path: qiang-0/qiang-4/4f6e90c8_obj
-        weight: 1
-      - path: qiang-0/qiang-4/4d2dd7a8_obj
-        weight: 1
-      - path: qiang-0/qiang-4/4d2e2238_obj
-        weight: 1
-      - path: qiang-0/qiang-5
-        weight: 1
-      - path: qiang-0/qiang-5/4d2c3d80_obj
-        weight: 1
-      - path: qiang-0/qiang-5/4f6f96a8_obj
-        weight: 1
-      - path: qiang-0/qiang-5/4f6c5e60_obj
-        weight: 1
-      - path: qiang-0/qiang-5/4f741e08_obj
-        weight: 1
-      - path: qiang-0/qiang-6
-        weight: 1
-      - path: qiang-0/qiang-6/4cd0ad80_obj
-        weight: 1
-      - path: qiang-0/qiang-6/4cd03fb0_obj
-        weight: 1
-      - path: qiang-0/qiang-6/4cd2d008_obj
-        weight: 1
-      - path: qiang-0/qiang-7
-        weight: 1
-      - path: qiang-0/qiang-7/4f66c2c0_obj
-        weight: 1
-      - path: qiang-0/qiang-7/4ccd71b0_obj
-        weight: 1
-      - path: qiang-0/qiang-7/4ccfd7b0_obj
-        weight: 1
-      - path: qiang-0/qiang-7/4ccaae58_obj
-        weight: 1
-      - path: qiang-0/qiang-8
-        weight: 1
-      - path: qiang-0/qiang-8/4cd2df10_obj
-        weight: 1
-      - path: qiang-0/qiang-8/4cd063b8_obj
-        weight: 1
-      - path: qiang-0/qiang-8/4cca0b90_obj
-        weight: 1
-      - path: qiang-0/qiang-8/4cceb630_obj
-        weight: 1
-      - path: qiang-0/qiang-8/4f796f10_obj
+      - path: ren/SAS_body_bmp001
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
@@ -1960,41 +1952,19 @@ ModelImporter:
       loop: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events: []
       transformMask:
       - path: 
-        weight: 1
-      - path: ren
-        weight: 1
-      - path: ren/DrawCall_0304
-        weight: 1
-      - path: ren/Mesh_052
-        weight: 1
-      - path: ren/DrawCall_0303
-        weight: 1
-      - path: ren/Mesh_053
-        weight: 1
-      - path: ren/Mesh_060
-        weight: 1
-      - path: ren/Mesh_054
-        weight: 1
-      - path: ren/Mesh_051
-        weight: 1
-      - path: ren/DrawCall_0301
-        weight: 1
-      - path: ren/SAS_body_bmp001
-        weight: 1
-      - path: ren/Mesh_059
         weight: 1
       - path: Circle001
         weight: 1
@@ -2005,6 +1975,34 @@ ModelImporter:
       - path: Circle001/Bip001/Bip001 Pelvis
         weight: 1
       - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
+          Calf
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
+          Calf/Bip001 L Foot
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
+          Calf/Bip001 L Foot/Bip001 L Toe0
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
+          Calf/Bip001 L Foot/Bip001 L Toe0/Bip001 L Toe0Nub
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
+          Calf
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
+          Calf/Bip001 R Foot
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
+          Calf/Bip001 R Foot/Bip001 R Toe0
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
+          Calf/Bip001 R Foot/Bip001 R Toe0/Bip001 R Toe0Nub
         weight: 1
       - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1
         weight: 1
@@ -2212,121 +2210,55 @@ ModelImporter:
           Spine3/Bip001 Neck/Bip001 R Clavicle/Bip001 R UpperArm/Bip001 R Forearm/Bip001
           R Hand/qiang
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh
+      - path: Q-1
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
-          Calf
+      - path: Q-1/DrawCall_0054
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
-          Calf/Bip001 L Foot
+      - path: Q-1/DrawCall_0055
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
-          Calf/Bip001 L Foot/Bip001 L Toe0
+      - path: Q-1/DrawCall_0060
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
-          Calf/Bip001 L Foot/Bip001 L Toe0/Bip001 L Toe0Nub
+      - path: Q-2
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh
+      - path: Q-2/DrawCall_42
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
-          Calf
+      - path: Q-2/DrawCall_43
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
-          Calf/Bip001 R Foot
+      - path: Q-4
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
-          Calf/Bip001 R Foot/Bip001 R Toe0
+      - path: Q-4/DrawCall_0122
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
-          Calf/Bip001 R Foot/Bip001 R Toe0/Bip001 R Toe0Nub
+      - path: Q-4/DrawCall_0123
         weight: 1
-      - path: qiang-0
+      - path: Q-5
         weight: 1
-      - path: qiang-0/qiang-3
+      - path: Q-5/DrawCall_0080
         weight: 1
-      - path: qiang-0/qiang-3/4d289fb0_obj
+      - path: Q-5/DrawCall_0081
         weight: 1
-      - path: qiang-0/qiang-3/4d2c8688_obj
+      - path: Q-5/DrawCall_0084
         weight: 1
-      - path: qiang-0/qiang-3/4d366f90_obj
+      - path: ren
         weight: 1
-      - path: qiang-0/qiang-3/4d2cf070_obj
+      - path: ren/DrawCall_0301
         weight: 1
-      - path: qiang-0/qiang-3/4d2d1220_obj
+      - path: ren/DrawCall_0303
         weight: 1
-      - path: qiang-0/qiang-1
+      - path: ren/DrawCall_0304
         weight: 1
-      - path: qiang-0/qiang-1/4d2b6ef0_obj
+      - path: ren/Mesh_051
         weight: 1
-      - path: qiang-0/qiang-1/4d2c60e0_obj
+      - path: ren/Mesh_052
         weight: 1
-      - path: qiang-0/qiang-2
+      - path: ren/Mesh_053
         weight: 1
-      - path: qiang-0/qiang-2/4ccf1048_obj
+      - path: ren/Mesh_054
         weight: 1
-      - path: qiang-0/qiang-2/4ccef640_obj
+      - path: ren/Mesh_059
         weight: 1
-      - path: qiang-0/qiang-2/4cd2ea10_obj
+      - path: ren/Mesh_060
         weight: 1
-      - path: qiang-0/qiang-2/bvsdbsdgs
-        weight: 1
-      - path: qiang-0/qiang-2/4cca2598_obj
-        weight: 1
-      - path: qiang-0/qiang-2/4f7f8088_obj
-        weight: 1
-      - path: qiang-0/qiang-2/4cce6188_obj
-        weight: 1
-      - path: qiang-0/qiang-2/4ccee418_obj
-        weight: 1
-      - path: qiang-0/qiang-4
-        weight: 1
-      - path: qiang-0/qiang-4/4d3433c8_obj
-        weight: 1
-      - path: qiang-0/qiang-4/4f6e90c8_obj
-        weight: 1
-      - path: qiang-0/qiang-4/4d2dd7a8_obj
-        weight: 1
-      - path: qiang-0/qiang-4/4d2e2238_obj
-        weight: 1
-      - path: qiang-0/qiang-5
-        weight: 1
-      - path: qiang-0/qiang-5/4d2c3d80_obj
-        weight: 1
-      - path: qiang-0/qiang-5/4f6f96a8_obj
-        weight: 1
-      - path: qiang-0/qiang-5/4f6c5e60_obj
-        weight: 1
-      - path: qiang-0/qiang-5/4f741e08_obj
-        weight: 1
-      - path: qiang-0/qiang-6
-        weight: 1
-      - path: qiang-0/qiang-6/4cd0ad80_obj
-        weight: 1
-      - path: qiang-0/qiang-6/4cd03fb0_obj
-        weight: 1
-      - path: qiang-0/qiang-6/4cd2d008_obj
-        weight: 1
-      - path: qiang-0/qiang-7
-        weight: 1
-      - path: qiang-0/qiang-7/4f66c2c0_obj
-        weight: 1
-      - path: qiang-0/qiang-7/4ccd71b0_obj
-        weight: 1
-      - path: qiang-0/qiang-7/4ccfd7b0_obj
-        weight: 1
-      - path: qiang-0/qiang-7/4ccaae58_obj
-        weight: 1
-      - path: qiang-0/qiang-8
-        weight: 1
-      - path: qiang-0/qiang-8/4cd2df10_obj
-        weight: 1
-      - path: qiang-0/qiang-8/4cd063b8_obj
-        weight: 1
-      - path: qiang-0/qiang-8/4cca0b90_obj
-        weight: 1
-      - path: qiang-0/qiang-8/4cceb630_obj
-        weight: 1
-      - path: qiang-0/qiang-8/4f796f10_obj
+      - path: ren/SAS_body_bmp001
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
@@ -2342,41 +2274,19 @@ ModelImporter:
       loop: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events: []
       transformMask:
       - path: 
-        weight: 1
-      - path: ren
-        weight: 1
-      - path: ren/DrawCall_0304
-        weight: 1
-      - path: ren/Mesh_052
-        weight: 1
-      - path: ren/DrawCall_0303
-        weight: 1
-      - path: ren/Mesh_053
-        weight: 1
-      - path: ren/Mesh_060
-        weight: 1
-      - path: ren/Mesh_054
-        weight: 1
-      - path: ren/Mesh_051
-        weight: 1
-      - path: ren/DrawCall_0301
-        weight: 1
-      - path: ren/SAS_body_bmp001
-        weight: 1
-      - path: ren/Mesh_059
         weight: 1
       - path: Circle001
         weight: 1
@@ -2387,6 +2297,34 @@ ModelImporter:
       - path: Circle001/Bip001/Bip001 Pelvis
         weight: 1
       - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
+          Calf
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
+          Calf/Bip001 L Foot
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
+          Calf/Bip001 L Foot/Bip001 L Toe0
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
+          Calf/Bip001 L Foot/Bip001 L Toe0/Bip001 L Toe0Nub
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
+          Calf
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
+          Calf/Bip001 R Foot
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
+          Calf/Bip001 R Foot/Bip001 R Toe0
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
+          Calf/Bip001 R Foot/Bip001 R Toe0/Bip001 R Toe0Nub
         weight: 1
       - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1
         weight: 1
@@ -2594,121 +2532,55 @@ ModelImporter:
           Spine3/Bip001 Neck/Bip001 R Clavicle/Bip001 R UpperArm/Bip001 R Forearm/Bip001
           R Hand/qiang
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh
+      - path: Q-1
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
-          Calf
+      - path: Q-1/DrawCall_0054
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
-          Calf/Bip001 L Foot
+      - path: Q-1/DrawCall_0055
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
-          Calf/Bip001 L Foot/Bip001 L Toe0
+      - path: Q-1/DrawCall_0060
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
-          Calf/Bip001 L Foot/Bip001 L Toe0/Bip001 L Toe0Nub
+      - path: Q-2
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh
+      - path: Q-2/DrawCall_42
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
-          Calf
+      - path: Q-2/DrawCall_43
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
-          Calf/Bip001 R Foot
+      - path: Q-4
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
-          Calf/Bip001 R Foot/Bip001 R Toe0
+      - path: Q-4/DrawCall_0122
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
-          Calf/Bip001 R Foot/Bip001 R Toe0/Bip001 R Toe0Nub
+      - path: Q-4/DrawCall_0123
         weight: 1
-      - path: qiang-0
+      - path: Q-5
         weight: 1
-      - path: qiang-0/qiang-3
+      - path: Q-5/DrawCall_0080
         weight: 1
-      - path: qiang-0/qiang-3/4d289fb0_obj
+      - path: Q-5/DrawCall_0081
         weight: 1
-      - path: qiang-0/qiang-3/4d2c8688_obj
+      - path: Q-5/DrawCall_0084
         weight: 1
-      - path: qiang-0/qiang-3/4d366f90_obj
+      - path: ren
         weight: 1
-      - path: qiang-0/qiang-3/4d2cf070_obj
+      - path: ren/DrawCall_0301
         weight: 1
-      - path: qiang-0/qiang-3/4d2d1220_obj
+      - path: ren/DrawCall_0303
         weight: 1
-      - path: qiang-0/qiang-1
+      - path: ren/DrawCall_0304
         weight: 1
-      - path: qiang-0/qiang-1/4d2b6ef0_obj
+      - path: ren/Mesh_051
         weight: 1
-      - path: qiang-0/qiang-1/4d2c60e0_obj
+      - path: ren/Mesh_052
         weight: 1
-      - path: qiang-0/qiang-2
+      - path: ren/Mesh_053
         weight: 1
-      - path: qiang-0/qiang-2/4ccf1048_obj
+      - path: ren/Mesh_054
         weight: 1
-      - path: qiang-0/qiang-2/4ccef640_obj
+      - path: ren/Mesh_059
         weight: 1
-      - path: qiang-0/qiang-2/4cd2ea10_obj
+      - path: ren/Mesh_060
         weight: 1
-      - path: qiang-0/qiang-2/bvsdbsdgs
-        weight: 1
-      - path: qiang-0/qiang-2/4cca2598_obj
-        weight: 1
-      - path: qiang-0/qiang-2/4f7f8088_obj
-        weight: 1
-      - path: qiang-0/qiang-2/4cce6188_obj
-        weight: 1
-      - path: qiang-0/qiang-2/4ccee418_obj
-        weight: 1
-      - path: qiang-0/qiang-4
-        weight: 1
-      - path: qiang-0/qiang-4/4d3433c8_obj
-        weight: 1
-      - path: qiang-0/qiang-4/4f6e90c8_obj
-        weight: 1
-      - path: qiang-0/qiang-4/4d2dd7a8_obj
-        weight: 1
-      - path: qiang-0/qiang-4/4d2e2238_obj
-        weight: 1
-      - path: qiang-0/qiang-5
-        weight: 1
-      - path: qiang-0/qiang-5/4d2c3d80_obj
-        weight: 1
-      - path: qiang-0/qiang-5/4f6f96a8_obj
-        weight: 1
-      - path: qiang-0/qiang-5/4f6c5e60_obj
-        weight: 1
-      - path: qiang-0/qiang-5/4f741e08_obj
-        weight: 1
-      - path: qiang-0/qiang-6
-        weight: 1
-      - path: qiang-0/qiang-6/4cd0ad80_obj
-        weight: 1
-      - path: qiang-0/qiang-6/4cd03fb0_obj
-        weight: 1
-      - path: qiang-0/qiang-6/4cd2d008_obj
-        weight: 1
-      - path: qiang-0/qiang-7
-        weight: 1
-      - path: qiang-0/qiang-7/4f66c2c0_obj
-        weight: 1
-      - path: qiang-0/qiang-7/4ccd71b0_obj
-        weight: 1
-      - path: qiang-0/qiang-7/4ccfd7b0_obj
-        weight: 1
-      - path: qiang-0/qiang-7/4ccaae58_obj
-        weight: 1
-      - path: qiang-0/qiang-8
-        weight: 1
-      - path: qiang-0/qiang-8/4cd2df10_obj
-        weight: 1
-      - path: qiang-0/qiang-8/4cd063b8_obj
-        weight: 1
-      - path: qiang-0/qiang-8/4cca0b90_obj
-        weight: 1
-      - path: qiang-0/qiang-8/4cceb630_obj
-        weight: 1
-      - path: qiang-0/qiang-8/4f796f10_obj
+      - path: ren/SAS_body_bmp001
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
@@ -2724,13 +2596,13 @@ ModelImporter:
       loop: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
-      keepOriginalPositionY: 1
+      keepOriginalPositionY: 0
       keepOriginalPositionXZ: 0
-      heightFromFeet: 0
+      heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
@@ -3106,13 +2978,13 @@ ModelImporter:
       loop: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
-      keepOriginalPositionY: 1
+      keepOriginalPositionY: 0
       keepOriginalPositionXZ: 0
-      heightFromFeet: 0
+      heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
@@ -3488,41 +3360,19 @@ ModelImporter:
       loop: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events: []
       transformMask:
       - path: 
-        weight: 1
-      - path: ren
-        weight: 1
-      - path: ren/DrawCall_0304
-        weight: 1
-      - path: ren/Mesh_052
-        weight: 1
-      - path: ren/DrawCall_0303
-        weight: 1
-      - path: ren/Mesh_053
-        weight: 1
-      - path: ren/Mesh_060
-        weight: 1
-      - path: ren/Mesh_054
-        weight: 1
-      - path: ren/Mesh_051
-        weight: 1
-      - path: ren/DrawCall_0301
-        weight: 1
-      - path: ren/SAS_body_bmp001
-        weight: 1
-      - path: ren/Mesh_059
         weight: 1
       - path: Circle001
         weight: 1
@@ -3533,6 +3383,34 @@ ModelImporter:
       - path: Circle001/Bip001/Bip001 Pelvis
         weight: 1
       - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
+          Calf
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
+          Calf/Bip001 L Foot
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
+          Calf/Bip001 L Foot/Bip001 L Toe0
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
+          Calf/Bip001 L Foot/Bip001 L Toe0/Bip001 L Toe0Nub
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
+          Calf
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
+          Calf/Bip001 R Foot
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
+          Calf/Bip001 R Foot/Bip001 R Toe0
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
+          Calf/Bip001 R Foot/Bip001 R Toe0/Bip001 R Toe0Nub
         weight: 1
       - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1
         weight: 1
@@ -3740,121 +3618,55 @@ ModelImporter:
           Spine3/Bip001 Neck/Bip001 R Clavicle/Bip001 R UpperArm/Bip001 R Forearm/Bip001
           R Hand/qiang
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh
+      - path: Q-1
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
-          Calf
+      - path: Q-1/DrawCall_0054
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
-          Calf/Bip001 L Foot
+      - path: Q-1/DrawCall_0055
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
-          Calf/Bip001 L Foot/Bip001 L Toe0
+      - path: Q-1/DrawCall_0060
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
-          Calf/Bip001 L Foot/Bip001 L Toe0/Bip001 L Toe0Nub
+      - path: Q-2
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh
+      - path: Q-2/DrawCall_42
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
-          Calf
+      - path: Q-2/DrawCall_43
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
-          Calf/Bip001 R Foot
+      - path: Q-4
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
-          Calf/Bip001 R Foot/Bip001 R Toe0
+      - path: Q-4/DrawCall_0122
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
-          Calf/Bip001 R Foot/Bip001 R Toe0/Bip001 R Toe0Nub
+      - path: Q-4/DrawCall_0123
         weight: 1
-      - path: qiang-0
+      - path: Q-5
         weight: 1
-      - path: qiang-0/qiang-3
+      - path: Q-5/DrawCall_0080
         weight: 1
-      - path: qiang-0/qiang-3/4d289fb0_obj
+      - path: Q-5/DrawCall_0081
         weight: 1
-      - path: qiang-0/qiang-3/4d2c8688_obj
+      - path: Q-5/DrawCall_0084
         weight: 1
-      - path: qiang-0/qiang-3/4d366f90_obj
+      - path: ren
         weight: 1
-      - path: qiang-0/qiang-3/4d2cf070_obj
+      - path: ren/DrawCall_0301
         weight: 1
-      - path: qiang-0/qiang-3/4d2d1220_obj
+      - path: ren/DrawCall_0303
         weight: 1
-      - path: qiang-0/qiang-1
+      - path: ren/DrawCall_0304
         weight: 1
-      - path: qiang-0/qiang-1/4d2b6ef0_obj
+      - path: ren/Mesh_051
         weight: 1
-      - path: qiang-0/qiang-1/4d2c60e0_obj
+      - path: ren/Mesh_052
         weight: 1
-      - path: qiang-0/qiang-2
+      - path: ren/Mesh_053
         weight: 1
-      - path: qiang-0/qiang-2/4ccf1048_obj
+      - path: ren/Mesh_054
         weight: 1
-      - path: qiang-0/qiang-2/4ccef640_obj
+      - path: ren/Mesh_059
         weight: 1
-      - path: qiang-0/qiang-2/4cd2ea10_obj
+      - path: ren/Mesh_060
         weight: 1
-      - path: qiang-0/qiang-2/bvsdbsdgs
-        weight: 1
-      - path: qiang-0/qiang-2/4cca2598_obj
-        weight: 1
-      - path: qiang-0/qiang-2/4f7f8088_obj
-        weight: 1
-      - path: qiang-0/qiang-2/4cce6188_obj
-        weight: 1
-      - path: qiang-0/qiang-2/4ccee418_obj
-        weight: 1
-      - path: qiang-0/qiang-4
-        weight: 1
-      - path: qiang-0/qiang-4/4d3433c8_obj
-        weight: 1
-      - path: qiang-0/qiang-4/4f6e90c8_obj
-        weight: 1
-      - path: qiang-0/qiang-4/4d2dd7a8_obj
-        weight: 1
-      - path: qiang-0/qiang-4/4d2e2238_obj
-        weight: 1
-      - path: qiang-0/qiang-5
-        weight: 1
-      - path: qiang-0/qiang-5/4d2c3d80_obj
-        weight: 1
-      - path: qiang-0/qiang-5/4f6f96a8_obj
-        weight: 1
-      - path: qiang-0/qiang-5/4f6c5e60_obj
-        weight: 1
-      - path: qiang-0/qiang-5/4f741e08_obj
-        weight: 1
-      - path: qiang-0/qiang-6
-        weight: 1
-      - path: qiang-0/qiang-6/4cd0ad80_obj
-        weight: 1
-      - path: qiang-0/qiang-6/4cd03fb0_obj
-        weight: 1
-      - path: qiang-0/qiang-6/4cd2d008_obj
-        weight: 1
-      - path: qiang-0/qiang-7
-        weight: 1
-      - path: qiang-0/qiang-7/4f66c2c0_obj
-        weight: 1
-      - path: qiang-0/qiang-7/4ccd71b0_obj
-        weight: 1
-      - path: qiang-0/qiang-7/4ccfd7b0_obj
-        weight: 1
-      - path: qiang-0/qiang-7/4ccaae58_obj
-        weight: 1
-      - path: qiang-0/qiang-8
-        weight: 1
-      - path: qiang-0/qiang-8/4cd2df10_obj
-        weight: 1
-      - path: qiang-0/qiang-8/4cd063b8_obj
-        weight: 1
-      - path: qiang-0/qiang-8/4cca0b90_obj
-        weight: 1
-      - path: qiang-0/qiang-8/4cceb630_obj
-        weight: 1
-      - path: qiang-0/qiang-8/4f796f10_obj
+      - path: ren/SAS_body_bmp001
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
@@ -3870,13 +3682,13 @@ ModelImporter:
       loop: 0
       loopTime: 1
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
@@ -4252,41 +4064,19 @@ ModelImporter:
       loop: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events: []
       transformMask:
       - path: 
-        weight: 1
-      - path: ren
-        weight: 1
-      - path: ren/DrawCall_0304
-        weight: 1
-      - path: ren/Mesh_052
-        weight: 1
-      - path: ren/DrawCall_0303
-        weight: 1
-      - path: ren/Mesh_053
-        weight: 1
-      - path: ren/Mesh_060
-        weight: 1
-      - path: ren/Mesh_054
-        weight: 1
-      - path: ren/Mesh_051
-        weight: 1
-      - path: ren/DrawCall_0301
-        weight: 1
-      - path: ren/SAS_body_bmp001
-        weight: 1
-      - path: ren/Mesh_059
         weight: 1
       - path: Circle001
         weight: 1
@@ -4297,6 +4087,34 @@ ModelImporter:
       - path: Circle001/Bip001/Bip001 Pelvis
         weight: 1
       - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
+          Calf
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
+          Calf/Bip001 L Foot
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
+          Calf/Bip001 L Foot/Bip001 L Toe0
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
+          Calf/Bip001 L Foot/Bip001 L Toe0/Bip001 L Toe0Nub
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
+          Calf
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
+          Calf/Bip001 R Foot
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
+          Calf/Bip001 R Foot/Bip001 R Toe0
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
+          Calf/Bip001 R Foot/Bip001 R Toe0/Bip001 R Toe0Nub
         weight: 1
       - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1
         weight: 1
@@ -4504,47 +4322,7 @@ ModelImporter:
           Spine3/Bip001 Neck/Bip001 R Clavicle/Bip001 R UpperArm/Bip001 R Forearm/Bip001
           R Hand/qiang
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh
-        weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
-          Calf
-        weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
-          Calf/Bip001 L Foot
-        weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
-          Calf/Bip001 L Foot/Bip001 L Toe0
-        weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
-          Calf/Bip001 L Foot/Bip001 L Toe0/Bip001 L Toe0Nub
-        weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh
-        weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
-          Calf
-        weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
-          Calf/Bip001 R Foot
-        weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
-          Calf/Bip001 R Foot/Bip001 R Toe0
-        weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
-          Calf/Bip001 R Foot/Bip001 R Toe0/Bip001 R Toe0Nub
-        weight: 1
       - path: qiang-0
-        weight: 1
-      - path: qiang-0/qiang-3
-        weight: 1
-      - path: qiang-0/qiang-3/4d289fb0_obj
-        weight: 1
-      - path: qiang-0/qiang-3/4d2c8688_obj
-        weight: 1
-      - path: qiang-0/qiang-3/4d366f90_obj
-        weight: 1
-      - path: qiang-0/qiang-3/4d2cf070_obj
-        weight: 1
-      - path: qiang-0/qiang-3/4d2d1220_obj
         weight: 1
       - path: qiang-0/qiang-1
         weight: 1
@@ -4554,39 +4332,51 @@ ModelImporter:
         weight: 1
       - path: qiang-0/qiang-2
         weight: 1
-      - path: qiang-0/qiang-2/4ccf1048_obj
-        weight: 1
-      - path: qiang-0/qiang-2/4ccef640_obj
-        weight: 1
-      - path: qiang-0/qiang-2/4cd2ea10_obj
-        weight: 1
-      - path: qiang-0/qiang-2/bvsdbsdgs
-        weight: 1
       - path: qiang-0/qiang-2/4cca2598_obj
-        weight: 1
-      - path: qiang-0/qiang-2/4f7f8088_obj
         weight: 1
       - path: qiang-0/qiang-2/4cce6188_obj
         weight: 1
       - path: qiang-0/qiang-2/4ccee418_obj
         weight: 1
+      - path: qiang-0/qiang-2/4ccef640_obj
+        weight: 1
+      - path: qiang-0/qiang-2/4ccf1048_obj
+        weight: 1
+      - path: qiang-0/qiang-2/4cd2ea10_obj
+        weight: 1
+      - path: qiang-0/qiang-2/4f7f8088_obj
+        weight: 1
+      - path: qiang-0/qiang-2/bvsdbsdgs
+        weight: 1
+      - path: qiang-0/qiang-3
+        weight: 1
+      - path: qiang-0/qiang-3/4d2c8688_obj
+        weight: 1
+      - path: qiang-0/qiang-3/4d2cf070_obj
+        weight: 1
+      - path: qiang-0/qiang-3/4d2d1220_obj
+        weight: 1
+      - path: qiang-0/qiang-3/4d289fb0_obj
+        weight: 1
+      - path: qiang-0/qiang-3/4d366f90_obj
+        weight: 1
       - path: qiang-0/qiang-4
-        weight: 1
-      - path: qiang-0/qiang-4/4d3433c8_obj
-        weight: 1
-      - path: qiang-0/qiang-4/4f6e90c8_obj
         weight: 1
       - path: qiang-0/qiang-4/4d2dd7a8_obj
         weight: 1
       - path: qiang-0/qiang-4/4d2e2238_obj
         weight: 1
+      - path: qiang-0/qiang-4/4d3433c8_obj
+        weight: 1
+      - path: qiang-0/qiang-4/4f6e90c8_obj
+        weight: 1
       - path: qiang-0/qiang-5
         weight: 1
       - path: qiang-0/qiang-5/4d2c3d80_obj
         weight: 1
-      - path: qiang-0/qiang-5/4f6f96a8_obj
-        weight: 1
       - path: qiang-0/qiang-5/4f6c5e60_obj
+        weight: 1
+      - path: qiang-0/qiang-5/4f6f96a8_obj
         weight: 1
       - path: qiang-0/qiang-5/4f741e08_obj
         weight: 1
@@ -4594,31 +4384,53 @@ ModelImporter:
         weight: 1
       - path: qiang-0/qiang-6/4cd0ad80_obj
         weight: 1
-      - path: qiang-0/qiang-6/4cd03fb0_obj
-        weight: 1
       - path: qiang-0/qiang-6/4cd2d008_obj
+        weight: 1
+      - path: qiang-0/qiang-6/4cd03fb0_obj
         weight: 1
       - path: qiang-0/qiang-7
         weight: 1
-      - path: qiang-0/qiang-7/4f66c2c0_obj
+      - path: qiang-0/qiang-7/4ccaae58_obj
         weight: 1
       - path: qiang-0/qiang-7/4ccd71b0_obj
         weight: 1
       - path: qiang-0/qiang-7/4ccfd7b0_obj
         weight: 1
-      - path: qiang-0/qiang-7/4ccaae58_obj
+      - path: qiang-0/qiang-7/4f66c2c0_obj
         weight: 1
       - path: qiang-0/qiang-8
-        weight: 1
-      - path: qiang-0/qiang-8/4cd2df10_obj
-        weight: 1
-      - path: qiang-0/qiang-8/4cd063b8_obj
         weight: 1
       - path: qiang-0/qiang-8/4cca0b90_obj
         weight: 1
       - path: qiang-0/qiang-8/4cceb630_obj
         weight: 1
+      - path: qiang-0/qiang-8/4cd2df10_obj
+        weight: 1
+      - path: qiang-0/qiang-8/4cd063b8_obj
+        weight: 1
       - path: qiang-0/qiang-8/4f796f10_obj
+        weight: 1
+      - path: ren
+        weight: 1
+      - path: ren/DrawCall_0301
+        weight: 1
+      - path: ren/DrawCall_0303
+        weight: 1
+      - path: ren/DrawCall_0304
+        weight: 1
+      - path: ren/Mesh_051
+        weight: 1
+      - path: ren/Mesh_052
+        weight: 1
+      - path: ren/Mesh_053
+        weight: 1
+      - path: ren/Mesh_054
+        weight: 1
+      - path: ren/Mesh_059
+        weight: 1
+      - path: ren/Mesh_060
+        weight: 1
+      - path: ren/SAS_body_bmp001
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
@@ -4634,13 +4446,13 @@ ModelImporter:
       loop: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
@@ -5016,12 +4828,12 @@ ModelImporter:
       loop: 0
       loopTime: 1
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
       keepOriginalPositionY: 0
-      keepOriginalPositionXZ: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -5398,13 +5210,13 @@ ModelImporter:
       loop: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
@@ -5780,13 +5592,13 @@ ModelImporter:
       loop: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
@@ -6162,12 +5974,12 @@ ModelImporter:
       loop: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
+      loopBlendOrientation: 1
       loopBlendPositionY: 1
-      loopBlendPositionXZ: 0
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
       keepOriginalPositionY: 0
-      keepOriginalPositionXZ: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -6544,12 +6356,12 @@ ModelImporter:
       loop: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
       keepOriginalPositionY: 0
-      keepOriginalPositionXZ: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -6926,12 +6738,12 @@ ModelImporter:
       loop: 0
       loopTime: 1
       loopBlend: 0
-      loopBlendOrientation: 0
+      loopBlendOrientation: 1
       loopBlendPositionY: 1
-      loopBlendPositionXZ: 0
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
       keepOriginalPositionY: 0
-      keepOriginalPositionXZ: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -6939,28 +6751,6 @@ ModelImporter:
       events: []
       transformMask:
       - path: 
-        weight: 1
-      - path: ren
-        weight: 1
-      - path: ren/DrawCall_0304
-        weight: 1
-      - path: ren/Mesh_052
-        weight: 1
-      - path: ren/DrawCall_0303
-        weight: 1
-      - path: ren/Mesh_053
-        weight: 1
-      - path: ren/Mesh_060
-        weight: 1
-      - path: ren/Mesh_054
-        weight: 1
-      - path: ren/Mesh_051
-        weight: 1
-      - path: ren/DrawCall_0301
-        weight: 1
-      - path: ren/SAS_body_bmp001
-        weight: 1
-      - path: ren/Mesh_059
         weight: 1
       - path: Circle001
         weight: 1
@@ -6971,6 +6761,34 @@ ModelImporter:
       - path: Circle001/Bip001/Bip001 Pelvis
         weight: 1
       - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
+          Calf
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
+          Calf/Bip001 L Foot
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
+          Calf/Bip001 L Foot/Bip001 L Toe0
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
+          Calf/Bip001 L Foot/Bip001 L Toe0/Bip001 L Toe0Nub
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
+          Calf
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
+          Calf/Bip001 R Foot
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
+          Calf/Bip001 R Foot/Bip001 R Toe0
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
+          Calf/Bip001 R Foot/Bip001 R Toe0/Bip001 R Toe0Nub
         weight: 1
       - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1
         weight: 1
@@ -7178,121 +6996,55 @@ ModelImporter:
           Spine3/Bip001 Neck/Bip001 R Clavicle/Bip001 R UpperArm/Bip001 R Forearm/Bip001
           R Hand/qiang
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh
+      - path: Q-1
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
-          Calf
+      - path: Q-1/DrawCall_0054
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
-          Calf/Bip001 L Foot
+      - path: Q-1/DrawCall_0055
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
-          Calf/Bip001 L Foot/Bip001 L Toe0
+      - path: Q-1/DrawCall_0060
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
-          Calf/Bip001 L Foot/Bip001 L Toe0/Bip001 L Toe0Nub
+      - path: Q-2
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh
+      - path: Q-2/DrawCall_42
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
-          Calf
+      - path: Q-2/DrawCall_43
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
-          Calf/Bip001 R Foot
+      - path: Q-4
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
-          Calf/Bip001 R Foot/Bip001 R Toe0
+      - path: Q-4/DrawCall_0122
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
-          Calf/Bip001 R Foot/Bip001 R Toe0/Bip001 R Toe0Nub
+      - path: Q-4/DrawCall_0123
         weight: 1
-      - path: qiang-0
+      - path: Q-5
         weight: 1
-      - path: qiang-0/qiang-3
+      - path: Q-5/DrawCall_0080
         weight: 1
-      - path: qiang-0/qiang-3/4d289fb0_obj
+      - path: Q-5/DrawCall_0081
         weight: 1
-      - path: qiang-0/qiang-3/4d2c8688_obj
+      - path: Q-5/DrawCall_0084
         weight: 1
-      - path: qiang-0/qiang-3/4d366f90_obj
+      - path: ren
         weight: 1
-      - path: qiang-0/qiang-3/4d2cf070_obj
+      - path: ren/DrawCall_0301
         weight: 1
-      - path: qiang-0/qiang-3/4d2d1220_obj
+      - path: ren/DrawCall_0303
         weight: 1
-      - path: qiang-0/qiang-1
+      - path: ren/DrawCall_0304
         weight: 1
-      - path: qiang-0/qiang-1/4d2b6ef0_obj
+      - path: ren/Mesh_051
         weight: 1
-      - path: qiang-0/qiang-1/4d2c60e0_obj
+      - path: ren/Mesh_052
         weight: 1
-      - path: qiang-0/qiang-2
+      - path: ren/Mesh_053
         weight: 1
-      - path: qiang-0/qiang-2/4ccf1048_obj
+      - path: ren/Mesh_054
         weight: 1
-      - path: qiang-0/qiang-2/4ccef640_obj
+      - path: ren/Mesh_059
         weight: 1
-      - path: qiang-0/qiang-2/4cd2ea10_obj
+      - path: ren/Mesh_060
         weight: 1
-      - path: qiang-0/qiang-2/bvsdbsdgs
-        weight: 1
-      - path: qiang-0/qiang-2/4cca2598_obj
-        weight: 1
-      - path: qiang-0/qiang-2/4f7f8088_obj
-        weight: 1
-      - path: qiang-0/qiang-2/4cce6188_obj
-        weight: 1
-      - path: qiang-0/qiang-2/4ccee418_obj
-        weight: 1
-      - path: qiang-0/qiang-4
-        weight: 1
-      - path: qiang-0/qiang-4/4d3433c8_obj
-        weight: 1
-      - path: qiang-0/qiang-4/4f6e90c8_obj
-        weight: 1
-      - path: qiang-0/qiang-4/4d2dd7a8_obj
-        weight: 1
-      - path: qiang-0/qiang-4/4d2e2238_obj
-        weight: 1
-      - path: qiang-0/qiang-5
-        weight: 1
-      - path: qiang-0/qiang-5/4d2c3d80_obj
-        weight: 1
-      - path: qiang-0/qiang-5/4f6f96a8_obj
-        weight: 1
-      - path: qiang-0/qiang-5/4f6c5e60_obj
-        weight: 1
-      - path: qiang-0/qiang-5/4f741e08_obj
-        weight: 1
-      - path: qiang-0/qiang-6
-        weight: 1
-      - path: qiang-0/qiang-6/4cd0ad80_obj
-        weight: 1
-      - path: qiang-0/qiang-6/4cd03fb0_obj
-        weight: 1
-      - path: qiang-0/qiang-6/4cd2d008_obj
-        weight: 1
-      - path: qiang-0/qiang-7
-        weight: 1
-      - path: qiang-0/qiang-7/4f66c2c0_obj
-        weight: 1
-      - path: qiang-0/qiang-7/4ccd71b0_obj
-        weight: 1
-      - path: qiang-0/qiang-7/4ccfd7b0_obj
-        weight: 1
-      - path: qiang-0/qiang-7/4ccaae58_obj
-        weight: 1
-      - path: qiang-0/qiang-8
-        weight: 1
-      - path: qiang-0/qiang-8/4cd2df10_obj
-        weight: 1
-      - path: qiang-0/qiang-8/4cd063b8_obj
-        weight: 1
-      - path: qiang-0/qiang-8/4cca0b90_obj
-        weight: 1
-      - path: qiang-0/qiang-8/4cceb630_obj
-        weight: 1
-      - path: qiang-0/qiang-8/4f796f10_obj
+      - path: ren/SAS_body_bmp001
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
@@ -7308,13 +7060,13 @@ ModelImporter:
       loop: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
+      loopBlendOrientation: 1
       loopBlendPositionY: 1
-      loopBlendPositionXZ: 0
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
@@ -7690,13 +7442,13 @@ ModelImporter:
       loop: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
@@ -8072,12 +7824,12 @@ ModelImporter:
       loop: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
       keepOriginalPositionY: 0
-      keepOriginalPositionXZ: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -8454,12 +8206,12 @@ ModelImporter:
       loop: 0
       loopTime: 1
       loopBlend: 0
-      loopBlendOrientation: 0
+      loopBlendOrientation: 1
       loopBlendPositionY: 1
-      loopBlendPositionXZ: 0
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
       keepOriginalPositionY: 0
-      keepOriginalPositionXZ: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -8836,7 +8588,7 @@ ModelImporter:
       loop: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
+      loopBlendOrientation: 1
       loopBlendPositionY: 1
       loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
@@ -9218,12 +8970,12 @@ ModelImporter:
       loop: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
       keepOriginalPositionY: 0
-      keepOriginalPositionXZ: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -9600,12 +9352,12 @@ ModelImporter:
       loop: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
       keepOriginalPositionY: 0
-      keepOriginalPositionXZ: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -9982,12 +9734,12 @@ ModelImporter:
       loop: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
+      loopBlendOrientation: 1
       loopBlendPositionY: 1
-      loopBlendPositionXZ: 0
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
       keepOriginalPositionY: 0
-      keepOriginalPositionXZ: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -10364,41 +10116,19 @@ ModelImporter:
       loop: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events: []
       transformMask:
       - path: 
-        weight: 1
-      - path: ren
-        weight: 1
-      - path: ren/DrawCall_0304
-        weight: 1
-      - path: ren/Mesh_052
-        weight: 1
-      - path: ren/DrawCall_0303
-        weight: 1
-      - path: ren/Mesh_053
-        weight: 1
-      - path: ren/Mesh_060
-        weight: 1
-      - path: ren/Mesh_054
-        weight: 1
-      - path: ren/Mesh_051
-        weight: 1
-      - path: ren/DrawCall_0301
-        weight: 1
-      - path: ren/SAS_body_bmp001
-        weight: 1
-      - path: ren/Mesh_059
         weight: 1
       - path: Circle001
         weight: 1
@@ -10409,6 +10139,34 @@ ModelImporter:
       - path: Circle001/Bip001/Bip001 Pelvis
         weight: 1
       - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
+          Calf
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
+          Calf/Bip001 L Foot
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
+          Calf/Bip001 L Foot/Bip001 L Toe0
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
+          Calf/Bip001 L Foot/Bip001 L Toe0/Bip001 L Toe0Nub
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
+          Calf
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
+          Calf/Bip001 R Foot
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
+          Calf/Bip001 R Foot/Bip001 R Toe0
+        weight: 1
+      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
+          Calf/Bip001 R Foot/Bip001 R Toe0/Bip001 R Toe0Nub
         weight: 1
       - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1
         weight: 1
@@ -10616,121 +10374,55 @@ ModelImporter:
           Spine3/Bip001 Neck/Bip001 R Clavicle/Bip001 R UpperArm/Bip001 R Forearm/Bip001
           R Hand/qiang
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh
+      - path: Q-1
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
-          Calf
+      - path: Q-1/DrawCall_0054
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
-          Calf/Bip001 L Foot
+      - path: Q-1/DrawCall_0055
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
-          Calf/Bip001 L Foot/Bip001 L Toe0
+      - path: Q-1/DrawCall_0060
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
-          Calf/Bip001 L Foot/Bip001 L Toe0/Bip001 L Toe0Nub
+      - path: Q-2
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh
+      - path: Q-2/DrawCall_42
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
-          Calf
+      - path: Q-2/DrawCall_43
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
-          Calf/Bip001 R Foot
+      - path: Q-4
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
-          Calf/Bip001 R Foot/Bip001 R Toe0
+      - path: Q-4/DrawCall_0122
         weight: 1
-      - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
-          Calf/Bip001 R Foot/Bip001 R Toe0/Bip001 R Toe0Nub
+      - path: Q-4/DrawCall_0123
         weight: 1
-      - path: qiang-0
+      - path: Q-5
         weight: 1
-      - path: qiang-0/qiang-3
+      - path: Q-5/DrawCall_0080
         weight: 1
-      - path: qiang-0/qiang-3/4d289fb0_obj
+      - path: Q-5/DrawCall_0081
         weight: 1
-      - path: qiang-0/qiang-3/4d2c8688_obj
+      - path: Q-5/DrawCall_0084
         weight: 1
-      - path: qiang-0/qiang-3/4d366f90_obj
+      - path: ren
         weight: 1
-      - path: qiang-0/qiang-3/4d2cf070_obj
+      - path: ren/DrawCall_0301
         weight: 1
-      - path: qiang-0/qiang-3/4d2d1220_obj
+      - path: ren/DrawCall_0303
         weight: 1
-      - path: qiang-0/qiang-1
+      - path: ren/DrawCall_0304
         weight: 1
-      - path: qiang-0/qiang-1/4d2b6ef0_obj
+      - path: ren/Mesh_051
         weight: 1
-      - path: qiang-0/qiang-1/4d2c60e0_obj
+      - path: ren/Mesh_052
         weight: 1
-      - path: qiang-0/qiang-2
+      - path: ren/Mesh_053
         weight: 1
-      - path: qiang-0/qiang-2/4ccf1048_obj
+      - path: ren/Mesh_054
         weight: 1
-      - path: qiang-0/qiang-2/4ccef640_obj
+      - path: ren/Mesh_059
         weight: 1
-      - path: qiang-0/qiang-2/4cd2ea10_obj
+      - path: ren/Mesh_060
         weight: 1
-      - path: qiang-0/qiang-2/bvsdbsdgs
-        weight: 1
-      - path: qiang-0/qiang-2/4cca2598_obj
-        weight: 1
-      - path: qiang-0/qiang-2/4f7f8088_obj
-        weight: 1
-      - path: qiang-0/qiang-2/4cce6188_obj
-        weight: 1
-      - path: qiang-0/qiang-2/4ccee418_obj
-        weight: 1
-      - path: qiang-0/qiang-4
-        weight: 1
-      - path: qiang-0/qiang-4/4d3433c8_obj
-        weight: 1
-      - path: qiang-0/qiang-4/4f6e90c8_obj
-        weight: 1
-      - path: qiang-0/qiang-4/4d2dd7a8_obj
-        weight: 1
-      - path: qiang-0/qiang-4/4d2e2238_obj
-        weight: 1
-      - path: qiang-0/qiang-5
-        weight: 1
-      - path: qiang-0/qiang-5/4d2c3d80_obj
-        weight: 1
-      - path: qiang-0/qiang-5/4f6f96a8_obj
-        weight: 1
-      - path: qiang-0/qiang-5/4f6c5e60_obj
-        weight: 1
-      - path: qiang-0/qiang-5/4f741e08_obj
-        weight: 1
-      - path: qiang-0/qiang-6
-        weight: 1
-      - path: qiang-0/qiang-6/4cd0ad80_obj
-        weight: 1
-      - path: qiang-0/qiang-6/4cd03fb0_obj
-        weight: 1
-      - path: qiang-0/qiang-6/4cd2d008_obj
-        weight: 1
-      - path: qiang-0/qiang-7
-        weight: 1
-      - path: qiang-0/qiang-7/4f66c2c0_obj
-        weight: 1
-      - path: qiang-0/qiang-7/4ccd71b0_obj
-        weight: 1
-      - path: qiang-0/qiang-7/4ccfd7b0_obj
-        weight: 1
-      - path: qiang-0/qiang-7/4ccaae58_obj
-        weight: 1
-      - path: qiang-0/qiang-8
-        weight: 1
-      - path: qiang-0/qiang-8/4cd2df10_obj
-        weight: 1
-      - path: qiang-0/qiang-8/4cd063b8_obj
-        weight: 1
-      - path: qiang-0/qiang-8/4cca0b90_obj
-        weight: 1
-      - path: qiang-0/qiang-8/4cceb630_obj
-        weight: 1
-      - path: qiang-0/qiang-8/4f796f10_obj
+      - path: ren/SAS_body_bmp001
         weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
@@ -10748,10 +10440,10 @@ ModelImporter:
       loopBlend: 0
       loopBlendOrientation: 1
       loopBlendPositionY: 1
-      loopBlendPositionXZ: 0
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
       keepOriginalPositionY: 0
-      keepOriginalPositionXZ: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -11130,10 +10822,10 @@ ModelImporter:
       loopBlend: 0
       loopBlendOrientation: 1
       loopBlendPositionY: 1
-      loopBlendPositionXZ: 0
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
       keepOriginalPositionY: 0
-      keepOriginalPositionXZ: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -11510,7 +11202,7 @@ ModelImporter:
       loop: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
+      loopBlendOrientation: 1
       loopBlendPositionY: 1
       loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
@@ -11892,12 +11584,12 @@ ModelImporter:
       loop: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
       keepOriginalPositionY: 0
-      keepOriginalPositionXZ: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -12274,9 +11966,9 @@ ModelImporter:
       loop: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
       keepOriginalPositionY: 0
       keepOriginalPositionXZ: 0
@@ -12656,9 +12348,9 @@ ModelImporter:
       loop: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
+      loopBlendOrientation: 1
       loopBlendPositionY: 1
-      loopBlendPositionXZ: 0
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
       keepOriginalPositionY: 0
       keepOriginalPositionXZ: 1
@@ -13038,12 +12730,12 @@ ModelImporter:
       loop: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
       keepOriginalPositionY: 0
-      keepOriginalPositionXZ: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -13420,13 +13112,13 @@ ModelImporter:
       loop: 0
       loopTime: 0
       loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
@@ -13803,11 +13495,11 @@ ModelImporter:
       loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 1
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
       keepOriginalOrientation: 1
       keepOriginalPositionY: 0
-      keepOriginalPositionXZ: 0
+      keepOriginalPositionXZ: 1
       heightFromFeet: 1
       mirror: 0
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
@@ -13821,7 +13513,7 @@ ModelImporter:
       - path: Circle001/Bip001
         weight: 1
       - path: Circle001/Bip001/Bip001 Footsteps
-        weight: 0
+        weight: 1
       - path: Circle001/Bip001/Bip001 Pelvis
         weight: 1
       - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine
@@ -13839,7 +13531,7 @@ ModelImporter:
         weight: 1
       - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 L Thigh/Bip001 L
           Calf/Bip001 L Foot/Bip001 L Toe0/Bip001 L Toe0Nub
-        weight: 0
+        weight: 1
       - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh
         weight: 1
       - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
@@ -13853,7 +13545,7 @@ ModelImporter:
         weight: 1
       - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 R Thigh/Bip001 R
           Calf/Bip001 R Foot/Bip001 R Toe0/Bip001 R Toe0Nub
-        weight: 0
+        weight: 1
       - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1
         weight: 1
       - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2
@@ -13869,7 +13561,7 @@ ModelImporter:
         weight: 1
       - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
           Spine3/Bip001 Neck/Bip001 Head/Bip001 HeadNub
-        weight: 0
+        weight: 1
       - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
           Spine3/Bip001 Neck/Bip001 L Clavicle
         weight: 1
@@ -13898,7 +13590,7 @@ ModelImporter:
       - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
           Spine3/Bip001 Neck/Bip001 L Clavicle/Bip001 L UpperArm/Bip001 L Forearm/Bip001
           L Hand/Bip001 L Finger0/Bip001 L Finger01/Bip001 L Finger02/Bip001 L Finger0Nub
-        weight: 0
+        weight: 1
       - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
           Spine3/Bip001 Neck/Bip001 L Clavicle/Bip001 L UpperArm/Bip001 L Forearm/Bip001
           L Hand/Bip001 L Finger1
@@ -13914,7 +13606,7 @@ ModelImporter:
       - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
           Spine3/Bip001 Neck/Bip001 L Clavicle/Bip001 L UpperArm/Bip001 L Forearm/Bip001
           L Hand/Bip001 L Finger1/Bip001 L Finger11/Bip001 L Finger12/Bip001 L Finger1Nub
-        weight: 0
+        weight: 1
       - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
           Spine3/Bip001 Neck/Bip001 L Clavicle/Bip001 L UpperArm/Bip001 L Forearm/Bip001
           L Hand/Bip001 L Finger2
@@ -13930,7 +13622,7 @@ ModelImporter:
       - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
           Spine3/Bip001 Neck/Bip001 L Clavicle/Bip001 L UpperArm/Bip001 L Forearm/Bip001
           L Hand/Bip001 L Finger2/Bip001 L Finger21/Bip001 L Finger22/Bip001 L Finger2Nub
-        weight: 0
+        weight: 1
       - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
           Spine3/Bip001 Neck/Bip001 L Clavicle/Bip001 L UpperArm/Bip001 L Forearm/Bip001
           L Hand/Bip001 L Finger3
@@ -13946,7 +13638,7 @@ ModelImporter:
       - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
           Spine3/Bip001 Neck/Bip001 L Clavicle/Bip001 L UpperArm/Bip001 L Forearm/Bip001
           L Hand/Bip001 L Finger3/Bip001 L Finger31/Bip001 L Finger32/Bip001 L Finger3Nub
-        weight: 0
+        weight: 1
       - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
           Spine3/Bip001 Neck/Bip001 L Clavicle/Bip001 L UpperArm/Bip001 L Forearm/Bip001
           L Hand/Bip001 L Finger4
@@ -13962,7 +13654,7 @@ ModelImporter:
       - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
           Spine3/Bip001 Neck/Bip001 L Clavicle/Bip001 L UpperArm/Bip001 L Forearm/Bip001
           L Hand/Bip001 L Finger4/Bip001 L Finger41/Bip001 L Finger42/Bip001 L Finger4Nub
-        weight: 0
+        weight: 1
       - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
           Spine3/Bip001 Neck/Bip001 R Clavicle
         weight: 1
@@ -13991,7 +13683,7 @@ ModelImporter:
       - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
           Spine3/Bip001 Neck/Bip001 R Clavicle/Bip001 R UpperArm/Bip001 R Forearm/Bip001
           R Hand/Bip001 R Finger0/Bip001 R Finger01/Bip001 R Finger02/Bip001 R Finger0Nub
-        weight: 0
+        weight: 1
       - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
           Spine3/Bip001 Neck/Bip001 R Clavicle/Bip001 R UpperArm/Bip001 R Forearm/Bip001
           R Hand/Bip001 R Finger1
@@ -14007,7 +13699,7 @@ ModelImporter:
       - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
           Spine3/Bip001 Neck/Bip001 R Clavicle/Bip001 R UpperArm/Bip001 R Forearm/Bip001
           R Hand/Bip001 R Finger1/Bip001 R Finger11/Bip001 R Finger12/Bip001 R Finger1Nub
-        weight: 0
+        weight: 1
       - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
           Spine3/Bip001 Neck/Bip001 R Clavicle/Bip001 R UpperArm/Bip001 R Forearm/Bip001
           R Hand/Bip001 R Finger2
@@ -14023,7 +13715,7 @@ ModelImporter:
       - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
           Spine3/Bip001 Neck/Bip001 R Clavicle/Bip001 R UpperArm/Bip001 R Forearm/Bip001
           R Hand/Bip001 R Finger2/Bip001 R Finger21/Bip001 R Finger22/Bip001 R Finger2Nub
-        weight: 0
+        weight: 1
       - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
           Spine3/Bip001 Neck/Bip001 R Clavicle/Bip001 R UpperArm/Bip001 R Forearm/Bip001
           R Hand/Bip001 R Finger3
@@ -14039,7 +13731,7 @@ ModelImporter:
       - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
           Spine3/Bip001 Neck/Bip001 R Clavicle/Bip001 R UpperArm/Bip001 R Forearm/Bip001
           R Hand/Bip001 R Finger3/Bip001 R Finger31/Bip001 R Finger32/Bip001 R Finger3Nub
-        weight: 0
+        weight: 1
       - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
           Spine3/Bip001 Neck/Bip001 R Clavicle/Bip001 R UpperArm/Bip001 R Forearm/Bip001
           R Hand/Bip001 R Finger4
@@ -14055,121 +13747,61 @@ ModelImporter:
       - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
           Spine3/Bip001 Neck/Bip001 R Clavicle/Bip001 R UpperArm/Bip001 R Forearm/Bip001
           R Hand/Bip001 R Finger4/Bip001 R Finger41/Bip001 R Finger42/Bip001 R Finger4Nub
-        weight: 0
+        weight: 1
       - path: Circle001/Bip001/Bip001 Pelvis/Bip001 Spine/Bip001 Spine1/Bip001 Spine2/Bip001
           Spine3/Bip001 Neck/Bip001 R Clavicle/Bip001 R UpperArm/Bip001 R Forearm/Bip001
           R Hand/qiang
-        weight: 0
-      - path: qiang-0
-        weight: 0
-      - path: qiang-0/qiang-1
-        weight: 0
-      - path: qiang-0/qiang-1/4d2b6ef0_obj
-        weight: 0
-      - path: qiang-0/qiang-1/4d2c60e0_obj
-        weight: 0
-      - path: qiang-0/qiang-2
-        weight: 0
-      - path: qiang-0/qiang-2/4cca2598_obj
-        weight: 0
-      - path: qiang-0/qiang-2/4cce6188_obj
-        weight: 0
-      - path: qiang-0/qiang-2/4ccee418_obj
-        weight: 0
-      - path: qiang-0/qiang-2/4ccef640_obj
-        weight: 0
-      - path: qiang-0/qiang-2/4ccf1048_obj
-        weight: 0
-      - path: qiang-0/qiang-2/4cd2ea10_obj
-        weight: 0
-      - path: qiang-0/qiang-2/4f7f8088_obj
-        weight: 0
-      - path: qiang-0/qiang-2/bvsdbsdgs
-        weight: 0
-      - path: qiang-0/qiang-3
-        weight: 0
-      - path: qiang-0/qiang-3/4d2c8688_obj
-        weight: 0
-      - path: qiang-0/qiang-3/4d2cf070_obj
-        weight: 0
-      - path: qiang-0/qiang-3/4d2d1220_obj
-        weight: 0
-      - path: qiang-0/qiang-3/4d289fb0_obj
-        weight: 0
-      - path: qiang-0/qiang-3/4d366f90_obj
-        weight: 0
-      - path: qiang-0/qiang-4
-        weight: 0
-      - path: qiang-0/qiang-4/4d2dd7a8_obj
-        weight: 0
-      - path: qiang-0/qiang-4/4d2e2238_obj
-        weight: 0
-      - path: qiang-0/qiang-4/4d3433c8_obj
-        weight: 0
-      - path: qiang-0/qiang-4/4f6e90c8_obj
-        weight: 0
-      - path: qiang-0/qiang-5
-        weight: 0
-      - path: qiang-0/qiang-5/4d2c3d80_obj
-        weight: 0
-      - path: qiang-0/qiang-5/4f6c5e60_obj
-        weight: 0
-      - path: qiang-0/qiang-5/4f6f96a8_obj
-        weight: 0
-      - path: qiang-0/qiang-5/4f741e08_obj
-        weight: 0
-      - path: qiang-0/qiang-6
-        weight: 0
-      - path: qiang-0/qiang-6/4cd0ad80_obj
-        weight: 0
-      - path: qiang-0/qiang-6/4cd2d008_obj
-        weight: 0
-      - path: qiang-0/qiang-6/4cd03fb0_obj
-        weight: 0
-      - path: qiang-0/qiang-7
-        weight: 0
-      - path: qiang-0/qiang-7/4ccaae58_obj
-        weight: 0
-      - path: qiang-0/qiang-7/4ccd71b0_obj
-        weight: 0
-      - path: qiang-0/qiang-7/4ccfd7b0_obj
-        weight: 0
-      - path: qiang-0/qiang-7/4f66c2c0_obj
-        weight: 0
-      - path: qiang-0/qiang-8
-        weight: 0
-      - path: qiang-0/qiang-8/4cca0b90_obj
-        weight: 0
-      - path: qiang-0/qiang-8/4cceb630_obj
-        weight: 0
-      - path: qiang-0/qiang-8/4cd2df10_obj
-        weight: 0
-      - path: qiang-0/qiang-8/4cd063b8_obj
-        weight: 0
-      - path: qiang-0/qiang-8/4f796f10_obj
-        weight: 0
+        weight: 1
+      - path: Q-1
+        weight: 1
+      - path: Q-1/DrawCall_0054
+        weight: 1
+      - path: Q-1/DrawCall_0055
+        weight: 1
+      - path: Q-1/DrawCall_0060
+        weight: 1
+      - path: Q-2
+        weight: 1
+      - path: Q-2/DrawCall_42
+        weight: 1
+      - path: Q-2/DrawCall_43
+        weight: 1
+      - path: Q-4
+        weight: 1
+      - path: Q-4/DrawCall_0122
+        weight: 1
+      - path: Q-4/DrawCall_0123
+        weight: 1
+      - path: Q-5
+        weight: 1
+      - path: Q-5/DrawCall_0080
+        weight: 1
+      - path: Q-5/DrawCall_0081
+        weight: 1
+      - path: Q-5/DrawCall_0084
+        weight: 1
       - path: ren
-        weight: 0
+        weight: 1
       - path: ren/DrawCall_0301
-        weight: 0
+        weight: 1
       - path: ren/DrawCall_0303
-        weight: 0
+        weight: 1
       - path: ren/DrawCall_0304
-        weight: 0
+        weight: 1
       - path: ren/Mesh_051
-        weight: 0
+        weight: 1
       - path: ren/Mesh_052
-        weight: 0
+        weight: 1
       - path: ren/Mesh_053
-        weight: 0
+        weight: 1
       - path: ren/Mesh_054
-        weight: 0
+        weight: 1
       - path: ren/Mesh_059
-        weight: 0
+        weight: 1
       - path: ren/Mesh_060
-        weight: 0
+        weight: 1
       - path: ren/SAS_body_bmp001
-        weight: 0
+        weight: 1
       maskType: 0
       maskSource: {instanceID: 0}
     isReadable: 1
@@ -14611,52 +14243,52 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: DrawCall_0304
-      position: {x: -.0103948815, y: -.0943930149, z: -1.8178134}
+      position: {x: -.0103948805, y: -.0943930149, z: -1.8178134}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Mesh_052
-      position: {x: -.0103948815, y: -.0943930149, z: -1.8178134}
+      position: {x: -.0103948805, y: -.0943930149, z: -1.8178134}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: DrawCall_0303
-      position: {x: -.0103948815, y: -.0943930149, z: -1.8178134}
+      position: {x: -.0103948805, y: -.0943930149, z: -1.8178134}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Mesh_053
-      position: {x: -.0103948815, y: -.0943930149, z: -1.8178134}
+      position: {x: -.0103948805, y: -.0943930149, z: -1.8178134}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Mesh_060
-      position: {x: -.0103948815, y: -.0943930149, z: -1.8178134}
+      position: {x: -.0103948805, y: -.0943930149, z: -1.8178134}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Mesh_054
-      position: {x: -.0103948815, y: -.0943930149, z: -1.8178134}
+      position: {x: -.0103948805, y: -.0943930149, z: -1.8178134}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Mesh_051
-      position: {x: -.0103948815, y: -.0943930149, z: -1.8178134}
+      position: {x: -.0103948805, y: -.0943930149, z: -1.8178134}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: DrawCall_0301
-      position: {x: -.0103948815, y: -.0943930149, z: -1.8178134}
+      position: {x: -.0103948805, y: -.0943930149, z: -1.8178134}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: SAS_body_bmp001
-      position: {x: -.0103948815, y: -.0943930149, z: -1.8178134}
+      position: {x: -.0103948805, y: -.0943930149, z: -1.8178134}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Mesh_059
-      position: {x: -.0103948815, y: -.0943930149, z: -1.8178134}
+      position: {x: -.0103948805, y: -.0943930149, z: -1.8178134}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
@@ -14666,12 +14298,12 @@ ModelImporter:
       scale: {x: 1.00000012, y: 1, z: 1}
       transformModified: 1
     - name: Bip001
-      position: {x: .0392093137, y: .102143735, z: 4.47241402}
+      position: {x: .03920931, y: .102143735, z: 4.47241402}
       rotation: {x: 0, y: 0, z: .566405594, w: .824126661}
       scale: {x: .999999881, y: .999999881, z: 1}
       transformModified: 1
     - name: Bip001 Footsteps
-      position: {x: -0, y: 0, z: -1.79958844}
+      position: {x: -0, y: 0, z: -1.79958856}
       rotation: {x: 0, y: -0, z: -.707106233, w: .707107365}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
@@ -14681,12 +14313,12 @@ ModelImporter:
       scale: {x: .999999404, y: .999999464, z: .999999464}
       transformModified: 1
     - name: Bip001 Spine
-      position: {x: -.0220438223, y: -.000215584747, z: 3.08744781e-08}
+      position: {x: -.0220438205, y: -.000215584747, z: 3.08744781e-08}
       rotation: {x: 2.11596443e-06, y: 2.98023153e-08, z: 2.98023153e-08, w: -1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: Bip001 Spine1
-      position: {x: -.27136606, y: -.00021601867, z: -5.99164163e-10}
+      position: {x: -.27136606, y: -.000216018685, z: -5.99164163e-10}
       rotation: {x: 2.98023153e-08, y: -1.19209261e-07, z: .0252461676, w: .999681234}
       scale: {x: 1.00000024, y: 1.00000024, z: 1.00000024}
       transformModified: 1
@@ -14696,12 +14328,12 @@ ModelImporter:
       scale: {x: .99999994, y: .99999994, z: 1.00000024}
       transformModified: 1
     - name: Bip001 Spine3
-      position: {x: -.271422595, y: -.000238086694, z: -6.60220378e-10}
+      position: {x: -.271422565, y: -.000238086694, z: -6.60220378e-10}
       rotation: {x: -5.96046377e-08, y: -2.98023188e-08, z: .00386454118, w: .999992549}
       scale: {x: 1.00000012, y: 1.00000048, z: .999999523}
       transformModified: 1
     - name: Bip001 Neck
-      position: {x: -.308823168, y: -.000133375157, z: -3.17470938e-10}
+      position: {x: -.308823168, y: -.000133375142, z: -3.17470938e-10}
       rotation: {x: 0, y: -1.7881392e-07, z: .1028056, w: -.994701505}
       scale: {x: 1.00000036, y: 1.00000024, z: .99999994}
       transformModified: 1
@@ -14711,7 +14343,7 @@ ModelImporter:
       scale: {x: .999999762, y: .999999583, z: 1.00000024}
       transformModified: 1
     - name: Bip001 HeadNub
-      position: {x: -.461769342, y: 0, z: 0}
+      position: {x: -.461769313, y: 0, z: 0}
       rotation: {x: -3.95812094e-09, y: 1.86264493e-09, z: 3.72528985e-09, w: 1}
       scale: {x: 1.00000012, y: 1, z: 1.00000012}
       transformModified: 1
@@ -14731,17 +14363,17 @@ ModelImporter:
       scale: {x: 1.00000036, y: 1.00000036, z: 1.00000012}
       transformModified: 1
     - name: Bip001 L Hand
-      position: {x: -.524584949, y: 2.4795531e-08, z: 1.98364248e-07}
+      position: {x: -.524584889, y: 2.4795531e-08, z: 1.98364248e-07}
       rotation: {x: .706611633, y: -.0173925646, z: -.017378727, w: -.70717442}
       scale: {x: .999999523, y: .999999881, z: .999999762}
       transformModified: 1
     - name: Bip001 L Finger3
-      position: {x: -.225572482, y: -.000134490954, z: .0130161904}
+      position: {x: -.225572482, y: -.000134490954, z: .0130161894}
       rotation: {x: -.000238949986, y: -.00418919558, z: .0357815176, w: .999350905}
       scale: {x: .999999702, y: 1.0000006, z: 1.00000048}
       transformModified: 1
     - name: Bip001 L Finger31
-      position: {x: -.0847259313, y: -1.98364248e-07, z: 0}
+      position: {x: -.0847259387, y: -1.98364248e-07, z: 0}
       rotation: {x: -4.14729584e-09, y: -1.60653144e-08, z: -.0352120325, w: .999379873}
       scale: {x: .99999994, y: 1.0000006, z: 1.00000012}
       transformModified: 1
@@ -14756,7 +14388,7 @@ ModelImporter:
       scale: {x: 1, y: 1.00000012, z: 1.00000012}
       transformModified: 1
     - name: Bip001 L Finger2
-      position: {x: -.225984678, y: -.000645477267, z: -.0363168493}
+      position: {x: -.225984663, y: -.000645477267, z: -.0363168456}
       rotation: {x: -.000237486485, y: -.00422315858, z: .0358864293, w: .999346972}
       scale: {x: 1.0000006, y: 1.00000072, z: 1.00000012}
       transformModified: 1
@@ -14776,7 +14408,7 @@ ModelImporter:
       scale: {x: .99999994, y: .99999994, z: .99999994}
       transformModified: 1
     - name: Bip001 L Finger1
-      position: {x: -.217455819, y: -.00122073363, z: -.0843745545}
+      position: {x: -.217455819, y: -.00122073363, z: -.0843745619}
       rotation: {x: -.000237536326, y: -.004222224, z: .0358869359, w: .999346972}
       scale: {x: 1.0000006, y: 1.00000072, z: 1.00000012}
       transformModified: 1
@@ -14806,7 +14438,7 @@ ModelImporter:
       scale: {x: .999999762, y: 1.00000024, z: 1.00000012}
       transformModified: 1
     - name: Bip001 L Finger42
-      position: {x: -.0567659959, y: 3.96728495e-07, z: 0}
+      position: {x: -.0567659922, y: 3.96728495e-07, z: 0}
       rotation: {x: 6.96163127e-08, y: -8.56816129e-08, z: -.0396816246, w: .999212384}
       scale: {x: 1.00000012, y: .99999994, z: .999999762}
       transformModified: 1
@@ -14816,7 +14448,7 @@ ModelImporter:
       scale: {x: 1, y: 1, z: .99999994}
       transformModified: 1
     - name: Bip001 L Finger0
-      position: {x: -.106046714, y: -.00103625481, z: -.0898349062}
+      position: {x: -.106046721, y: -.00103625481, z: -.0898349062}
       rotation: {x: -.44693315, y: .385833144, z: -.171694651, w: -.788609207}
       scale: {x: .999999285, y: 1, z: 1.00000107}
       transformModified: 1
@@ -14831,7 +14463,7 @@ ModelImporter:
       scale: {x: 1, y: 1.00000024, z: 1}
       transformModified: 1
     - name: Bip001 L Finger0Nub
-      position: {x: -.0737956688, y: 0, z: 1.98364248e-07}
+      position: {x: -.0737956613, y: 0, z: 1.98364248e-07}
       rotation: {x: -4.16333634e-17, y: -3.7252903e-09, z: -1.11758709e-08, w: 1}
       scale: {x: 1, y: 1, z: 1.00000012}
       transformModified: 1
@@ -14856,7 +14488,7 @@ ModelImporter:
       scale: {x: .99999994, y: 1.00000012, z: 1.00000012}
       transformModified: 1
     - name: Bip001 R Finger3
-      position: {x: -.225572586, y: -.000134490954, z: -.0130161904}
+      position: {x: -.225572586, y: -.000134490954, z: -.0130161894}
       rotation: {x: .000238878594, y: .00418930966, z: .035781417, w: .999350905}
       scale: {x: .999999642, y: 1.00000048, z: 1.00000036}
       transformModified: 1
@@ -14876,7 +14508,7 @@ ModelImporter:
       scale: {x: -1, y: -1, z: -1.00000012}
       transformModified: 1
     - name: Bip001 R Finger2
-      position: {x: -.225984782, y: -.000645477267, z: .0363168493}
+      position: {x: -.225984767, y: -.000645477267, z: .0363168456}
       rotation: {x: .000237397791, y: .0042226119, z: .0358864889, w: .999346972}
       scale: {x: 1.00000083, y: 1.00000095, z: 1}
       transformModified: 1
@@ -14896,22 +14528,22 @@ ModelImporter:
       scale: {x: -.999999881, y: -.999999881, z: -.999999881}
       transformModified: 1
     - name: Bip001 R Finger1
-      position: {x: -.217455909, y: -.00122073363, z: .0843745768}
+      position: {x: -.217455894, y: -.00122073363, z: .0843745768}
       rotation: {x: .000237317698, y: .00422402937, z: .0358856767, w: .999347031}
       scale: {x: 1.00000083, y: 1.00000095, z: 1}
       transformModified: 1
     - name: Bip001 R Finger11
-      position: {x: -.0920239538, y: 0, z: -4.95910619e-08}
+      position: {x: -.0920239463, y: 0, z: -4.95910619e-08}
       rotation: {x: -.00376926083, y: -.0201775301, z: -.033396095, w: .999231398}
       scale: {x: 1, y: .99999994, z: 1.00000024}
       transformModified: 1
     - name: Bip001 R Finger12
-      position: {x: -.0702878907, y: -1.98364248e-07, z: 0}
+      position: {x: -.0702878982, y: -1.98364248e-07, z: 0}
       rotation: {x: 2.98023117e-08, y: -3.72528888e-08, z: .0410271287, w: .999158084}
       scale: {x: 1.00000012, y: 1.00000036, z: .999999702}
       transformModified: 1
     - name: Bip001 R Finger1Nub
-      position: {x: -.0702878907, y: 1.98364248e-07, z: 3.71932956e-08}
+      position: {x: -.0702878982, y: 1.98364248e-07, z: 3.71932956e-08}
       rotation: {x: 1.39698397e-09, y: -3.7252903e-09, z: 1, w: -7.4505806e-09}
       scale: {x: -.99999994, y: -.99999994, z: -.99999994}
       transformModified: 1
@@ -14931,7 +14563,7 @@ ModelImporter:
       scale: {x: .999999583, y: .999999583, z: 1}
       transformModified: 1
     - name: Bip001 R Finger0Nub
-      position: {x: -.0737954676, y: 4.95910619e-08, z: 0}
+      position: {x: -.0737954602, y: 4.95910619e-08, z: 0}
       rotation: {x: -3.46944695e-17, y: -7.4505806e-09, z: 1, w: 4.65661287e-09}
       scale: {x: -1, y: -1, z: -1}
       transformModified: 1
@@ -14946,7 +14578,7 @@ ModelImporter:
       scale: {x: .999999881, y: 1.00000024, z: .999999821}
       transformModified: 1
     - name: Bip001 R Finger42
-      position: {x: -.0567659959, y: 1.98364248e-07, z: 0}
+      position: {x: -.0567659922, y: 1.98364248e-07, z: 0}
       rotation: {x: 2.25380006e-07, y: 1.11758682e-08, z: -.039681226, w: .999212384}
       scale: {x: 1, y: 1.00000012, z: .99999994}
       transformModified: 1
@@ -15001,7 +14633,7 @@ ModelImporter:
       scale: {x: .999999881, y: 1.00000012, z: 1}
       transformModified: 1
     - name: Bip001 R Toe0
-      position: {x: -.188895181, y: .26083377, z: 2.4795531e-08}
+      position: {x: -.188895196, y: .26083377, z: 2.4795531e-08}
       rotation: {x: 4.17232457e-07, y: 4.17232457e-07, z: -.707106888, w: .707106769}
       scale: {x: 1.00000024, y: 1, z: 1.00000036}
       transformModified: 1
@@ -15011,12 +14643,12 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: qiang-0
-      position: {x: 2.25670338, y: 2.74221396, z: -.188484922}
+      position: {x: 2.25670314, y: 2.74221373, z: -.188484922}
       rotation: {x: -.706864476, y: .0185098983, z: .0185098983, w: .706864476}
       scale: {x: 1, y: 1.00000012, z: 1}
       transformModified: 1
     - name: qiang-3
-      position: {x: -.1754262, y: -.0929606035, z: .020802062}
+      position: {x: -.1754262, y: -.092960611, z: .020802062}
       rotation: {x: .707106829, y: 0, z: -0, w: .707106829}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
@@ -15046,62 +14678,62 @@ ModelImporter:
       scale: {x: 4.5746994, y: 4.5746994, z: 4.5746994}
       transformModified: 1
     - name: qiang-1
-      position: {x: -.555957913, y: .0396750458, z: -.085797295}
+      position: {x: -.555957913, y: .0396750458, z: -.0857972875}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: 4d2b6ef0_obj
-      position: {x: -2.13774753, y: .202546567, z: -4.44706917}
+      position: {x: -2.13774753, y: .202546567, z: -4.44706869}
       rotation: {x: .707106829, y: 0, z: -0, w: .707106709}
       scale: {x: 4.5746994, y: 4.5746994, z: 4.5746994}
       transformModified: 1
     - name: 4d2c60e0_obj
-      position: {x: -2.13774753, y: .202546567, z: -4.44706917}
+      position: {x: -2.13774753, y: .202546567, z: -4.44706869}
       rotation: {x: .707106829, y: 0, z: -0, w: .707106709}
       scale: {x: 4.5746994, y: 4.5746994, z: 4.5746994}
       transformModified: 1
     - name: qiang-2
-      position: {x: -.266919732, y: -.0557093844, z: .0581008866}
+      position: {x: -.266919732, y: -.0557093807, z: .0581008904}
       rotation: {x: .707106829, y: 0, z: -0, w: .707106709}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: 4ccf1048_obj
-      position: {x: -2.42517161, y: -3.76798129, z: -.26840508}
+      position: {x: -2.42517138, y: -3.76798129, z: -.26840508}
       rotation: {x: -6.21280371e-15, y: 0, z: -0, w: 1}
       scale: {x: 4.5746994, y: 4.5746994, z: 4.5746994}
       transformModified: 1
     - name: 4ccef640_obj
-      position: {x: -2.42517161, y: -3.76798129, z: -.26840508}
+      position: {x: -2.42517138, y: -3.76798129, z: -.26840508}
       rotation: {x: -6.21280371e-15, y: 0, z: -0, w: 1}
       scale: {x: 4.5746994, y: 4.5746994, z: 4.5746994}
       transformModified: 1
     - name: 4cd2ea10_obj
-      position: {x: -2.42517161, y: -3.76798129, z: -.26840508}
+      position: {x: -2.42517138, y: -3.76798129, z: -.26840508}
       rotation: {x: -6.21280371e-15, y: 0, z: -0, w: 1}
       scale: {x: 4.5746994, y: 4.5746994, z: 4.5746994}
       transformModified: 1
     - name: bvsdbsdgs
-      position: {x: -.238151759, y: -.0387841761, z: -.26840505}
+      position: {x: -.238151744, y: -.0387841761, z: -.26840505}
       rotation: {x: -6.21280371e-15, y: 0, z: -0, w: 1}
       scale: {x: 4.5746994, y: 4.5746994, z: 4.5746994}
       transformModified: 1
     - name: 4cca2598_obj
-      position: {x: -2.42517161, y: -3.76798129, z: -.26840508}
+      position: {x: -2.42517138, y: -3.76798129, z: -.26840508}
       rotation: {x: -6.21280371e-15, y: 0, z: -0, w: 1}
       scale: {x: 4.5746994, y: 4.5746994, z: 4.5746994}
       transformModified: 1
     - name: 4f7f8088_obj
-      position: {x: -2.42517161, y: -3.76798129, z: -.26840508}
+      position: {x: -2.42517138, y: -3.76798129, z: -.26840508}
       rotation: {x: -6.21280371e-15, y: 0, z: -0, w: 1}
       scale: {x: 4.5746994, y: 4.5746994, z: 4.5746994}
       transformModified: 1
     - name: 4cce6188_obj
-      position: {x: -2.42517161, y: -3.76798129, z: -.26840508}
+      position: {x: -2.42517138, y: -3.76798129, z: -.26840508}
       rotation: {x: -6.21280371e-15, y: 0, z: -0, w: 1}
       scale: {x: 4.5746994, y: 4.5746994, z: 4.5746994}
       transformModified: 1
     - name: 4ccee418_obj
-      position: {x: -2.42517161, y: -3.76798129, z: -.26840508}
+      position: {x: -2.42517138, y: -3.76798129, z: -.26840508}
       rotation: {x: -6.21280371e-15, y: 0, z: -0, w: 1}
       scale: {x: 4.5746994, y: 4.5746994, z: 4.5746994}
       transformModified: 1
@@ -15136,22 +14768,22 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: 4d2c3d80_obj
-      position: {x: -2.43540049, y: .29441765, z: -1.9662919}
+      position: {x: -2.43540025, y: .29441765, z: -1.9662919}
       rotation: {x: .707106829, y: 0, z: -0, w: .707106709}
       scale: {x: 4.5746994, y: 4.5746994, z: 4.5746994}
       transformModified: 1
     - name: 4f6f96a8_obj
-      position: {x: -2.43540049, y: .29441765, z: -1.9662919}
+      position: {x: -2.43540025, y: .29441765, z: -1.9662919}
       rotation: {x: .707106829, y: 0, z: -0, w: .707106709}
       scale: {x: 4.5746994, y: 4.5746994, z: 4.5746994}
       transformModified: 1
     - name: 4f6c5e60_obj
-      position: {x: -2.43540049, y: .29441765, z: -1.9662919}
+      position: {x: -2.43540025, y: .29441765, z: -1.9662919}
       rotation: {x: .707106829, y: 0, z: -0, w: .707106709}
       scale: {x: 4.5746994, y: 4.5746994, z: 4.5746994}
       transformModified: 1
     - name: 4f741e08_obj
-      position: {x: -2.43540049, y: .29441765, z: -1.9662919}
+      position: {x: -2.43540025, y: .29441765, z: -1.9662919}
       rotation: {x: .707106829, y: 0, z: -0, w: .707106709}
       scale: {x: 4.5746994, y: 4.5746994, z: 4.5746994}
       transformModified: 1
@@ -15161,42 +14793,42 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: 4cd0ad80_obj
-      position: {x: -3.26962519, y: -.138341606, z: -.337831706}
+      position: {x: -3.26962543, y: -.138341606, z: -.337831706}
       rotation: {x: -6.21280371e-15, y: 0, z: -0, w: 1}
       scale: {x: 4.5746994, y: 4.5746994, z: 4.5746994}
       transformModified: 1
     - name: 4cd03fb0_obj
-      position: {x: -3.26962519, y: -.138341606, z: -.337831706}
+      position: {x: -3.26962543, y: -.138341606, z: -.337831706}
       rotation: {x: -6.21280371e-15, y: 0, z: -0, w: 1}
       scale: {x: 4.5746994, y: 4.5746994, z: 4.5746994}
       transformModified: 1
     - name: 4cd2d008_obj
-      position: {x: -3.26962519, y: -.138341606, z: -.337831706}
+      position: {x: -3.26962543, y: -.138341606, z: -.337831706}
       rotation: {x: -6.21280371e-15, y: 0, z: -0, w: 1}
       scale: {x: 4.5746994, y: 4.5746994, z: 4.5746994}
       transformModified: 1
     - name: qiang-7
-      position: {x: .0718300715, y: -.155154929, z: .0364165008}
+      position: {x: .0718300715, y: -.155154914, z: .0364164971}
       rotation: {x: .707106829, y: 0, z: -0, w: .707106709}
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: 4f66c2c0_obj
-      position: {x: -3.42504668, y: .484998614, z: -.342553586}
+      position: {x: -3.42504644, y: .484998614, z: -.342553586}
       rotation: {x: -6.21280371e-15, y: 0, z: -0, w: 1}
       scale: {x: 4.5746994, y: 4.5746994, z: 4.5746994}
       transformModified: 1
     - name: 4ccd71b0_obj
-      position: {x: -3.42504668, y: .484998614, z: -.342553586}
+      position: {x: -3.42504644, y: .484998614, z: -.342553586}
       rotation: {x: -6.21280371e-15, y: 0, z: -0, w: 1}
       scale: {x: 4.5746994, y: 4.5746994, z: 4.5746994}
       transformModified: 1
     - name: 4ccfd7b0_obj
-      position: {x: -1.14487398, y: -.24973385, z: -.342553616}
+      position: {x: -1.14487386, y: -.249733835, z: -.342553616}
       rotation: {x: -6.21280371e-15, y: 0, z: -0, w: 1}
       scale: {x: 4.5746994, y: 4.5746994, z: 4.5746994}
       transformModified: 1
     - name: 4ccaae58_obj
-      position: {x: -3.42504668, y: .484998614, z: -.342553586}
+      position: {x: -3.42504644, y: .484998614, z: -.342553586}
       rotation: {x: -6.21280371e-15, y: 0, z: -0, w: 1}
       scale: {x: 4.5746994, y: 4.5746994, z: 4.5746994}
       transformModified: 1
@@ -15206,27 +14838,27 @@ ModelImporter:
       scale: {x: 1, y: 1, z: 1}
       transformModified: 1
     - name: 4cd2df10_obj
-      position: {x: -3.44588542, y: 1.03743744, z: -.337736547}
+      position: {x: -3.44588542, y: 1.03743744, z: -.337736517}
       rotation: {x: -6.21280371e-15, y: 0, z: -0, w: 1}
       scale: {x: 4.5746994, y: 4.5746994, z: 4.5746994}
       transformModified: 1
     - name: 4cd063b8_obj
-      position: {x: -3.44588542, y: 1.03743744, z: -.337736547}
+      position: {x: -3.44588542, y: 1.03743744, z: -.337736517}
       rotation: {x: -6.21280371e-15, y: 0, z: -0, w: 1}
       scale: {x: 4.5746994, y: 4.5746994, z: 4.5746994}
       transformModified: 1
     - name: 4cca0b90_obj
-      position: {x: -3.44588542, y: 1.03743744, z: -.337736547}
+      position: {x: -3.44588542, y: 1.03743744, z: -.337736517}
       rotation: {x: -6.21280371e-15, y: 0, z: -0, w: 1}
       scale: {x: 4.5746994, y: 4.5746994, z: 4.5746994}
       transformModified: 1
     - name: 4cceb630_obj
-      position: {x: -3.44588542, y: 1.03743744, z: -.337736547}
+      position: {x: -3.44588542, y: 1.03743744, z: -.337736517}
       rotation: {x: -6.21280371e-15, y: 0, z: -0, w: 1}
       scale: {x: 4.5746994, y: 4.5746994, z: 4.5746994}
       transformModified: 1
     - name: 4f796f10_obj
-      position: {x: -3.44588542, y: 1.03743744, z: -.337736547}
+      position: {x: -3.44588542, y: 1.03743744, z: -.337736517}
       rotation: {x: -6.21280371e-15, y: 0, z: -0, w: 1}
       scale: {x: 4.5746994, y: 4.5746994, z: 4.5746994}
       transformModified: 1

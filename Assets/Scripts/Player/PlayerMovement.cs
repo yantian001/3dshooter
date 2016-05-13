@@ -35,6 +35,8 @@ public class PlayerMovement : MonoBehaviour
         {
             animator = GetComponent<Animator>();
         }
+       // agent.enabled = false;
+        character.enabled = false;
     }
     /// <summary>
     /// 是否可以向左边移动
@@ -61,6 +63,7 @@ public class PlayerMovement : MonoBehaviour
             if (agent.remainingDistance < 0.1f)
             {
                 agent.enabled = false;
+               // character.enabled = false;
                 //isMoving = false;
             }
             else
@@ -146,6 +149,7 @@ public class PlayerMovement : MonoBehaviour
         }
         //index = i % targets.Length;
         agent.enabled = true;
+      //  character.enabled = true;
         //isMoving = true;
         transform.LookAt(targets[index].position);
         agent.SetDestination(targets[index].position);
