@@ -3,5 +3,5 @@ using System.Collections;
 
 public class TargetPosition : MonoBehaviour
 {
-    public int id = 0;
+    public string allowedEnemy = "tufei-1";
 }

@@ -71,6 +71,20 @@ namespace GameDataEditor
             }
         }
 
+        private static string InfoKey = "Info";
+		private GDETaskInfoData _Info;
+        public GDETaskInfoData Info
+        {
+            get { return _Info; }
+            set {
+                if (_Info != value)
+                {
+                    _Info = value;
+                    GDEDataManager.SetCustom(_key+"_"+InfoKey, _Info);
+                }
+            }
+        }
+
         public GDETaskData()
 		{
 			_key = string.Empty;
@@ -93,6 +107,10 @@ namespace GameDataEditor
                 dict.TryGetInt(TaskNumKey, out _TaskNum);
                 dict.TryGetString(TaskContentKey, out _TaskContent);
                 dict.TryGetString(TaskThumbKey, out _TaskThumb);
+
+                string customDataKey;
+                dict.TryGetString(InfoKey, out customDataKey);
+				GDEDataManager.DataDictionary.TryGetCustom(customDataKey, out _Info);
                 LoadFromSavedData(dataKey);
 			}
 		}
@@ -105,6 +123,8 @@ namespace GameDataEditor
             _TaskNum = GDEDataManager.GetInt(_key+"_"+TaskNumKey, _TaskNum);
             _TaskContent = GDEDataManager.GetString(_key+"_"+TaskContentKey, _TaskContent);
             _TaskThumb = GDEDataManager.GetString(_key+"_"+TaskThumbKey, _TaskThumb);
+
+            _Info = GDEDataManager.GetCustom(_key+"_"+InfoKey, _Info);
          }
 
         public void Reset_isLocked()
@@ -143,13 +163,31 @@ namespace GameDataEditor
             dict.TryGetString(TaskThumbKey, out _TaskThumb);
         }
 
+        public void Reset_Info()
+		{
+			GDEDataManager.ResetToDefault(_key, InfoKey);
+
+			Dictionary<string, object> dict;
+	        GDEDataManager.Get(_key, out dict);
+
+			string customDataKey;
+            dict.TryGetString(InfoKey, out customDataKey);
+
+            GDEDataManager.DataDictionary.TryGetCustom(customDataKey, out _Info);
+			Info = GDEDataManager.GetCustom(_key+"_"+InfoKey, _Info);
+
+			Info.ResetAll();
+		}
+
         public void ResetAll()
         {
             GDEDataManager.ResetToDefault(_key, isLockedKey);
             GDEDataManager.ResetToDefault(_key, TaskContentKey);
             GDEDataManager.ResetToDefault(_key, TaskThumbKey);
             GDEDataManager.ResetToDefault(_key, TaskNumKey);
+            GDEDataManager.ResetToDefault(_key, InfoKey);
 
+            Reset_Info();
 
             Dictionary<string, object> dict;
             GDEDataManager.Get(_key, out dict);

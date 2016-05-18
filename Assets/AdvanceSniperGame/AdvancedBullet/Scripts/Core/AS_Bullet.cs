@@ -246,11 +246,11 @@ public class AS_Bullet : MonoBehaviour
         // sorted first to the last
         hits = new RaycastHit[castcount];
         //ÐÞ¸ÄÅÅÐò·½Ê½
-        // castHits.Sort((x, y) => x.distance.CompareTo(y.distance));
-        castHits.Sort((x, y) =>
-        {
-            return y.sort.CompareTo(x.sort);
-        });
+         castHits.Sort((x, y) => x.distance.CompareTo(y.distance));
+        //castHits.Sort((x, y) =>
+        //{
+        //    return y.sort.CompareTo(x.sort);
+        //});
 
 
         for (int i = 0; i < castHits.Count; i++)
@@ -306,8 +306,9 @@ public class AS_Bullet : MonoBehaviour
                 }
 
             }
-            else
+            else if(!(hit.collider is CharacterController))
             {
+                //Debug.Log(hit.collider.gameObject.name);
                 if (ParticleHit)
                 {
                     hitparticle = (GameObject)Instantiate(ParticleHit, hit.point, hit.transform.rotation);

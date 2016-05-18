@@ -13,19 +13,28 @@ namespace BehaviorDesigner.Runtime.Tasks.Movement
         protected NavMeshAgent navMeshAgent;
 
         protected NavMeshObstacle navMeshObstacle;
+        protected bool removedObstacle = false;
 
         public override void OnAwake()
         {
             // cache for quick lookup
             navMeshAgent = gameObject.GetComponent<NavMeshAgent>();
-            navMeshObstacle = gameObject.GetComponent<NavMeshObstacle>();
+            //navMeshObstacle = gameObject.GetComponent<NavMeshObstacle>();
+            //if (navMeshObstacle != null)
+            //{
+            //    GameObject.Destroy(navMeshObstacle);
+            //    removedObstacle = true;
+            //}
+            //else
+            //{
+            //    removedObstacle = false;
+            //}
         }
 
         public override void OnStart()
         {
             //disable navMeshObstacle
-            if (navMeshObstacle != null)
-                navMeshObstacle.enabled = false;
+           
             // set the speed and angular speed, enable the NavMeshAgent
             navMeshAgent.speed = speed.Value;
             navMeshAgent.angularSpeed = angularSpeed.Value;
@@ -37,8 +46,14 @@ namespace BehaviorDesigner.Runtime.Tasks.Movement
         {
             // Disable the nav mesh
             navMeshAgent.enabled = false;
-            if (navMeshObstacle != null)
-                navMeshObstacle.enabled = true;
+            //if (removedObstacle )
+            //{
+            //    navMeshObstacle = gameObject.AddComponent<NavMeshObstacle>();
+            //    navMeshObstacle.carving = true;
+            //    navMeshObstacle.carvingMoveThreshold = 0.5f;
+            //    removedObstacle = false;
+            //}
+               
         }
 
         // Reset the public variables

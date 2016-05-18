@@ -5,13 +5,20 @@ public class MitrailleurShootSMB : StateMachineBehaviour
 {
 
     EnemyGun gun;
-    Transform target;
+    Vector3 target;
+    Transform muzzle;
+    Transform aimSpin;
     public override void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         base.OnStateEnter(animator, stateInfo, layerIndex);
-        Debug.Log(animator.gameObject);
+       // Debug.Log(animator.gameObject);
         gun =animator.gameObject.GetComponent<EnemyGun>();
-        target = GameObject.FindGameObjectWithTag("Player").transform;
+        muzzle = gun.muzzleTransform;
+        aimSpin = gun.aimSpine;
+
+        
+        gun.DetachTarget();
+        target = gun.targetPosition;
     }
 
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -19,8 +26,16 @@ public class MitrailleurShootSMB : StateMachineBehaviour
         base.OnStateUpdate(animator, stateInfo, layerIndex);
         if(gun.gunState == GunState.Ready)
         {
-            animator.transform.rotation = Quaternion.RotateTowards(animator.transform.rotation, Quaternion.LookRotation(target.position - animator.transform.position), 1);
-            gun.Shoot();
+            Quaternion q = Quaternion.LookRotation(target - muzzle.position);
+            if (Quaternion.Angle(aimSpin.rotation, q) < 0.5)
+            {
+                gun.Shoot();
+            }
+            else
+            {
+                aimSpin.rotation = Quaternion.RotateTowards(aimSpin.rotation, Quaternion.LookRotation(target - muzzle.position), 3f);
+            }
+            
         }
         else
         {

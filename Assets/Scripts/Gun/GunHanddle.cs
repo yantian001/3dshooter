@@ -137,14 +137,18 @@ public class GunHanddle : MonoBehaviour
     {
         if (CurrentGun)
         {
-            crossHair.currentSpace += 5;
-            CurrentGun.Shoot();
-            isFirstFire = true;
-            if (isFirstFire)
+            
+            if(CurrentGun.Shoot())
             {
-                // BehaviorDesigner.Runtime.GlobalVariables.Instance.SetVariableValue("Fired", true);
-                // LeanTween.dispatchEvent((int)Events.FIRED);
+                crossHair.currentSpace += 10;
+                isFirstFire = true;
+                if (isFirstFire)
+                {
+                    // BehaviorDesigner.Runtime.GlobalVariables.Instance.SetVariableValue("Fired", true);
+                    // LeanTween.dispatchEvent((int)Events.FIRED);
+                }
             }
+           
         }
     }
 

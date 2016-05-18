@@ -85,10 +85,10 @@ public class Gun : MonoBehaviour
     }
 
 
-    public void Shoot()
+    public bool Shoot()
     {
         if (!Active)
-            return;
+            return false;
 
         if (timefire + FireRate < Time.time)
         {
@@ -140,12 +140,14 @@ public class Gun : MonoBehaviour
                 {
                     gunState = GunState.Empty;
                 }
+                return true;
             }
             else if (gunState == GunState.Empty)
             {
                 audiosource.PlayOneShot(SoundEmpty);
             }
         }
+        return false;
     }
 
     /// <summary>

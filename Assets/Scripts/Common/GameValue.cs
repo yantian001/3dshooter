@@ -1,20 +1,19 @@
-using UnityEngine;
-using System.Collections;
+using GameDataEditor;
 
 public enum LevelType
 {
-	/// <summary>
-	/// The main task.
-	/// </summary>
-	MainTask,
-	/// <summary>
-	/// The loop task.
-	/// </summary>
-	LoopTask,
-	/// <summary>
-	/// The boss task.
-	/// </summary>
-	BossTask,
+    /// <summary>
+    /// The main task.
+    /// </summary>
+    MainTask,
+    /// <summary>
+    /// The loop task.
+    /// </summary>
+    LoopTask,
+    /// <summary>
+    /// The boss task.
+    /// </summary>
+    BossTask,
 }
 
 
@@ -25,7 +24,7 @@ public class GameValue
 
     //public static bool s_IsRandomObjective = false;
 
-	public static LevelType s_LevelType = LevelType.MainTask;
+    public static LevelType s_LevelType = LevelType.MainTask;
 
 
     public static int mapId = -1;
@@ -34,17 +33,22 @@ public class GameValue
     /// </summary>
     public static int level = -1;
 
-	public static string diffdegree = null;
+    public static string diffdegree = null;
+
+    /// <summary>
+    /// 当前任务的关卡信息
+    /// </summary>
+    public static GDETaskData taskData = null;
 
 	public static string shopType = "weapon";
 
     public static string GetMapSceneName()
     {
-        if(mapId == 1)
+        if (mapId == 1)
         {
             return "changjing-1";
         }
-        else if(mapId== 2)
+        else if (mapId == 2)
         {
             return "changjing-2";
 
@@ -62,7 +66,7 @@ public class GameValue
 
     public static int moneyPerTimeLeft = 5;
 
-    public static GameStatu staus = GameStatu.Init;
+    public static GameStatu staus = GameStatu.InGame;
 
     public static bool IsMapLastLevel(int mapid, int levelid)
     {
@@ -81,8 +85,8 @@ public class GameValue
         if (mapid > MapLevelConfig.Length)
             return 0;
         else
-            return MapLevelConfig[mapid-1];
+            return MapLevelConfig[mapid - 1];
     }
 
-  
+
 }

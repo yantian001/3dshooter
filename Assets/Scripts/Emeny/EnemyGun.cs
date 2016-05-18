@@ -36,10 +36,23 @@ public class EnemyGun : MonoBehaviour
     protected AudioSource audioSource;
     public float liftTimeBullet = 1f;
 
-    Vector3 targetPosition;
+    public EmenyAttr attr;
+
+    public Transform aimSpine;
+    [HideInInspector]
+    public Vector3 targetPosition;
     // Use this for initialization
     public virtual void Start()
     {
+        if (attr == null)
+        {
+            attr = GetComponent<EmenyAttr>();
+            if (attr == null)
+            {
+                Debug.LogError("Miss Enemy attr in " + gameObject.name);
+            }
+
+        }
         if (target == null)
         {
             target = GameObject.FindGameObjectWithTag("Player").transform;
@@ -48,16 +61,17 @@ public class EnemyGun : MonoBehaviour
                 target = target.GetComponent<PlayerAttr>().targetAttach;
             }
         }
-        if (audioSource)
+        if (!audioSource)
         {
             audioSource = GetComponent<AudioSource>();
         }
+        clip = attr.clip;
     }
 
     public virtual void Shoot()
     {
 
-        if (timeFired + fireRate < Time.time)
+        if (timeFired + attr.fireRate < Time.time)
         {
             if (gunState == GunState.Ready)
             {
@@ -78,7 +92,7 @@ public class EnemyGun : MonoBehaviour
 
     public void Reload()
     {
-        clip = clipSize;
+        clip = attr.clip;
         gunState = GunState.Ready;
     }
 
@@ -107,13 +121,13 @@ public class EnemyGun : MonoBehaviour
         {
             for (int i = 0; i < bulletNum; i++)
             {
-                Vector3 direction = (targetPosition - muzzleTransform.position).normalized + new Vector3(Random.Range(-Spread, Spread) / 100, Random.Range(-Spread, Spread) / 100, 0);
+                Vector3 direction = (targetPosition - muzzleTransform.position).normalized + new Vector3(Random.Range(-Spread, Spread) / attr.hitRate, Random.Range(-Spread, Spread) / attr.hitRate, 0);
 
                 GameObject b = GameObject.Instantiate(Bullet, muzzleTransform.position, Quaternion.LookRotation(direction)) as GameObject;
                 b.transform.forward = direction;
                 var asBullet = b.GetComponent<AS_Bullet>();
                 asBullet.source = muzzleTransform;
-                asBullet.Damage = power;
+                asBullet.Damage = attr.power;
                 Destroy(b, liftTimeBullet);
             }
         }
