@@ -3,7 +3,7 @@ using System.Collections;
 using GameDataEditor;
 using System.Collections.Generic;
 using UnityEngine.UI;
-
+using UnityEngine.EventSystems;
 public class Menu : MonoBehaviour {
 
 	//更新关卡
@@ -26,7 +26,7 @@ public class Menu : MonoBehaviour {
 		setButtonFunc();
 		GameValue.diffdegree="Ordinary";
 
-		 
+		showShopMenu();
 		
 
 	}
@@ -181,6 +181,77 @@ public class Menu : MonoBehaviour {
  		
 	}
  	
+	void showShopMenu()
+	{
+
+		CommonUtils.SetChildActive(rect,"RawImage",false);
+
+		Button ShopBtn = CommonUtils.GetChildComponent<Button>(rect,"bottom/RawImage/Shop");
+		ShopBtn.onClick.AddListener(delegate() {
+			//LeanTween;
+			CommonUtils.SetChildActive(rect,"RawImage",true);
+
+
+
+			//LeanTween.moveX( avatarScale, avatarScale.transform.position.x + 5f, 5f).setEase(LeanTweenType.easeOutBounce);
+
+			RectTransform rr = CommonUtils.GetChild(rect,"RawImage/RawImage");
+
+			Debug.Log(rr.position.y);
+
+			LeanTween.moveY(CommonUtils.GetChild(rect,"RawImage/RawImage").gameObject,rr.position.y + 322f,0.4f);
+
+
+			Button weaponBtn = CommonUtils.GetChildComponent<Button>(rect,"RawImage/RawImage/weapon");
+			weaponBtn.onClick.AddListener(delegate() {
+				GameValue.shopType = "weapon";
+
+				Application.LoadLevel("Shop");
+
+			});
+
+			Button bombBtn = CommonUtils.GetChildComponent<Button>(rect,"RawImage/RawImage/bomb");
+			bombBtn.onClick.AddListener(delegate() {
+				GameValue.shopType = "bomb";
+				Application.LoadLevel("Shop");
+			});
+
+			Button medicalBtn = CommonUtils.GetChildComponent<Button>(rect,"RawImage/RawImage/medical");
+			medicalBtn.onClick.AddListener(delegate() {
+				GameValue.shopType = "medical";
+				Application.LoadLevel("Shop");
+			});
+
+
+
+
+		});
+
+		Button maskBtn = CommonUtils.GetChildComponent<Button>(rect,"RawImage");
+
+		maskBtn.onClick.AddListener(delegate() {
+			//LeanTween;
+
+			RectTransform rr = CommonUtils.GetChild(rect,"RawImage/RawImage");
+			LeanTween.moveY(CommonUtils.GetChild(rect,"RawImage/RawImage").gameObject,rr.position.y - 322f,0.4f);
+
+
+
+			LeanTween.delayedCall(0.4f,hideMask);
+
+			
+		});
+	}
+
+	void hideMask()
+	{
+
+		RectTransform rr = CommonUtils.GetChild(rect,"RawImage/RawImage");
+
+		Debug.Log(rr.position.y);
+		CommonUtils.SetChildActive(rect,"RawImage",false);
+	}
+
 	void setButtonFunc()
 	{
 		Button left = CommonUtils.GetChildComponent<Button>(rect,"middle/left");

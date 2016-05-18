@@ -21,5 +21,9 @@ namespace GameDataEditor
         public static string Task_Task2_2 = "Task2_2";
         public static string Task_Task2_3 = "Task2_3";
         public static string Task_Task2_4 = "Task2_4";
+        public static string Medical_MedicalBox = "MedicalBox";
+        public static string Weapon_AK47 = "AK47";
+        public static string Bomb_Bomb = "Bomb";
+        public static string Bomb_Bomb_236755f9f77d474d9cc698abccce557c = "Bomb_236755f9f77d474d9cc698abccce557c";
     }
 }

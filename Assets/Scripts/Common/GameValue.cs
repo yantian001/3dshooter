@@ -36,6 +36,8 @@ public class GameValue
 
 	public static string diffdegree = null;
 
+	public static string shopType = "weapon";
+
     public static string GetMapSceneName()
     {
         if(mapId == 1)
