@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 6d0e21d916c1fab47bf426d2c7084b63
-timeCreated: 1463561435
+guid: 9e916a4514dcf0b4ebd1cd3e5fef30a0
+timeCreated: 1463636483
 licenseType: Pro
 ModelImporter:
   serializedVersion: 18
@@ -9,8 +9,8 @@ ModelImporter:
     400000: //RootNode
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Exported_Mesh_Combined_Mesh
-    6400000: //RootNode
+    4300000: Plane001
+    7400000: Take 001
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -35,12 +35,12 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 39.3499985
+    globalScale: 6
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     importBlendShapes: 1
     swapUVChannels: 0
-    generateSecondaryUV: 1
+    generateSecondaryUV: 0
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0
@@ -70,7 +70,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
