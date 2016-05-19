@@ -52,8 +52,12 @@ public class DamageManager : MonoBehaviour
                 {
                     Debug.LogError("Miss Enemy Attr");
                 }
-                maxHp = attr.maxHP;
-                hp = maxHp;
+                if(attr)
+                {
+                    maxHp = attr.maxHP;
+                    hp = maxHp;
+                }
+                
             }
         }
        
