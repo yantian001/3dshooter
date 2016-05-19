@@ -23,6 +23,7 @@ namespace GameDataEditor
         public static string Task_Task2_4 = "Task2_4";
         public static string EnemyAttr_EnemyAttr_1_1 = "EnemyAttr_1_1";
         public static string WaveItem_Task_1_1_Wave_1_Item_1 = "Task_1_1_Wave_1_Item_1";
+        public static string WaveItem_Task_1_1_Wave_1_Item_1_919df013861c47b29104e39a5b26e0a1 = "Task_1_1_Wave_1_Item_1_919df013861c47b29104e39a5b26e0a1";
         public static string Wave_Task_1_1_Wave_1 = "Task_1_1_Wave_1";
         public static string TaskInfo_Task_1_1 = "Task_1_1";
         public static string Medical_MedicalBox = "MedicalBox";

@@ -19,7 +19,8 @@ public class PlayerAttr : MonoBehaviour
 
     private void OnGameFinish(LTEvent obj)
     {
-        Invoke("DelayCall", 1f);
+        // Invoke("DelayCall", 1f);
+        DelayCall();
     }
 
     public void DelayCall()
@@ -33,7 +34,7 @@ public class PlayerAttr : MonoBehaviour
 
     public void OnDisable()
     {
-        LeanTween.addListener((int)Events.GAMEFINISH, OnGameFinish);
+        LeanTween.addListener((int)Events.ENEMYCLEARED, OnGameFinish);
     }
 
 

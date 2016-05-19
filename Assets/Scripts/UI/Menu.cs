@@ -4,320 +4,333 @@ using GameDataEditor;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-public class Menu : MonoBehaviour {
+public class Menu : MonoBehaviour
+{
 
-	//更新关卡
+    //更新关卡
 
-	RectTransform rect;
-
-	private List<string> levels;
-	private GDELevelData currentLevel;
-	// Use this for initialization
-	void Start () {
+    RectTransform rect;
 
-		rect = GetComponent<RectTransform>();
-		GDEDataManager.Init("gde_data");
-		if(!GDEDataManager.GetAllDataKeysBySchema("Level",out levels))
-		{
-			return;
-		}
+    private List<string> levels;
+    private GDELevelData currentLevel;
+    // Use this for initialization
+    void Start()
+    {
 
-		updateLevel(0);
-		setButtonFunc();
-		GameValue.diffdegree="Ordinary";
+        rect = GetComponent<RectTransform>();
+        GDEDataManager.Init("gde_data");
+        if (!GDEDataManager.GetAllDataKeysBySchema("Level", out levels))
+        {
+            return;
+        }
 
-		showShopMenu();
-		
+        updateLevel(0);
+        setButtonFunc();
+        GameValue.diffdegree = "Ordinary";
 
-	}
+        showShopMenu();
 
-	//更新toggle
-	void initToggle()
-	{
-	
-		Vector3 newPos;
 
-		List<Toggle> toggles = new List<Toggle>();
+    }
 
-		int taskcnt = currentLevel.TaskList.Count;
+    //更新toggle
+    void initToggle()
+    {
 
-		Toggle task  =  CommonUtils.GetChildComponent<Toggle>(rect,"middle/Panel/Panel/0");
+        Vector3 newPos;
 
-		ToggleGroup group =  CommonUtils.GetChildComponent<ToggleGroup>(rect,"middle/Panel/Panel");
-		 
-		 
-		group.allowSwitchOff=true;
+        List<Toggle> toggles = new List<Toggle>();
 
-		if(taskcnt == 0)
-		{
-			task.enabled = false;
-			return;
-		}
+        int taskcnt = currentLevel.TaskList.Count;
 
-		toggles.Add(task);
+        Toggle task = CommonUtils.GetChildComponent<Toggle>(rect, "middle/Panel/Panel/0");
 
- 
-		Toggle [] tgs = group.GetComponentsInChildren<Toggle>();
+        ToggleGroup group = CommonUtils.GetChildComponent<ToggleGroup>(rect, "middle/Panel/Panel");
 
 
-		foreach(Toggle t in tgs)
-		{
-			if(t.name!="0")
-			{
-				Destroy(t.gameObject);
-			}
-			else
-			{
-				SelectToggle(t,false);
-			}
-		}
-		
-		int i = 0;
-		for(i = 1; i < taskcnt;i++)
-		{
-			Toggle clone = (Toggle)Instantiate(task,task.GetComponent<RectTransform>().position,task.GetComponent<RectTransform>().rotation);
+        group.allowSwitchOff = true;
 
+        if (taskcnt == 0)
+        {
+            task.enabled = false;
+            return;
+        }
 
-			clone.GetComponent<RectTransform>().SetParent ( group.GetComponent<RectTransform>());
-			clone.GetComponent<RectTransform>().localScale = new Vector3(1,1,1);
-			newPos =  clone.GetComponent<RectTransform>().anchoredPosition;
+        toggles.Add(task);
 
-			newPos.y = newPos.y-160f*i;
 
-			 
+        Toggle[] tgs = group.GetComponentsInChildren<Toggle>();
 
-			clone.GetComponent<RectTransform>().anchoredPosition = newPos;
-			clone.name = "" + (i);
-			
-			if(i == taskcnt-1)
-				(CommonUtils.GetChildComponent<RawImage>(clone.GetComponent<RectTransform>(),"Continue")).enabled = false;
-			toggles.Add(clone);
 
-		}
-		group.GetComponent<RectTransform>().sizeDelta = new Vector2(group.GetComponent<RectTransform>().sizeDelta.x, i * 160 );
+        foreach (Toggle t in tgs)
+        {
+            if (t.name != "0")
+            {
+                Destroy(t.gameObject);
+            }
+            else
+            {
+                SelectToggle(t, false);
+            }
+        }
 
-		newPos =  group.GetComponent<RectTransform>().position;
-		
-		newPos.y = -i * 160 / 2;
+        int i = 0;
+        for (i = 1; i < taskcnt; i++)
+        {
+            Toggle clone = (Toggle)Instantiate(task, task.GetComponent<RectTransform>().position, task.GetComponent<RectTransform>().rotation);
 
-		group.GetComponent<RectTransform>().position = newPos;
 
-		
-		for(i = 0 ; i < taskcnt;i++)
-		{
-			Toggle t = toggles[i];
-			t.onValueChanged.AddListener(
-				delegate(bool isOn){
-					this.SelectToggle(t,isOn);
-			}
-			);
+            clone.GetComponent<RectTransform>().SetParent(group.GetComponent<RectTransform>());
+            clone.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
+            newPos = clone.GetComponent<RectTransform>().anchoredPosition;
 
-			RectTransform toggleRect = t.GetComponent<RectTransform>();
+            newPos.y = newPos.y - 160f * i;
 
-			GDETaskData currentTask = currentLevel.TaskList[i];
 
-			RawImage TaskThumb = CommonUtils.GetChildComponent<RawImage>(toggleRect,"TaskThumb");
 
+            clone.GetComponent<RectTransform>().anchoredPosition = newPos;
+            clone.name = "" + (i);
 
+            if (i == taskcnt - 1)
+                (CommonUtils.GetChildComponent<RawImage>(clone.GetComponent<RectTransform>(), "Continue")).enabled = false;
+            toggles.Add(clone);
 
-			if(currentTask.isLocked)
-			{
-				CommonUtils.SetChildActive(toggleRect,"Lock",true);
-				TaskThumb.enabled = false;
-				t.enabled = false;
-			}
-			else
-			{
-				CommonUtils.SetChildActive(toggleRect,"Lock",false);
-				TaskThumb.enabled = true;
-				TaskThumb.texture = Resources.Load(currentTask.TaskThumb) as Texture2D;
-			}
-			Text TaskNum = CommonUtils.GetChildComponent<Text>(toggleRect,"TaskNum");
+        }
+        group.GetComponent<RectTransform>().sizeDelta = new Vector2(group.GetComponent<RectTransform>().sizeDelta.x, i * 160);
 
-			TaskNum.text =  currentLevel.LevelNum1.ToString() + "-" + currentTask.TaskNum.ToString();
-		}
+        newPos = group.GetComponent<RectTransform>().position;
 
-		Text taskName = CommonUtils.GetChildComponent<Text>(rect,"middle/Task/Text");
+        newPos.y = -i * 160 / 2;
 
-		taskName.text = currentLevel.LevelName;
+        group.GetComponent<RectTransform>().position = newPos;
 
-		SelectToggle(task,true);
-		group.allowSwitchOff=false;
-	}
 
-	//toggle事件
+        for (i = 0; i < taskcnt; i++)
+        {
+            Toggle t = toggles[i];
+            t.onValueChanged.AddListener(
+                delegate (bool isOn)
+                {
+                    this.SelectToggle(t, isOn);
+                }
+            );
 
-	void SelectToggle(Toggle t, bool isOn)
-	{
-		t.isOn = isOn;
+            RectTransform toggleRect = t.GetComponent<RectTransform>();
 
-		if(isOn)
-		{
+            GDETaskData currentTask = currentLevel.TaskList[i];
 
+            RawImage TaskThumb = CommonUtils.GetChildComponent<RawImage>(toggleRect, "TaskThumb");
 
-		Text taskContent = CommonUtils.GetChildComponent<Text>(rect,"middle/Task/content");
 
-		GDETaskData task = currentLevel.TaskList[int.Parse(t.name)];
 
-		taskContent.text = task.TaskContent;
+            if (currentTask.isLocked)
+            {
+                CommonUtils.SetChildActive(toggleRect, "Lock", true);
+                TaskThumb.enabled = false;
+                t.enabled = false;
+            }
+            else
+            {
+                CommonUtils.SetChildActive(toggleRect, "Lock", false);
+                TaskThumb.enabled = true;
+                TaskThumb.texture = Resources.Load(currentTask.TaskThumb) as Texture2D;
+            }
+            Text TaskNum = CommonUtils.GetChildComponent<Text>(toggleRect, "TaskNum");
 
+            TaskNum.text = currentLevel.LevelNum1.ToString() + "-" + currentTask.TaskNum.ToString();
+        }
 
-		GameValue.mapId =   task.TaskNum;
-		}
-	}
+        Text taskName = CommonUtils.GetChildComponent<Text>(rect, "middle/Task/Text");
 
-	void updateLevel(int value)
-	{
-		if (!GDEDataManager.DataDictionary.TryGetCustom(levels[value], out currentLevel))
-		{
-			currentLevel = null;
-		}
+        taskName.text = currentLevel.LevelName;
 
-		GameValue.level = currentLevel.LevelNum1;
+        SelectToggle(task, true);
+        group.allowSwitchOff = false;
+    }
 
-		initToggle();
+    //toggle事件
 
-		updateDiffBtn();
- 		
-	}
- 	
-	void showShopMenu()
-	{
+    void SelectToggle(Toggle t, bool isOn)
+    {
+        t.isOn = isOn;
 
-		CommonUtils.SetChildActive(rect,"RawImage",false);
+        if (isOn)
+        {
 
-		Button ShopBtn = CommonUtils.GetChildComponent<Button>(rect,"bottom/RawImage/Shop");
-		ShopBtn.onClick.AddListener(delegate() {
-			//LeanTween;
-			CommonUtils.SetChildActive(rect,"RawImage",true);
 
+            Text taskContent = CommonUtils.GetChildComponent<Text>(rect, "middle/Task/content");
 
+            GDETaskData task = currentLevel.TaskList[int.Parse(t.name)];
 
-			//LeanTween.moveX( avatarScale, avatarScale.transform.position.x + 5f, 5f).setEase(LeanTweenType.easeOutBounce);
+            taskContent.text = task.TaskContent;
+            GameValue.mapId = task.TaskNum;
+            GameValue.taskData = task;
+        }
+    }
 
-			RectTransform rr = CommonUtils.GetChild(rect,"RawImage/RawImage");
+    void updateLevel(int value)
+    {
+        if (!GDEDataManager.DataDictionary.TryGetCustom(levels[value], out currentLevel))
+        {
+            currentLevel = null;
+        }
 
-			Debug.Log(rr.position.y);
+        GameValue.level = currentLevel.LevelNum1;
 
-			LeanTween.moveY(CommonUtils.GetChild(rect,"RawImage/RawImage").gameObject,rr.position.y + 322f,0.4f);
+        initToggle();
 
+        updateDiffBtn();
 
-			Button weaponBtn = CommonUtils.GetChildComponent<Button>(rect,"RawImage/RawImage/weapon");
-			weaponBtn.onClick.AddListener(delegate() {
-				GameValue.shopType = "weapon";
+    }
 
-				Application.LoadLevel("Shop");
+    void showShopMenu()
+    {
 
-			});
+        CommonUtils.SetChildActive(rect, "RawImage", false);
 
-			Button bombBtn = CommonUtils.GetChildComponent<Button>(rect,"RawImage/RawImage/bomb");
-			bombBtn.onClick.AddListener(delegate() {
-				GameValue.shopType = "bomb";
-				Application.LoadLevel("Shop");
-			});
+        Button ShopBtn = CommonUtils.GetChildComponent<Button>(rect, "bottom/RawImage/Shop");
+        ShopBtn.onClick.AddListener(delegate ()
+        {
+            //LeanTween;
+            CommonUtils.SetChildActive(rect, "RawImage", true);
 
-			Button medicalBtn = CommonUtils.GetChildComponent<Button>(rect,"RawImage/RawImage/medical");
-			medicalBtn.onClick.AddListener(delegate() {
-				GameValue.shopType = "medical";
-				Application.LoadLevel("Shop");
-			});
 
 
+            //LeanTween.moveX( avatarScale, avatarScale.transform.position.x + 5f, 5f).setEase(LeanTweenType.easeOutBounce);
 
+            RectTransform rr = CommonUtils.GetChild(rect, "RawImage/RawImage");
 
-		});
+            Debug.Log(rr.position.y);
 
-		Button maskBtn = CommonUtils.GetChildComponent<Button>(rect,"RawImage");
+            LeanTween.moveY(CommonUtils.GetChild(rect, "RawImage/RawImage").gameObject, rr.position.y + 322f, 0.4f);
 
-		maskBtn.onClick.AddListener(delegate() {
-			//LeanTween;
 
-			RectTransform rr = CommonUtils.GetChild(rect,"RawImage/RawImage");
-			LeanTween.moveY(CommonUtils.GetChild(rect,"RawImage/RawImage").gameObject,rr.position.y - 322f,0.4f);
+            Button weaponBtn = CommonUtils.GetChildComponent<Button>(rect, "RawImage/RawImage/weapon");
+            weaponBtn.onClick.AddListener(delegate ()
+            {
+                GameValue.shopType = "weapon";
 
+                Application.LoadLevel("Shop");
 
+            });
 
-			LeanTween.delayedCall(0.4f,hideMask);
+            Button bombBtn = CommonUtils.GetChildComponent<Button>(rect, "RawImage/RawImage/bomb");
+            bombBtn.onClick.AddListener(delegate ()
+            {
+                GameValue.shopType = "bomb";
+                Application.LoadLevel("Shop");
+            });
 
-			
-		});
-	}
+            Button medicalBtn = CommonUtils.GetChildComponent<Button>(rect, "RawImage/RawImage/medical");
+            medicalBtn.onClick.AddListener(delegate ()
+            {
+                GameValue.shopType = "medical";
+                Application.LoadLevel("Shop");
+            });
 
-	void hideMask()
-	{
 
-		RectTransform rr = CommonUtils.GetChild(rect,"RawImage/RawImage");
 
-		Debug.Log(rr.position.y);
-		CommonUtils.SetChildActive(rect,"RawImage",false);
-	}
 
-	void setButtonFunc()
-	{
-		Button left = CommonUtils.GetChildComponent<Button>(rect,"middle/left");
-		Button right = CommonUtils.GetChildComponent<Button>(rect,"middle/right");
+        });
 
-		left.onClick.AddListener(delegate() {
-			if(currentLevel.LevelNum1>1)
-			{
-			 
-				updateLevel(currentLevel.LevelNum1-2);
-			}
-		});
+        Button maskBtn = CommonUtils.GetChildComponent<Button>(rect, "RawImage");
 
-		right.onClick.AddListener(delegate() {
-			if(currentLevel.LevelNum1<levels.Count)
-				updateLevel(currentLevel.LevelNum1);
-		});
+        maskBtn.onClick.AddListener(delegate ()
+        {
+            //LeanTween;
 
-	}
+            RectTransform rr = CommonUtils.GetChild(rect, "RawImage/RawImage");
+            LeanTween.moveY(CommonUtils.GetChild(rect, "RawImage/RawImage").gameObject, rr.position.y - 322f, 0.4f);
 
-	void updateDiffBtn()
-	{
 
-		ToggleGroup tg = CommonUtils.GetChildComponent<ToggleGroup>(rect,"bottom/bg/Panel");
 
+            LeanTween.delayedCall(0.4f, hideMask);
 
 
-		Toggle Ordinary = CommonUtils.GetChildComponent<Toggle>(rect,"bottom/bg/Panel/Ordinary");
-		Ordinary.onValueChanged.AddListener(
-			delegate(bool isOn){
+        });
+    }
 
-			 
+    void hideMask()
+    {
 
-			GameValue.diffdegree="Ordinary";
+        RectTransform rr = CommonUtils.GetChild(rect, "RawImage/RawImage");
 
+        Debug.Log(rr.position.y);
+        CommonUtils.SetChildActive(rect, "RawImage", false);
+    }
 
-		}
-		);
-		
-		Toggle Elite = CommonUtils.GetChildComponent<Toggle>(rect,"bottom/bg/Panel/Elite");
+    void setButtonFunc()
+    {
+        Button left = CommonUtils.GetChildComponent<Button>(rect, "middle/left");
+        Button right = CommonUtils.GetChildComponent<Button>(rect, "middle/right");
 
-		 
+        left.onClick.AddListener(delegate ()
+        {
+            if (currentLevel.LevelNum1 > 1)
+            {
 
-		if(currentLevel.TaskList[currentLevel.TaskList.Count-1].isLocked == true)
-		{
-			Elite.isOn = false;
-			Ordinary.isOn = true;
-			Elite.enabled = false;
-		}
-		else{
+                updateLevel(currentLevel.LevelNum1 - 2);
+            }
+        });
 
+        right.onClick.AddListener(delegate ()
+        {
+            if (currentLevel.LevelNum1 < levels.Count)
+                updateLevel(currentLevel.LevelNum1);
+        });
 
-			Elite.enabled = true;
-		}
-		
-		Elite.onValueChanged.AddListener(
-			delegate(bool isOn){
+    }
 
+    void updateDiffBtn()
+    {
 
-			GameValue.diffdegree="Elite";
+        ToggleGroup tg = CommonUtils.GetChildComponent<ToggleGroup>(rect, "bottom/bg/Panel");
 
-		}
-		);
-	}
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+
+        Toggle Ordinary = CommonUtils.GetChildComponent<Toggle>(rect, "bottom/bg/Panel/Ordinary");
+        Ordinary.onValueChanged.AddListener(
+            delegate (bool isOn)
+            {
+
+
+
+                GameValue.diffdegree = "Ordinary";
+
+
+            }
+        );
+
+        Toggle Elite = CommonUtils.GetChildComponent<Toggle>(rect, "bottom/bg/Panel/Elite");
+
+
+
+        if (currentLevel.TaskList[currentLevel.TaskList.Count - 1].isLocked == true)
+        {
+            Elite.isOn = false;
+            Ordinary.isOn = true;
+            Elite.enabled = false;
+        }
+        else
+        {
+
+
+            Elite.enabled = true;
+        }
+
+        Elite.onValueChanged.AddListener(
+            delegate (bool isOn)
+            {
+
+
+                GameValue.diffdegree = "Elite";
+
+            }
+        );
+    }
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
 }

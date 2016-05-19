@@ -71,6 +71,20 @@ namespace GameDataEditor
             }
         }
 
+        private static string SceneNameKey = "SceneName";
+		private string _SceneName;
+        public string SceneName
+        {
+            get { return _SceneName; }
+            set {
+                if (_SceneName != value)
+                {
+                    _SceneName = value;
+                    GDEDataManager.SetString(_key+"_"+SceneNameKey, _SceneName);
+                }
+            }
+        }
+
         private static string WavesKey = "Waves";
 		public List<GDEWaveData>      Waves;
 		public void Set_Waves()
@@ -101,6 +115,7 @@ namespace GameDataEditor
                 dict.TryGetInt(TotalTimeKey, out _TotalTime);
                 dict.TryGetInt(RewardKey, out _Reward);
                 dict.TryGetFloat(WaveIntervalKey, out _WaveInterval);
+                dict.TryGetString(SceneNameKey, out _SceneName);
 
                 dict.TryGetCustomList(WavesKey, out Waves);
                 LoadFromSavedData(dataKey);
@@ -115,6 +130,7 @@ namespace GameDataEditor
             _TotalTime = GDEDataManager.GetInt(_key+"_"+TotalTimeKey, _TotalTime);
             _Reward = GDEDataManager.GetInt(_key+"_"+RewardKey, _Reward);
             _WaveInterval = GDEDataManager.GetFloat(_key+"_"+WaveIntervalKey, _WaveInterval);
+            _SceneName = GDEDataManager.GetString(_key+"_"+SceneNameKey, _SceneName);
 
             Waves = GDEDataManager.GetCustomList(_key+"_"+WavesKey, Waves);
          }
@@ -155,6 +171,15 @@ namespace GameDataEditor
             dict.TryGetFloat(WaveIntervalKey, out _WaveInterval);
         }
 
+        public void Reset_SceneName()
+        {
+            GDEDataManager.ResetToDefault(_key, SceneNameKey);
+
+            Dictionary<string, object> dict;
+            GDEDataManager.Get(_key, out dict);
+            dict.TryGetString(SceneNameKey, out _SceneName);
+        }
+
         public void Reset_Waves()
 		{
 			GDEDataManager.ResetToDefault(_key, WavesKey);
@@ -175,6 +200,7 @@ namespace GameDataEditor
             GDEDataManager.ResetToDefault(_key, TotalTimeKey);
             GDEDataManager.ResetToDefault(_key, WaveIntervalKey);
             GDEDataManager.ResetToDefault(_key, RewardKey);
+            GDEDataManager.ResetToDefault(_key, SceneNameKey);
 
             Reset_Waves();
 

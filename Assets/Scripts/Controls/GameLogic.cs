@@ -80,14 +80,12 @@ public class GameLogic : MonoBehaviour
 
     private void OnGameStart(LTEvent obj)
     {
-        if (obj.data == null || ConvertUtil.ToBool(obj.data) == false)
+        if( GameValue.taskData != null && GameValue.taskData.Info.SceneName != "")
         {
-            Loading(false);
-        }
-        else
-        {
+            GameValue.s_CurrentSceneName = GameValue.taskData.Info.SceneName;
             Loading(true);
         }
+            
     }
 
     void OnGameRestart(LTEvent evt)

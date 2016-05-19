@@ -103,7 +103,7 @@ namespace GameDataEditor
 		private float _FireRate;
         public float FireRate
         {
-            get { return 1/_FireRate; }
+            get { return 1f/_FireRate; }
             set {
                 if (_FireRate != value)
                 {

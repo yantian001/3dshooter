@@ -24,7 +24,10 @@ public class GameManager : MonoBehaviour
         LeanTween.addListener((int)Events.PLAYERDIE, OnPlayerDie);
     }
 
-   
+    public void Start()
+    {
+        ChangeGameStatu(GameStatu.InGame);
+    }
 
     public void OnDisable()
     {
@@ -38,7 +41,7 @@ public class GameManager : MonoBehaviour
     {
         UpdateCombo();
     }
-    
+
 
     #endregion
 
