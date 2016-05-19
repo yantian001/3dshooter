@@ -7,8 +7,8 @@ public class Crosshair : MonoBehaviour
     public float crosshairFadeSpeed = .3f;
     public float crosshairSizeX = 10f;
     public float crosshairSizeY = 10f;
-   // PlayerAtts plAtts;
-    Image ch1, ch2, ch3, ch4;
+    // PlayerAtts plAtts;
+    RawImage ch1,ch2, ch3, ch4;
     //GunAtt gunAtt;
     Animator animator;
     private float targetSpaceV;
@@ -78,14 +78,14 @@ public class Crosshair : MonoBehaviour
 
     private void InstantiateChs()
     {
-        GameObject go1 = new GameObject(); go1.AddComponent<Image>();
-        GameObject go2 = new GameObject(); go2.AddComponent<Image>();
-        GameObject go3 = new GameObject(); go3.AddComponent<Image>();
-        GameObject go4 = new GameObject(); go4.AddComponent<Image>();
-        ch1 = go1.GetComponent<Image>(); go1.name = "Crosshair Up"; go1.transform.SetParent(transform);
-        ch2 = go2.GetComponent<Image>(); go2.name = "Crosshair Right"; go2.transform.SetParent(transform);
-        ch3 = go3.GetComponent<Image>(); go3.name = "Crosshair Down"; go3.transform.SetParent(transform);
-        ch4 = go4.GetComponent<Image>(); go4.name = "Crosshair Left"; go4.transform.SetParent(transform);
+        GameObject go1 = new GameObject(); go1.AddComponent<RawImage>();
+        GameObject go2 = new GameObject(); go2.AddComponent<RawImage>();
+        GameObject go3 = new GameObject(); go3.AddComponent<RawImage>();
+        GameObject go4 = new GameObject(); go4.AddComponent<RawImage>();
+        ch1 = go1.GetComponent<RawImage>(); go1.name = "Crosshair Up"; go1.transform.SetParent(transform);
+        ch2 = go2.GetComponent<RawImage>(); go2.name = "Crosshair Right"; go2.transform.SetParent(transform);
+        ch3 = go3.GetComponent<RawImage>(); go3.name = "Crosshair Down"; go3.transform.SetParent(transform);
+        ch4 = go4.GetComponent<RawImage>(); go4.name = "Crosshair Left"; go4.transform.SetParent(transform);
         ch1.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 0));
         ch2.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 270));
         ch3.transform.localRotation = Quaternion.Euler(new Vector3(0, 0, 180));
@@ -110,10 +110,10 @@ public class Crosshair : MonoBehaviour
 
     public void ChangeSprites(Sprite sprite)
     {
-        ch1.sprite = sprite;
-        ch2.sprite = sprite;
-        ch3.sprite = sprite;
-        ch4.sprite = sprite;
+        //ch1.sprite = sprite;
+        //ch2.sprite = sprite;
+        //ch3.sprite = sprite;
+        //ch4.sprite = sprite;
     }
 
     private void PositionChs()

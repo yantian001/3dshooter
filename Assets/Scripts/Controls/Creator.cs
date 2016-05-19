@@ -124,7 +124,7 @@ public class Creator : MonoBehaviour
                             }
                             break;
                         }
-                        
+                        i++;
                     }
                 }
             }

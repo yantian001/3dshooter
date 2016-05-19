@@ -7,7 +7,17 @@ public class EnemyDeadInfo  {
 
     public Transform transform;
 
-    public bool headShot = false;
+    public bool headShot
+    {
+        get
+        {
+            return hitPos == HitPosition.HEAD;
+        }
+        private set
+        {
+
+        }
+    }
 
     public HitPosition hitPos;
 

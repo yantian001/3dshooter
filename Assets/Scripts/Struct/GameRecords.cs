@@ -37,6 +37,16 @@ public class GameRecords
         }
     }
 
+    private int _maxCombos;
+    /// <summary>
+    /// 最大连击数
+    /// </summary>
+    public int MaxCombos
+    {
+        get { return _maxCombos; }
+        set { if (value > _maxCombos) _maxCombos = value; }
+    }
+
     public GameFinishType FinishType { get; set; }
 
     public int TimeLeft { get; set; }

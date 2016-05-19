@@ -110,6 +110,10 @@ public class TPSInput : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(GameValue.staus != GameStatu.InGame || !gameObject.activeInHierarchy)
+        {
+            InputEable = false;
+        }
         if (InputEable)
         {
             horizontal = CnInputManager.GetAxis("Horizontal");
@@ -142,6 +146,10 @@ public class TPSInput : MonoBehaviour
         }
         else
         {
+            IsAim = false;
+            IsFirePressed = false;
+            IsMoveLeftPressed = false;
+            IsMoveRightPressed = false;
 
         }
     }

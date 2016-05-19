@@ -85,7 +85,7 @@ public class TPSCamera : MonoBehaviour
 
     public void LateUpdate()
     {
-        isAim = tpsInput.IsAim && (!tpsInput.IsMoveing);
+        isAim = tpsInput.IsAim && (!tpsInput.IsMoveing) && tpsInput.isActiveAndEnabled;
 
         //anim.SetBool("isAim", isAim);
         GetMouse();

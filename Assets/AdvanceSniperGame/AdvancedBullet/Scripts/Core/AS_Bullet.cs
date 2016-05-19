@@ -105,6 +105,7 @@ public class AS_Bullet : MonoBehaviour
 
     private bool tagCheck(string tag)
     {
+        //Debug.Log("tag check:" + tag);
         for (int i = 0; i < IgnoreTag.Length; i++)
         {
             if (IgnoreTag[i] == tag)
@@ -218,7 +219,7 @@ public class AS_Bullet : MonoBehaviour
         {
             if (casterhits[i].collider && Vector3.Dot((casterhits[i].point - initialPosition).normalized, initialDirection) > 0.5f)
             {
-                if (tagCheck(casterhits[i].collider.tag) && casterhits[i].collider.tag != this.gameObject.tag)
+                if ( (tagCheck(casterhits[i].collider.tag) && (tagCheck(casterhits[i].transform.root.tag)))&& casterhits[i].collider.tag != this.gameObject.tag)
                 {
                     if (hitedCheck(casterhits[i].collider))
                     {

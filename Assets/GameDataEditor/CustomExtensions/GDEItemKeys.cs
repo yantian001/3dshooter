@@ -21,13 +21,14 @@ namespace GameDataEditor
         public static string Task_Task2_2 = "Task2_2";
         public static string Task_Task2_3 = "Task2_3";
         public static string Task_Task2_4 = "Task2_4";
-        public static string Medical_MedicalBox = "MedicalBox";
-        public static string Weapon_AK47 = "AK47";
-        public static string Bomb_Bomb = "Bomb";
-        public static string Bomb_Bomb_236755f9f77d474d9cc698abccce557c = "Bomb_236755f9f77d474d9cc698abccce557c";
         public static string EnemyAttr_EnemyAttr_1_1 = "EnemyAttr_1_1";
         public static string WaveItem_Task_1_1_Wave_1_Item_1 = "Task_1_1_Wave_1_Item_1";
         public static string Wave_Task_1_1_Wave_1 = "Task_1_1_Wave_1";
         public static string TaskInfo_Task_1_1 = "Task_1_1";
+        public static string Medical_MedicalBox = "MedicalBox";
+        public static string Weapon_AK47 = "AK47";
+        public static string Weapon_Gun = "Gun";
+        public static string Bomb_Bomb = "Bomb";
+        public static string Bomb_Bomb_236755f9f77d474d9cc698abccce557c = "Bomb_236755f9f77d474d9cc698abccce557c";
     }
 }

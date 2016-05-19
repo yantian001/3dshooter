@@ -83,6 +83,10 @@ public class DamageManager : MonoBehaviour
         }
         distancedamage = distance;
         hp -= damage;
+        if (hp <= 0)
+        {
+            Dead(0);
+        }
         //Debug.Log(damage);
     }
 
@@ -123,10 +127,11 @@ public class DamageManager : MonoBehaviour
         }
         distancedamage = distance;
         hp -= damage;
-        //if (hp <= 0)
-        //{
-        //    behavior.SetVariableValue("IsDead", true); 
-        //}
+        if (hp <= 0)
+        {
+            //behavior.SetVariableValue("IsDead", true);
+            Dead(0);
+        }
         DetermineCover();
     }
 
@@ -154,6 +159,21 @@ public class DamageManager : MonoBehaviour
         else
         {
             //  LeanTween.rotateZ(transform.root.gameObject, 90, 0.5f);
+            if (deadbody.Length > 0 && suffix >= 0 && suffix < deadbody.Length)
+            {
+                // this Object has removed by Dead and replaced with Ragdoll. the ObjectLookAt will null and ActionCamera will stop following and looking.
+                // so we have to update ObjectLookAt to this Ragdoll replacement. then ActionCamera to continue fucusing on it.
+                GameObject deadReplace = (GameObject)Instantiate(deadbody[suffix], this.transform.position, this.transform.rotation);
+                // copy all of transforms to dead object replaced
+                CopyTransformsRecurse(this.transform, deadReplace);
+                // destroy dead object replaced after 5 sec
+               // Destroy(deadReplace, 5);
+                // destry this game object.
+              //  Destroy(this.gameObject, 1);
+                this.gameObject.SetActive(false);
+
+            }
+            LeanTween.dispatchEvent((int)Events.PLAYERDIE);
         }
     }
 
@@ -163,7 +183,7 @@ public class DamageManager : MonoBehaviour
         EnemyDeadInfo edi = new EnemyDeadInfo();
         edi.score = Score;
         edi.transform = this.transform;
-        edi.headShot = suffix == 2;
+        //edi.headShot = suffix == 2;
         edi.hitPos = hpos;
         //  edi.animal = this.GetComponent<Animal>();
         LeanTween.dispatchEvent((int)Events.ENEMYDIE, edi);
@@ -214,6 +234,21 @@ public class DamageManager : MonoBehaviour
         }
         else
         {
+            if (deadbody.Length > 0 && suffix >= 0 && suffix < deadbody.Length)
+            {
+                // this Object has removed by Dead and replaced with Ragdoll. the ObjectLookAt will null and ActionCamera will stop following and looking.
+                // so we have to update ObjectLookAt to this Ragdoll replacement. then ActionCamera to continue fucusing on it.
+                GameObject deadReplace = (GameObject)Instantiate(deadbody[suffix], this.transform.position, this.transform.rotation);
+                // copy all of transforms to dead object replaced
+                CopyTransformsRecurse(this.transform, deadReplace);
+                // destroy dead object replaced after 5 sec
+                // Destroy(deadReplace, 5);
+                // destry this game object.
+                //  Destroy(this.gameObject, 1);
+                this.gameObject.SetActive(false);
+
+            }
+            LeanTween.dispatchEvent((int)Events.PLAYERDIE);
             // LeanTween.rotateZ(transform.root.gameObject, 90, 0.5f);
         }
     }
