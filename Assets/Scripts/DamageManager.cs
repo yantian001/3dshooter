@@ -29,6 +29,7 @@ public class DamageManager : MonoBehaviour
     public int depth = 0;
     public EmenyAttr attr;
 
+    AudioSource source;
 
     float hpSliderDisplayBeginTime = 0;
 
@@ -60,7 +61,7 @@ public class DamageManager : MonoBehaviour
                 
             }
         }
-       
+        source = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -142,6 +143,7 @@ public class DamageManager : MonoBehaviour
     public void Dead(int suffix, HitPosition hitPos)
     {
         // throw new NotImplementedException();
+        PlaySound();
         if (isEnemy)
         {
             if (deadbody.Length > 0 && suffix >= 0 && suffix < deadbody.Length)
@@ -152,7 +154,7 @@ public class DamageManager : MonoBehaviour
                 // copy all of transforms to dead object replaced
                 CopyTransformsRecurse(this.transform, deadReplace);
                 // destroy dead object replaced after 5 sec
-                Destroy(deadReplace, 5);
+                Destroy(deadReplace, 3);
                 // destry this game object.
                 Destroy(this.gameObject, 1);
                 this.gameObject.SetActive(false);
@@ -179,6 +181,16 @@ public class DamageManager : MonoBehaviour
             }
             LeanTween.dispatchEvent((int)Events.PLAYERDIE);
         }
+    }
+
+    void PlaySound()
+    {
+        if (hitsound.Length > 0)
+        {
+            //source.PlayOneShot(hitsound[Random.Range(0, hitsound.Length)]);
+            LeanAudio.play(hitsound[Random.Range(0, hitsound.Length)]);
+        }
+
     }
 
     public void AfterDead(int suffix)
@@ -218,6 +230,7 @@ public class DamageManager : MonoBehaviour
 
     public void Dead(int suffix)
     {
+        PlaySound();
         if (isEnemy)
         {
             if (deadbody.Length > 0 && suffix >= 0 && suffix < deadbody.Length)
@@ -228,7 +241,7 @@ public class DamageManager : MonoBehaviour
                 // copy all of transforms to dead object replaced
                 CopyTransformsRecurse(this.transform, deadReplace);
                 // destroy dead object replaced after 5 sec
-                Destroy(deadReplace, 5);
+                Destroy(deadReplace,3);
                 // destry this game object.
                 Destroy(this.gameObject, 1);
                 this.gameObject.SetActive(false);
