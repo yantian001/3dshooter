@@ -22,6 +22,13 @@ namespace GameDataEditor
         public static string Task_Task2_3 = "Task2_3";
         public static string Task_Task2_4 = "Task2_4";
         public static string EnemyAttr_EnemyAttr_1_1 = "EnemyAttr_1_1";
+        public static string EnemyAttr_EnemyAttr_1_2 = "EnemyAttr_1_2";
+        public static string EnemyAttr_EnemyAttr_1_3 = "EnemyAttr_1_3";
+        public static string EnemyAttr_EnemyAttr_1_4 = "EnemyAttr_1_4";
+        public static string EnemyAttr_EnemyAttr_1_5 = "EnemyAttr_1_5";
+        public static string EnemyAttr_EnemyAttr_1_6 = "EnemyAttr_1_6";
+        public static string EnemyAttr_EnemyAttr_1_7 = "EnemyAttr_1_7";
+        public static string EnemyAttr_EnemyAttr_1_8 = "EnemyAttr_1_8";
         public static string WaveItem_Task_1_1_Wave_1_Item_1 = "Task_1_1_Wave_1_Item_1";
         public static string WaveItem_Task_1_1_Wave_1_Item_1_919df013861c47b29104e39a5b26e0a1 = "Task_1_1_Wave_1_Item_1_919df013861c47b29104e39a5b26e0a1";
         public static string Wave_Task_1_1_Wave_1 = "Task_1_1_Wave_1";

@@ -273,6 +273,7 @@ public class DamageManager : MonoBehaviour
     // Copy all transforms to Ragdoll object
     public void CopyTransformsRecurse(Transform src, GameObject dst)
     {
+        Debug.Log(src.localPosition);
         dst.transform.position = src.position;
         dst.transform.rotation = src.rotation;
         foreach (Transform child in dst.transform)

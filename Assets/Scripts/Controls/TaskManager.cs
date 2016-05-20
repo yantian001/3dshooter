@@ -46,6 +46,31 @@ public class TaskManager : MonoBehaviour
 
     }
 
+    public void OnEnable()
+    {
+        LeanTween.addListener((int)Events.GAMEFINISH, OnGameFinish);
+    }
+
+    public void OnDisable()
+    {
+        LeanTween.removeListener((int)Events.GAMEFINISH, OnGameFinish);
+
+    }
+
+
+    void OnGameFinish(LTEvent evt)
+    {
+        GameRecords record = evt.data as GameRecords;
+        if (record != null)
+        {
+            if (record.FinishType == GameFinishType.Completed)
+            {
+                GameValue.taskData.isCleared = true;
+                UnlockTask(GameValue.level, GameValue.taskData.TaskNum + 1);
+            }
+        }
+    }
+
     /// <summary>
     /// 初始化
     /// </summary>
@@ -77,16 +102,46 @@ public class TaskManager : MonoBehaviour
         }
         return taskReturn;
     }
-
-    // Use this for initialization
-    void Start()
+    /// <summary>
+    /// 获得当前任务场景
+    /// </summary>
+    /// <returns></returns>
+    public GDELevelData GetCurrentLevel()
     {
+        GDELevelData levelCurrent = null;
+        for (int i = 0; i < levels.Count; i++)
+        {
+            levelCurrent = levels[i];
+            if (levelCurrent.TaskList.Find(p => { return (!p.isCleared) && (!p.isLocked); }) != null)
+            {
+                break;
+            }
 
+        }
+        return levelCurrent;
     }
 
-    // Update is called once per frame
-    void Update()
+    /// <summary>
+    /// 获取关卡
+    /// </summary>
+    /// <param name="level"></param>
+    /// <returns></returns>
+    public GDELevelData GetLevel(int level)
     {
+        return levels.Find(p => { return p.LevelNum1 == level; });
+    }
 
+    void UnlockTask(int level, int tasknum)
+    {
+        for (int i = 0; i < levels.Count; i++)
+        {
+            var task = levels[i].TaskList.Find(p => { return p.TaskNum == tasknum; });
+            if (task != null)
+            {
+                task.isLocked = false;
+                break;
+            }
+            //if(levels[i].TaskList.fi)
+        }
     }
 }

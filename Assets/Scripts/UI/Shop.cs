@@ -307,11 +307,12 @@ public class Shop : MonoBehaviour {
 					GDEWeaponData curWeapon;
 					if (GDEDataManager.DataDictionary.TryGetCustom(w.Key, out curWeapon))
 					{
-						if(curWeapon.isowned)
-						{
-							curWeapon.isEquipment = false;
-						}
-					}
+                        //if(curWeapon.isowned)
+                        //{
+                        //	curWeapon.isEquipment = false;
+                        //}
+                        curWeapon.isEquipment = false;
+                    }
 				}
 			}
 

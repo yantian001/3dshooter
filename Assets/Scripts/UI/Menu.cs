@@ -38,10 +38,12 @@ public class Menu : MonoBehaviour
     {
 
         Vector3 newPos;
-
+        bool isFoundCurrent = false;
         List<Toggle> toggles = new List<Toggle>();
 
         int taskcnt = currentLevel.TaskList.Count;
+        GameValue.taskData = null;
+
 
         Toggle task = CommonUtils.GetChildComponent<Toggle>(rect, "middle/Panel/Panel/0");
 
@@ -99,8 +101,8 @@ public class Menu : MonoBehaviour
         group.GetComponent<RectTransform>().sizeDelta = new Vector2(group.GetComponent<RectTransform>().sizeDelta.x, i * 160);
 
         newPos = group.GetComponent<RectTransform>().position;
-
-        newPos.y = -i * 160 / 2;
+        if (!isFoundCurrent)
+            newPos.y = -i * 160 / 2;
 
         group.GetComponent<RectTransform>().position = newPos;
 
@@ -127,14 +129,23 @@ public class Menu : MonoBehaviour
             {
                 CommonUtils.SetChildActive(toggleRect, "Lock", true);
                 TaskThumb.enabled = false;
-                t.enabled = false;
+                t.interactable = false;
             }
             else
             {
+
                 CommonUtils.SetChildActive(toggleRect, "Lock", false);
+                t.interactable = true;
                 TaskThumb.enabled = true;
                 TaskThumb.texture = Resources.Load(currentTask.TaskThumb) as Texture2D;
+                if (!currentTask.isCleared)
+                {
+                    SelectToggle(t, true);
+                    isFoundCurrent = true;
+                }
+
             }
+            CommonUtils.SetChildActive(toggleRect, "Cleared", currentTask.isCleared && !currentTask.isLocked);
             Text TaskNum = CommonUtils.GetChildComponent<Text>(toggleRect, "TaskNum");
 
             TaskNum.text = currentLevel.LevelNum1.ToString() + "-" + currentTask.TaskNum.ToString();
@@ -144,7 +155,7 @@ public class Menu : MonoBehaviour
 
         taskName.text = currentLevel.LevelName;
 
-        SelectToggle(task, true);
+        // SelectToggle(task, true);
         group.allowSwitchOff = false;
     }
 
@@ -191,47 +202,53 @@ public class Menu : MonoBehaviour
         Button ShopBtn = CommonUtils.GetChildComponent<Button>(rect, "bottom/RawImage/Shop");
         ShopBtn.onClick.AddListener(delegate ()
         {
-            //LeanTween;
-            CommonUtils.SetChildActive(rect, "RawImage", true);
+            GameValue.shopType = "weapon";
 
-
-
-            //LeanTween.moveX( avatarScale, avatarScale.transform.position.x + 5f, 5f).setEase(LeanTweenType.easeOutBounce);
-
-            RectTransform rr = CommonUtils.GetChild(rect, "RawImage/RawImage");
-
-            Debug.Log(rr.position.y);
-
-            LeanTween.moveY(CommonUtils.GetChild(rect, "RawImage/RawImage").gameObject, rr.position.y + 322f, 0.4f);
-
-
-            Button weaponBtn = CommonUtils.GetChildComponent<Button>(rect, "RawImage/RawImage/weapon");
-            weaponBtn.onClick.AddListener(delegate ()
-            {
-                GameValue.shopType = "weapon";
-
-                Application.LoadLevel("Shop");
-
-            });
-
-            Button bombBtn = CommonUtils.GetChildComponent<Button>(rect, "RawImage/RawImage/bomb");
-            bombBtn.onClick.AddListener(delegate ()
-            {
-                GameValue.shopType = "bomb";
-                Application.LoadLevel("Shop");
-            });
-
-            Button medicalBtn = CommonUtils.GetChildComponent<Button>(rect, "RawImage/RawImage/medical");
-            medicalBtn.onClick.AddListener(delegate ()
-            {
-                GameValue.shopType = "medical";
-                Application.LoadLevel("Shop");
-            });
-
-
-
-
+            Application.LoadLevel("Shop");
         });
+        //ShopBtn.onClick.AddListener(delegate ()
+        //{
+        //    //LeanTween;
+        //    CommonUtils.SetChildActive(rect, "RawImage", true);
+
+
+
+        //    //LeanTween.moveX( avatarScale, avatarScale.transform.position.x + 5f, 5f).setEase(LeanTweenType.easeOutBounce);
+
+        //    RectTransform rr = CommonUtils.GetChild(rect, "RawImage/RawImage");
+
+        //    Debug.Log(rr.position.y);
+
+        //    LeanTween.moveY(CommonUtils.GetChild(rect, "RawImage/RawImage").gameObject, rr.position.y + 322f, 0.4f);
+
+
+        //    Button weaponBtn = CommonUtils.GetChildComponent<Button>(rect, "RawImage/RawImage/weapon");
+        //    weaponBtn.onClick.AddListener(delegate ()
+        //    {
+        //        GameValue.shopType = "weapon";
+
+        //        Application.LoadLevel("Shop");
+
+        //    });
+
+        //    Button bombBtn = CommonUtils.GetChildComponent<Button>(rect, "RawImage/RawImage/bomb");
+        //    bombBtn.onClick.AddListener(delegate ()
+        //    {
+        //        GameValue.shopType = "bomb";
+        //        Application.LoadLevel("Shop");
+        //    });
+
+        //    Button medicalBtn = CommonUtils.GetChildComponent<Button>(rect, "RawImage/RawImage/medical");
+        //    medicalBtn.onClick.AddListener(delegate ()
+        //    {
+        //        GameValue.shopType = "medical";
+        //        Application.LoadLevel("Shop");
+        //    });
+
+
+
+
+        //});
 
         Button maskBtn = CommonUtils.GetChildComponent<Button>(rect, "RawImage");
 
@@ -328,9 +345,5 @@ public class Menu : MonoBehaviour
             }
         );
     }
-    // Update is called once per frame
-    void Update()
-    {
 
-    }
 }
