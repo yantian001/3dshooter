@@ -139,7 +139,10 @@ public class Creator : MonoBehaviour
         GameObject obj = Resources.Load("Prefabs/Humans/Enemy/"+item.EnemyName) as GameObject;
         if(obj)
         {
-            GameObject.Instantiate(obj, positions[Random.Range(0, positions.Length)].transform.position, Quaternion.identity);
+            Debug.Log("create");
+            GameObject o= (GameObject)GameObject.Instantiate(obj, positions[Random.Range(0, positions.Length)].transform.position, Quaternion.identity);
+            var e =o.GetComponent<EmenyAttr>();
+            e.level = item.EnemyLevel;
         }
     }
 }

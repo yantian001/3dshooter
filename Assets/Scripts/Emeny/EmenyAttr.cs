@@ -34,9 +34,12 @@ public class EmenyAttr : MonoBehaviour
     /// </summary>
     public int maxHP;
 
+    public int level = 1;
+
     public void Start()
     {
-        var data = EnemyAttrManager.Instance.GetEnemyAttr(id, 1);
+        Debug.Log("enemy attr init");
+        var data = EnemyAttrManager.Instance.GetEnemyAttr(id, level);
         if(data != null)
         {
             CopyData(data);
