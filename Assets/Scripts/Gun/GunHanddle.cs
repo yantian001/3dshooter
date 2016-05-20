@@ -92,13 +92,13 @@ public class GunHanddle : MonoBehaviour
         //  {
         for (int i = 0; i < Guns.Length; i++)
         {
-            Hide(Guns[i].gameObject, false);
+            //Hide(Guns[i].gameObject, false);
             Guns[i].SetActive(false);
         }
         if (Guns.Length > 0 && index < Guns.Length && index >= 0)
         {
             GunIndex = index;
-            CurrentGun = Guns[GunIndex].gameObject.GetComponent<Gun>();
+            CurrentGun = Guns[GunIndex];
             Hide(Guns[GunIndex].gameObject, true);
             Guns[GunIndex].SetActive(true);
         }
@@ -109,7 +109,7 @@ public class GunHanddle : MonoBehaviour
     {
 
         // int currentId = WeaponManager.Instance.GetCurrentWeaponId();
-        int currentId = -1;
+        int currentId = WeaponManager.Instance.GetCurrentWeaponId();
         if (currentId == -1)
         {
             SwitchGun(0);

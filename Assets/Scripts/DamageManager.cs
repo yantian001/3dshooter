@@ -51,7 +51,7 @@ public class DamageManager : MonoBehaviour
                 attr = GetComponent<EmenyAttr>();
                 if (attr == null)
                 {
-                    Debug.LogError("Miss Enemy Attr");
+                   // Debug.LogError("Miss Enemy Attr");
                 }
                 if(attr)
                 {

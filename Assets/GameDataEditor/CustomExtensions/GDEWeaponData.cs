@@ -113,6 +113,20 @@ namespace GameDataEditor
             }
         }
 
+        private static string IdKey = "Id";
+		private int _Id;
+        public int Id
+        {
+            get { return _Id; }
+            set {
+                if (_Id != value)
+                {
+                    _Id = value;
+                    GDEDataManager.SetInt(_key+"_"+IdKey, _Id);
+                }
+            }
+        }
+
         private static string nameKey = "name";
 		private string _name;
         public string name
@@ -166,6 +180,7 @@ namespace GameDataEditor
                 dict.TryGetInt(danjiaKey, out _danjia);
                 dict.TryGetInt(wendingxingKey, out _wendingxing);
                 dict.TryGetInt(shesuKey, out _shesu);
+                dict.TryGetInt(IdKey, out _Id);
                 dict.TryGetString(nameKey, out _name);
                 dict.TryGetString(thumbKey, out _thumb);
                 LoadFromSavedData(dataKey);
@@ -183,6 +198,7 @@ namespace GameDataEditor
             _danjia = GDEDataManager.GetInt(_key+"_"+danjiaKey, _danjia);
             _wendingxing = GDEDataManager.GetInt(_key+"_"+wendingxingKey, _wendingxing);
             _shesu = GDEDataManager.GetInt(_key+"_"+shesuKey, _shesu);
+            _Id = GDEDataManager.GetInt(_key+"_"+IdKey, _Id);
             _name = GDEDataManager.GetString(_key+"_"+nameKey, _name);
             _thumb = GDEDataManager.GetString(_key+"_"+thumbKey, _thumb);
          }
@@ -250,6 +266,15 @@ namespace GameDataEditor
             dict.TryGetInt(shesuKey, out _shesu);
         }
 
+        public void Reset_Id()
+        {
+            GDEDataManager.ResetToDefault(_key, IdKey);
+
+            Dictionary<string, object> dict;
+            GDEDataManager.Get(_key, out dict);
+            dict.TryGetInt(IdKey, out _Id);
+        }
+
         public void Reset_name()
         {
             GDEDataManager.ResetToDefault(_key, nameKey);
@@ -279,6 +304,7 @@ namespace GameDataEditor
             GDEDataManager.ResetToDefault(_key, thumbKey);
             GDEDataManager.ResetToDefault(_key, isownedKey);
             GDEDataManager.ResetToDefault(_key, isEquipmentKey);
+            GDEDataManager.ResetToDefault(_key, IdKey);
 
 
             Dictionary<string, object> dict;
