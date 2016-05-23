@@ -149,6 +149,7 @@ ModelImporter:
     100278: Q-2
     100280: Q-4
     100282: Q-5
+    100284: Object01
     400000: 4cca0b90_obj
     400002: 4cca2598_obj
     400004: 4ccaae58_obj
@@ -291,6 +292,7 @@ ModelImporter:
     400278: Q-2
     400280: Q-4
     400282: Q-5
+    400284: Object01
     2300000: Box001
     3300000: Box001
     4300000: DrawCall_0304
@@ -349,6 +351,7 @@ ModelImporter:
     4300106: DrawCall_0054
     4300108: DrawCall_0060
     4300110: DrawCall_0055
+    4300112: Object01
     6400000: Box001
     7400000: Stand-Idle
     7400002: Stand-Shoot
@@ -442,6 +445,7 @@ ModelImporter:
     13700104: DrawCall_0123
     13700106: DrawCall_42
     13700108: DrawCall_43
+    13700110: Object01
   materials:
     importMaterials: 1
     materialName: 0
@@ -13808,7 +13812,7 @@ ModelImporter:
   meshes:
     lODScreenPercentages: []
     globalScale: 2
-    meshCompression: 0
+    meshCompression: 3
     addColliders: 1
     importBlendShapes: 1
     swapUVChannels: 0
