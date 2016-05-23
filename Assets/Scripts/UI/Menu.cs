@@ -77,6 +77,7 @@ public class Menu : MonoBehaviour
         }
 
         int i = 0;
+       
         for (i = 1; i < taskcnt; i++)
         {
             Toggle clone = (Toggle)Instantiate(task, task.GetComponent<RectTransform>().position, task.GetComponent<RectTransform>().rotation);
@@ -100,13 +101,13 @@ public class Menu : MonoBehaviour
         }
         group.GetComponent<RectTransform>().sizeDelta = new Vector2(group.GetComponent<RectTransform>().sizeDelta.x, i * 160);
 
-        newPos = group.GetComponent<RectTransform>().position;
+        newPos = group.GetComponent<RectTransform>().anchoredPosition;
         if (!isFoundCurrent)
-            newPos.y = -i * 160 / 2;
+            newPos.y = -i * 160 / 2 -10;
 
-        group.GetComponent<RectTransform>().position = newPos;
+        group.GetComponent<RectTransform>().anchoredPosition = newPos;
 
-
+        int currntY = 0;
         for (i = 0; i < taskcnt; i++)
         {
             Toggle t = toggles[i];
@@ -141,7 +142,8 @@ public class Menu : MonoBehaviour
                 if (!currentTask.isCleared)
                 {
                     SelectToggle(t, true);
-                    isFoundCurrent = true;
+                    currntY = i;
+                   // isFoundCurrent = true;
                 }
 
             }
@@ -150,6 +152,12 @@ public class Menu : MonoBehaviour
 
             TaskNum.text = currentLevel.LevelNum1.ToString() + "-" + currentTask.TaskNum.ToString();
         }
+
+        newPos = group.GetComponent<RectTransform>().anchoredPosition;
+        if (currntY != 0)
+            newPos.y = -currntY * 160 / 2;
+
+        group.GetComponent<RectTransform>().anchoredPosition = newPos;
 
         Text taskName = CommonUtils.GetChildComponent<Text>(rect, "middle/Task/Text");
 

@@ -38,7 +38,7 @@ public class EmenyAttr : MonoBehaviour
 
     public void Start()
     {
-        Debug.Log("enemy attr init");
+       // Debug.Log("enemy attr init");
         var data = EnemyAttrManager.Instance.GetEnemyAttr(id, level);
         if(data != null)
         {

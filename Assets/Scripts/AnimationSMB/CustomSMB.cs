@@ -10,7 +10,7 @@ public class CustomSMB : StateMachineBehaviour {
         if(tpsInput == null)
         {
             tpsInput = GameObject.FindGameObjectWithTag("Player").GetComponent<TPSInput>();
-            Debug.Log("get tpsinpt in " + this.ToString());
+           // Debug.Log("get tpsinpt in " + this.ToString());
         }
     }
 }
