@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
         LeanTween.addListener((int)Events.ENEMYCLEARED, OnEnemyCleared);
         LeanTween.addListener((int)Events.ENEMYDIE, OnEnemyDie);
         LeanTween.addListener((int)Events.PLAYERDIE, OnPlayerDie);
+        LeanTween.addListener((int)Events.GAMEPAUSE, OnPause);
     }
 
     public void Start()
@@ -45,8 +46,9 @@ public class GameManager : MonoBehaviour
     {
         LeanTween.removeListener((int)Events.TIMEUP, OnTimeUp);
         LeanTween.removeListener((int)Events.ENEMYCLEARED, OnEnemyCleared);
-        LeanTween.addListener((int)Events.ENEMYDIE, OnEnemyDie);
-        LeanTween.addListener((int)Events.PLAYERDIE, OnPlayerDie);
+        LeanTween.removeListener((int)Events.ENEMYDIE, OnEnemyDie);
+        LeanTween.removeListener((int)Events.PLAYERDIE, OnPlayerDie);
+        LeanTween.removeListener((int)Events.GAMEPAUSE, OnPause);
     }
 
     public void Update()
@@ -149,6 +151,24 @@ public class GameManager : MonoBehaviour
     void DelayDispatchFinish()
     {
         LeanTween.dispatchEvent((int)Events.GAMEFINISH, record);
+    }
+
+    void OnPause(LTEvent evt)
+    {
+
+        if (statu == GameStatu.InGame)
+        {
+            ChangeGameStatu(GameStatu.Paused);
+        }
+        LeanTween.addListener((int)Events.GAMECONTINUE, OnContinue);
+        //Time.timeScale = 0;
+    }
+
+    void OnContinue(LTEvent evt)
+    {
+        LeanTween.removeListener((int)Events.GAMECONTINUE, OnContinue);
+        ChangeGameStatu(GameStatu.InGame);
+       // Time.timeScale = 1;
     }
     #endregion
 }

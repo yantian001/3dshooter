@@ -162,7 +162,7 @@ public class Menu : MonoBehaviour
         Text taskName = CommonUtils.GetChildComponent<Text>(rect, "middle/Task/Text");
 
         taskName.text = currentLevel.LevelName;
-
+        
         // SelectToggle(task, true);
         group.allowSwitchOff = false;
     }
@@ -171,6 +171,7 @@ public class Menu : MonoBehaviour
 
     void SelectToggle(Toggle t, bool isOn)
     {
+       
         t.isOn = isOn;
 
         if (isOn)

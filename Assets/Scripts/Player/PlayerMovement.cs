@@ -71,9 +71,10 @@ public class PlayerMovement : MonoBehaviour
                 animator.SetFloat("_speed", agent.velocity.magnitude);
 
                 //  float angle = Vector3.Angle(transform.forward, (targets[index].position - transform.position).normalized);
-                float angle = Vector3.Cross(transform.position, targets[index].position).y;
+               // float angle = Vector3.Cross(transform.position, targets[index].position).y;
+               // Debug.Log(Vector3.Angle(targets[index].forward, (transform.position - targets[index].position ).normalized));
                 //Debug.Log(angle);
-                animator.SetFloat("_angle", angle);
+                //animator.SetFloat("_angle", angle);
                 animator.SetFloat("_distance", agent.remainingDistance);
             }
         }
@@ -121,6 +122,7 @@ public class PlayerMovement : MonoBehaviour
     /// <param name="i">i>0时向右移动, i < 0 时向左移动</param>
     public void MoveDirection(int i)
     {
+        animator.SetFloat("_angle", -i);
         if (i > 0)
         {
             MoveTo(index + 1);
@@ -151,7 +153,7 @@ public class PlayerMovement : MonoBehaviour
         agent.enabled = true;
       //  character.enabled = true;
         //isMoving = true;
-        transform.LookAt(targets[index].position);
+       // transform.LookAt(targets[index].position);
         agent.SetDestination(targets[index].position);
     }
 }
