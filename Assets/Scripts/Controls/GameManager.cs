@@ -5,10 +5,18 @@ using System;
 public class GameManager : MonoBehaviour
 {
     #region variable
+    [HideInInspector]
     public GameStatu statu = GameStatu.Init;
+    [HideInInspector]
     public GameRecords record = new GameRecords();
+    [HideInInspector]
     public int currentCombo = 0;
+    [HideInInspector]
     public bool isCombo = false;
+
+    public AudioClip startAudio;
+    public AudioClip successAudio;
+    public AudioClip failAudio;
     //连击有效时间
     public float comboInterval = 5.0f;
 
@@ -27,6 +35,10 @@ public class GameManager : MonoBehaviour
     public void Start()
     {
         ChangeGameStatu(GameStatu.InGame);
+        if(startAudio)
+        {
+            LeanAudio.play(startAudio);
+        }
     }
 
     public void OnDisable()
@@ -90,13 +102,20 @@ public class GameManager : MonoBehaviour
     {
         record.FinishType = GameFinishType.Failed;
         ChangeGameStatu(GameStatu.Failed);
-
+        if(failAudio)
+        {
+            LeanAudio.play(failAudio);
+        }
     }
 
     void OnEnemyCleared(LTEvent evt)
     {
         record.FinishType = GameFinishType.Completed;
         ChangeGameStatu(GameStatu.Completed);
+        if (successAudio)
+        {
+            LeanAudio.play(successAudio);
+        }
     }
 
     private void OnPlayerDie(LTEvent obj)
@@ -104,6 +123,10 @@ public class GameManager : MonoBehaviour
         // throw new NotImplementedException();
         record.FinishType = GameFinishType.Failed;
         ChangeGameStatu(GameStatu.Failed);
+        if (failAudio)
+        {
+            LeanAudio.play(failAudio);
+        }
     }
 
     /// <summary>
