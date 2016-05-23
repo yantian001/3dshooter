@@ -3,5 +3,22 @@ using System.Collections;
 
 public class TargetPosition : MonoBehaviour
 {
-    public string allowedEnemy = "tufei-1";
+    public string[] dontAllowedEnemy;
+
+    public bool CanCreateEnemy(string name)
+    {
+        bool b = true;
+        if (dontAllowedEnemy.Length > 0)
+        {
+            for (int i = 0; i < dontAllowedEnemy.Length; i++)
+            {
+                if (dontAllowedEnemy[i] == name)
+                {
+                    b = false;
+                    break;
+                }
+            }
+        }
+        return b;
+    }
 }

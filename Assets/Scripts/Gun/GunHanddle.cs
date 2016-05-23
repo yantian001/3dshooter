@@ -40,6 +40,14 @@ public class GunHanddle : MonoBehaviour
         LeanTween.addListener((int)Events.PREVIEWSTART, OnPreviewStart);
     }
 
+    public void Start()
+    {
+        if(!FPScamera)
+        {
+            FPScamera = Camera.main;
+        }
+    }
+
     public void OnDisable()
     {
         LeanTween.removeListener((int)Events.GAMEFINISH, OnGameFinish);
@@ -137,8 +145,8 @@ public class GunHanddle : MonoBehaviour
     {
         if (CurrentGun)
         {
-            
-            if(CurrentGun.Shoot())
+
+            if (CurrentGun.Shoot())
             {
                 crossHair.currentSpace += 10;
                 isFirstFire = true;
@@ -148,7 +156,7 @@ public class GunHanddle : MonoBehaviour
                     // LeanTween.dispatchEvent((int)Events.FIRED);
                 }
             }
-           
+
         }
     }
 

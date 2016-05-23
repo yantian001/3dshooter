@@ -29,13 +29,13 @@ public class Creator : MonoBehaviour
     /// <summary>
     /// 上一次产生敌人波数的时间
     /// </summary>
-     float lastWaveCreateTime = -1;
+    float lastWaveCreateTime = -1;
     /// <summary>
     /// 当前敌人的波数
     /// </summary>
-     int currentWaveIndex = -1;
+    int currentWaveIndex = -1;
 
-     float createInterval = 0;
+    float createInterval = 0;
 
     GDETaskData task;
 
@@ -68,7 +68,7 @@ public class Creator : MonoBehaviour
                 Debug.Log("Enemy Cleared");
                 return;
             }
-            
+
             //创建一波敌人
             if (lastWaveCreateTime == -1 || lastWaveCreateTime + task.Info.WaveInterval < Time.time || enemys.Length <= 0)
             {
@@ -99,26 +99,26 @@ public class Creator : MonoBehaviour
 
     IEnumerator StepToCreateEnemy()
     {
-        while(true)
+        while (true)
         {
             if (GameValue.staus == GameStatu.InGame)
             {
-                if(enemyNeedCreates.Count > 0)
+                if (enemyNeedCreates.Count > 0)
                 {
                     int i = 0;
-                    while(i<enemyNeedCreates.Count)
+                    while (i < enemyNeedCreates.Count)
                     {
                         EnemyToCreat etc = enemyNeedCreates[i];
                         bool canCreate = true;
-                        if(etc.item.CheckPoint)
+                        if (etc.item.CheckPoint)
                         {
                             canCreate = WaypointManager.Instance.IsHaveEmptyPoint();
                         }
-                        if(canCreate)
+                        if (canCreate)
                         {
                             Spwan(etc.item);
                             etc.itemCreate += 1;
-                            if(etc.IsFinish())
+                            if (etc.IsFinish())
                             {
                                 enemyNeedCreates.Remove(etc);
                             }
@@ -130,19 +130,38 @@ public class Creator : MonoBehaviour
             }
             yield return new WaitForSeconds(Random.Range(.5f, 1f));
         }
-        
+
     }
 
     void Spwan(GDEWaveItemData item)
     {
-        
-        GameObject obj = Resources.Load("Prefabs/Humans/Enemy/"+item.EnemyName) as GameObject;
-        if(obj)
+
+        GameObject obj = Resources.Load("Prefabs/Humans/Enemy/" + item.EnemyName) as GameObject;
+        if (obj)
         {
             //Debug.Log("create");
-            GameObject o= (GameObject)GameObject.Instantiate(obj, positions[Random.Range(0, positions.Length)].transform.position, Quaternion.identity);
-            var e =o.GetComponent<EmenyAttr>();
-            e.level = item.EnemyLevel;
+            int c = 0;
+            int p = Random.Range(0, positions.Length);
+            while (!positions[p].CanCreateEnemy(item.EnemyName))
+            {
+                p += 1;
+                if (p >= positions.Length)
+                {
+                    p -= positions.Length;
+                }
+                c++;
+                if (c > positions.Length)
+                {
+                    p = -1;
+                    break;
+                }
+            }
+            if (p > -1)
+            {
+                GameObject o = (GameObject)GameObject.Instantiate(obj, positions[p].transform.position, Quaternion.identity);
+                var e = o.GetComponent<EmenyAttr>();
+                e.level = item.EnemyLevel;
+            }
         }
     }
 }
