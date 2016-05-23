@@ -285,13 +285,21 @@ public class Shop : MonoBehaviour {
 		{
 			GDEWeaponData weapon = (GDEWeaponData)item;
 			if(weapon.isowned == true )
+			{
+
 				buy.interactable = false;
+
+				if(weapon.isEquipment == true)
+					equipment.interactable = false;
+				else
+					equipment.interactable = true;
+
+			}
 			else
+			{
 				buy.interactable = true;
-			if(weapon.isEquipment == true)
 				equipment.interactable = false;
-			else
-				equipment.interactable = true;
+			}
 		}
 
 		equipment.onClick.AddListener(delegate() {
@@ -307,10 +315,6 @@ public class Shop : MonoBehaviour {
 					GDEWeaponData curWeapon;
 					if (GDEDataManager.DataDictionary.TryGetCustom(w.Key, out curWeapon))
 					{
-                        //if(curWeapon.isowned)
-                        //{
-                        //	curWeapon.isEquipment = false;
-                        //}
                         curWeapon.isEquipment = false;
                     }
 				}
