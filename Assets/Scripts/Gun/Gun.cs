@@ -60,6 +60,11 @@ public class Gun : MonoBehaviour
         {
             audiosource = GetComponent<AudioSource>();
         }
+
+        if(!NormalCamera)
+        {
+            NormalCamera = Camera.main;
+        }
     }
   
     public void SetActive(bool active)

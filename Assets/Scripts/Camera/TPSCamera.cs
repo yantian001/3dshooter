@@ -61,6 +61,10 @@ public class TPSCamera : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        if(!playerF)
+        {
+            playerF = GameObject.FindGameObjectWithTag("Player").transform;
+        }
         if (anim == null)
         {
             anim = playerF.GetComponent<Animator>();
