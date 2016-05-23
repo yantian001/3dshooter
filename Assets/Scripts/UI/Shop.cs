@@ -18,6 +18,9 @@ public class Shop : MonoBehaviour {
 	string MEDICAL="medical";
 	string BOMB="bomb";
 
+	Button buy;
+	Button equipment;
+
 	Dictionary<string,object> weapons;
 	string type;
 	// Use this for initialization
@@ -47,7 +50,7 @@ public class Shop : MonoBehaviour {
 		initBtn();
 
 		updateObject();
-
+		setupBtn();
 		UpdateFuncBtn();
 
 	}
@@ -228,17 +231,13 @@ public class Shop : MonoBehaviour {
 		thumb.texture = res;
 
 		thumb.GetComponent<RectTransform>().sizeDelta = new Vector2(175,208);
-
-		 
-
-
 	}
 
 
-	void UpdateFuncBtn()
+	void setupBtn()
 	{
-		Button buy = CommonUtils.GetChildComponent<Button>(rect,"bottom/buy");
-
+		buy = CommonUtils.GetChildComponent<Button>(rect,"bottom/buy");
+		
 		buy.onClick.AddListener(delegate() {
 			if(type == WEAPON)
 			{
@@ -247,20 +246,19 @@ public class Shop : MonoBehaviour {
 				{
 					weapon.isowned = true;
 					Player.CurrentUser.UseMoney(weapon.cost);
-					buy.interactable = false;
 				}
 			}
 			else if(type == MEDICAL)
 			{
 				GDEMedicalData medical = (GDEMedicalData)item;
-
-			  if(Player.CurrentUser.IsMoneyEnough(medical.cost))
-			  {
-				medical.number += 1;
-				Player.CurrentUser.UseMoney(medical.cost);
-			  }
-
- 
+				
+				if(Player.CurrentUser.IsMoneyEnough(medical.cost))
+				{
+					medical.number += 1;
+					Player.CurrentUser.UseMoney(medical.cost);
+				}
+				
+				
 			}else if(type == BOMB)
 			{
 				GDEBombData bomb = (GDEBombData)item;
@@ -270,11 +268,40 @@ public class Shop : MonoBehaviour {
 					Player.CurrentUser.UseMoney(bomb.cost);
 				}
 			}
-
+			UpdateFuncBtn();
 		});
 
 
-		Button equipment = CommonUtils.GetChildComponent<Button>(rect,"bottom/equipment");
+		equipment = CommonUtils.GetChildComponent<Button>(rect,"bottom/equipment");
+
+		equipment.onClick.AddListener(delegate() {
+			
+			GDEWeaponData weapon = (GDEWeaponData)item;
+
+			weapon.isEquipment = true;
+
+			foreach (var w in weapons)
+			{
+				if(w.Key != objs[currentpos])
+				{
+					GDEWeaponData curWeapon;
+					if (GDEDataManager.DataDictionary.TryGetCustom(w.Key, out curWeapon))
+					{
+						curWeapon.isEquipment = false;
+					}
+				}
+			}
+
+			UpdateFuncBtn();
+
+		});
+
+	}
+
+	void UpdateFuncBtn()
+	{
+
+
 
 		if(type != WEAPON)
 		{
@@ -284,9 +311,10 @@ public class Shop : MonoBehaviour {
 		if(type.Equals(WEAPON))
 		{
 			GDEWeaponData weapon = (GDEWeaponData)item;
+
+
 			if(weapon.isowned == true )
 			{
-
 				buy.interactable = false;
 
 				if(weapon.isEquipment == true)
@@ -301,28 +329,6 @@ public class Shop : MonoBehaviour {
 				equipment.interactable = false;
 			}
 		}
-
-		equipment.onClick.AddListener(delegate() {
-
-			GDEWeaponData weapon = (GDEWeaponData)item;
-
-			weapon.isEquipment = true;
-
-			foreach (var w in weapons)
-			{
-				if(w.Key != objs[currentpos])
-				{
-					GDEWeaponData curWeapon;
-					if (GDEDataManager.DataDictionary.TryGetCustom(w.Key, out curWeapon))
-					{
-                        curWeapon.isEquipment = false;
-                    }
-				}
-			}
-
-			equipment.interactable = false;
-
-		});
 	}
 
 	void initBtn()
