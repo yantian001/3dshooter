@@ -77,7 +77,11 @@ public class Finish : MonoBehaviour
     {
         //throw new NotImplementedException();
         GameRecords record = obj.data as GameRecords;
-        int taskreward = GameValue.taskData.Info.Reward;
+        int taskreward =0;
+        if (record.FinishType == GameFinishType.Completed)
+        {
+            taskreward = GameValue.taskData.Info.Reward;
+        }
         int total = record.MaxCombos * 10 + record.HeadShotCount * 10 + taskreward;
         //保存金币
         LeanTween.dispatchEvent((int)Events.MONEYUSED, -total);
