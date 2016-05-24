@@ -70,7 +70,7 @@ public class Creator : MonoBehaviour
             }
 
             //创建一波敌人
-            if (lastWaveCreateTime == -1 || lastWaveCreateTime + task.Info.WaveInterval < Time.time || enemys.Length <= 0)
+            if (lastWaveCreateTime == -1 || lastWaveCreateTime + task.Info.WaveInterval < Time.time || (lastWaveCreateTime +10 < Time.time && enemys.Length <= 0))
             {
                 CreateEnemy(currentWaveIndex + 1);
             }
@@ -116,13 +116,16 @@ public class Creator : MonoBehaviour
                         }
                         if (canCreate)
                         {
-                            Spwan(etc.item);
-                            etc.itemCreate += 1;
-                            if (etc.IsFinish())
+                            if (!etc.IsFinish())
                             {
-                                enemyNeedCreates.Remove(etc);
+                                Spwan(etc.item);
+                                etc.itemCreate += 1;
+                                if (etc.IsFinish())
+                                {
+                                    enemyNeedCreates.Remove(etc);
+                                }
+                                break;
                             }
-                            break;
                         }
                         i++;
                     }
