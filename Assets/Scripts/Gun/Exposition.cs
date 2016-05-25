@@ -35,8 +35,14 @@ public class Exposition : MonoBehaviour
 
     private bool hitedCheck(AS_BulletHiter hit)
     {
+        if (!hit || !hit.RootObject)
+        {
+            return false;
+        }
+
         for (int i = 0; i < hittedList.Count; i++)
         {
+
             if (hittedList[i].RootObject == hit.RootObject)
             {
 

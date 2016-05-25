@@ -40,6 +40,7 @@ public class Gun : MonoBehaviour
     public int AmmoIn = 1;
     public int AmmoPack = 90;
     public int AmmoPackMax = 90;
+    public float stab = 1;
 
     private float timefire = 0;
 
@@ -53,20 +54,33 @@ public class Gun : MonoBehaviour
     public Transform muzzleTransform;
     public GameObject muzzleFlash;
 
+    public void Awake()
+    {
+        GDEWeaponData weapon = WeaponManager.Instance.GetWeaponById(id);
+        Power = weapon.huoli;
+        Clip = ClipSize = weapon.danjia;
+        FireRate = 1f / weapon.shesu;
+        stab = weapon.wendingxing;
+        if (stab <= 0)
+            stab = 10;
+
+
+    }
+
     void Start()
     {
-      
+
         if (GetComponent<AudioSource>())
         {
             audiosource = GetComponent<AudioSource>();
         }
 
-        if(!NormalCamera)
+        if (!NormalCamera)
         {
             NormalCamera = Camera.main;
         }
     }
-  
+
     public void SetActive(bool active)
     {
         Active = active;
@@ -97,7 +111,7 @@ public class Gun : MonoBehaviour
 
         if (timefire + FireRate < Time.time)
         {
-            if (gunState == GunState.Ready )
+            if (gunState == GunState.Ready)
             {
                 if (SoundGunFire && audiosource != null)
                 {
@@ -109,16 +123,15 @@ public class Gun : MonoBehaviour
                     if (Bullets)
                     {
                         Vector3 point = NormalCamera.GetComponent<Camera>().ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height / 2, 0));
-                        
+
                         GameObject bullet = (GameObject)Instantiate(Bullets, point, Quaternion.LookRotation(NormalCamera.transform.forward));
                         var asBuulet = bullet.GetComponent<AS_Bullet>();
                         if (asBuulet)
                         {
                             asBuulet.Damage = ConvertUtil.ToInt32(Power);
                         }
-                        bullet.transform.forward = NormalCamera.transform.forward + new Vector3(Random.Range(-Spread / 1000, Spread / 1000), Random.Range(-Spread / 1000, Spread / 1000), Random.Range(-Spread / 1000, Spread / 1000));
+                        bullet.transform.forward = NormalCamera.transform.forward + new Vector3(Random.Range(-Spread / 10 * stab, Spread / 10 * stab), Random.Range(-Spread / 10 * stab, Spread / 10 * stab), Random.Range(-Spread / 10 * stab, Spread / 10 * stab));
 
-                        
                         Destroy(bullet, LifeTimeBullet);
                     }
                 }
@@ -160,7 +173,7 @@ public class Gun : MonoBehaviour
     /// </summary>
     public void ShowShell()
     {
-        if(Shell && ShellSpawn)
+        if (Shell && ShellSpawn)
         {
             GameObject shell = (GameObject)Instantiate(Shell, ShellSpawn.position, ShellSpawn.rotation);
             shell.GetComponent<Rigidbody>().AddForce(ShellSpawn.transform.right * 2);

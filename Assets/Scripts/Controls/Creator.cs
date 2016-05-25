@@ -126,6 +126,10 @@ public class Creator : MonoBehaviour
                                 }
                                 break;
                             }
+                            else
+                            {
+                                enemyNeedCreates.Remove(etc);
+                            }
                         }
                         i++;
                     }
