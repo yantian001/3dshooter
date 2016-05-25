@@ -44,21 +44,16 @@ public class DamageManager : MonoBehaviour
         {
             behavior = GetComponent<BehaviorTree>();
         }
-        if(isEnemy)
+        if (isEnemy)
         {
             if (attr == null)
             {
                 attr = GetComponent<EmenyAttr>();
-                if (attr == null)
-                {
-                   // Debug.LogError("Miss Enemy Attr");
-                }
-                if(attr)
-                {
-                    maxHp = attr.maxHP;
-                    hp = maxHp;
-                }
-                
+            }
+            if (attr)
+            {
+                maxHp = attr.maxHP;
+                hp = maxHp;
             }
         }
         source = GetComponent<AudioSource>();
@@ -82,6 +77,7 @@ public class DamageManager : MonoBehaviour
 
     public void ApplyDamage(int damage, Vector3 velosity, float distance)
     {
+        Debug.Log("hp :" + hp + " Damage :" + damage);
         if (hp <= 0)
         {
             return;
@@ -108,7 +104,7 @@ public class DamageManager : MonoBehaviour
             Dead(suffix);
         }
         DetermineCover();
-       
+
     }
 
     void DetermineCover()
@@ -173,9 +169,9 @@ public class DamageManager : MonoBehaviour
                 // copy all of transforms to dead object replaced
                 CopyTransformsRecurse(this.transform, deadReplace);
                 // destroy dead object replaced after 5 sec
-               // Destroy(deadReplace, 5);
+                // Destroy(deadReplace, 5);
                 // destry this game object.
-              //  Destroy(this.gameObject, 1);
+                //  Destroy(this.gameObject, 1);
                 this.gameObject.SetActive(false);
 
             }
@@ -241,7 +237,7 @@ public class DamageManager : MonoBehaviour
                 // copy all of transforms to dead object replaced
                 CopyTransformsRecurse(this.transform, deadReplace);
                 // destroy dead object replaced after 5 sec
-                Destroy(deadReplace,3);
+                Destroy(deadReplace, 3);
                 // destry this game object.
                 Destroy(this.gameObject, 1);
                 this.gameObject.SetActive(false);

@@ -135,7 +135,7 @@ public class Creator : MonoBehaviour
                     }
                 }
             }
-            yield return new WaitForSeconds(Random.Range(.5f, 1f));
+            yield return new WaitForSeconds(Random.Range(1.5f, 3f));
         }
 
     }

@@ -58,7 +58,8 @@ public class WeaponManager : MonoBehaviour
     void Init()
     {
         weapons = new List<GDEWeaponData>();
-        if (GDEDataManager.Init("gde_data"))
+        //if (GDEDataManager.Init("gde_data"))
+        GDEDataManager.Init("gde_data");
         {
             List<string> wsKeys;
             
@@ -152,12 +153,24 @@ public class WeaponManager : MonoBehaviour
 
     #endregion
 
+    void RefreshGun()
+    {
+        for(int i=0;i<weapons.Count;i++)
+        {
+            if(weapons[i].isEquipment)
+            {
+                currentWeapon = weapons[i];
+            }
+        }
+    }
+
     /// <summary>
     /// 获取当前武器ID
     /// </summary>
     /// <returns></returns>
     public int GetCurrentWeaponId()
     {
+        Init();
         if (currentWeapon != null)
         {
             return currentWeapon.Id;
