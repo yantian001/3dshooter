@@ -163,6 +163,10 @@ public class GameLogic : MonoBehaviour
                 OnGameQuit(null);
 
             }
+            else if(levelIndex == s_ShopScene)
+            {
+                OnGameMainMenu(null);
+            }
             else if (levelIndex == s_MenuScene)
             {
                 BackToStart(null);
