@@ -36,13 +36,14 @@ public class BGM : MonoBehaviour
         {
             _instance = this;
             DontDestroyOnLoad(gameObject);
+            LeanTween.addListener((int)Events.STOPBGM, OnStopBGM);
+            LeanTween.addListener((int)Events.STARTBGM, OnStartBGM);
         }
         else
         {
             Destroy(gameObject);
         }
-        LeanTween.addListener((int)Events.STOPBGM, OnStopBGM);
-        LeanTween.addListener((int)Events.STARTBGM, OnStartBGM);
+       
     }
 
     private void OnStartBGM(LTEvent obj)

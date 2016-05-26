@@ -154,10 +154,10 @@ public class Menu : MonoBehaviour
         }
 
         newPos = group.GetComponent<RectTransform>().anchoredPosition;
-        if (currntY != 0)
-            newPos.y =  -currntY * 160 ;
+       // if (currntY != 0)
+            newPos.y =  currntY * 160 ;
 
-        group.GetComponent<RectTransform>().anchoredPosition =  new Vector2(newPos.x, group.GetComponent<RectTransform>().sizeDelta.y +newPos.y);
+        group.GetComponent<RectTransform>().anchoredPosition =  new Vector2(newPos.x, -group.GetComponent<RectTransform>().sizeDelta.y +newPos.y);
 
         Text taskName = CommonUtils.GetChildComponent<Text>(rect, "middle/Task/Text");
 

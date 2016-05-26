@@ -34,7 +34,7 @@ public class PlayerAttr : MonoBehaviour
 
     public void OnDisable()
     {
-        LeanTween.addListener((int)Events.ENEMYCLEARED, OnGameFinish);
+        LeanTween.removeListener((int)Events.ENEMYCLEARED, OnGameFinish);
     }
 
 

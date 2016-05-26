@@ -36,8 +36,8 @@ public class GunHanddle : MonoBehaviour
 
     public void Awake()
     {
-        LeanTween.addListener((int)Events.GAMEFINISH, OnGameFinish);
-        LeanTween.addListener((int)Events.PREVIEWSTART, OnPreviewStart);
+        //LeanTween.addListener((int)Events.GAMEFINISH, OnGameFinish);
+        //LeanTween.addListener((int)Events.PREVIEWSTART, OnPreviewStart);
     }
 
     public void Start()
@@ -50,8 +50,8 @@ public class GunHanddle : MonoBehaviour
 
     public void OnDisable()
     {
-        LeanTween.removeListener((int)Events.GAMEFINISH, OnGameFinish);
-        LeanTween.removeListener((int)Events.PREVIEWSTART, OnPreviewStart);
+        //LeanTween.removeListener((int)Events.GAMEFINISH, OnGameFinish);
+        //LeanTween.removeListener((int)Events.PREVIEWSTART, OnPreviewStart);
     }
 
 
